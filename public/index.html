@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First 90</title>
+<meta name="description" content="Paste a company's website. Get the first things worth automating there, how to measure each one, and what to ask in the interview.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#edf1ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121a17" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg?v={{VERSION}}" type="image/svg+xml">
+<link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v={{VERSION}}">
+<script type="module" src="app.js?v={{VERSION}}"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <a class="wordmark" href="#" data-home>First <i>90</i></a>
+    <nav aria-label="Site"><a href="how.html">How it works</a></nav>
+  </header>
+
+  <main id="landing" class="landing">
+    <div>
+      <h1>The first 90 days, planned from the outside.</h1>
+      <p class="lede">Paste a company's website. Get the first things worth automating there, how to measure each one, and what to ask in the interview.</p>
+
+      <form class="plan-form" id="plan-form" novalidate>
+        <label for="site-input">Company website</label>
+        <div class="field">
+          <input id="site-input" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="example.com">
+          <button class="btn" type="submit" id="plan-btn">Plan it</button>
+        </div>
+        <p class="form-hint">Reads a handful of public pages. Takes about two minutes.</p>
+        <p class="notice" id="form-notice" role="status" hidden></p>
+      </form>
+
+      <section class="samples" aria-labelledby="samples-title">
+        <h2 id="samples-title">Or open a sample plan</h2>
+        <ul class="sample-list" id="sample-list"></ul>
+      </section>
+    </div>
+
+    <figure class="board" aria-label="A 90-day plan in three phases">
+      <div class="board-grid fill" id="hero-board" aria-hidden="true"></div>
+      <dl class="board-key">
+        <div><dt>Days 1 to 30</dt><dd>Measure and pilot</dd></div>
+        <div><dt>Days 31 to 60</dt><dd>Roll out</dd></div>
+        <div><dt>Days 61 to 90</dt><dd>Prove the result</dd></div>
+      </dl>
+      <figcaption>Every plan ends with a number to beat, a way to measure it in week one, and the questions that would prove it wrong.</figcaption>
+    </figure>
+  </main>
+
+  <main id="result-view" class="result" hidden></main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <p>An outside view from public pages. First 90 v{{VERSION}}</p>
+    <nav aria-label="Footer">
+      <a href="how.html">How it works</a>
+      <a href="https://github.com/pingywon/first-90">Source</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,410 @@
+{
+ "id": "aspen-dental",
+ "label": "Aspen Dental",
+ "kind": "Dental care",
+ "audit": {
+  "site": "aspendental.com",
+  "company": {
+   "name": "Aspen Dental",
+   "what_they_do": "Aspen Dental is a brand of independently owned dental practices that offer routine and emergency care, dentures, implants and clear aligners. The Aspen Group (TAG) licenses the brand and provides business and administrative support to these practices.",
+   "customers": "Patients across the United States who need routine, emergency, denture, implant or cosmetic dental care. Many offers are aimed at new patients without dental insurance and at denture wearers.",
+   "how_they_sell": "Patients book appointments online by choosing an office and visit type, or by phone. Treatment plans and estimates are given in the office. Payment runs through a billing portal, by phone or by email, with third-party financing and a $49 per year savings plan membership.",
+   "size_hints": "1100+ offices nationwide, 3000+ dental experts in the network, 10 million smiles served, in business since 1998. The 1,000th office opened in 2022. The support center is in Chicago."
+  },
+  "headline": "The first thing worth automating at Aspen Dental is the customer service billing inbox, because missing and declined payments are checked there by hand, one central team owns it, and reply times can be measured from week 1.",
+  "caveat": "Aspen Dental offices are independently owned and supported by The Aspen Group, so the website cannot show which tasks the central support team in Chicago handles and which each office handles in its own way.",
+  "signals": [
+   {
+    "observation": "Patients cannot cancel online. They have to call their local office, and staff handle each cancellation by hand.",
+    "quote": "If you need to cancel your appointment, call your  local Aspen Dental  office and let them know. They will assist you with the cancellation process.",
+    "page": 5,
+    "n": 1,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Rescheduling also means contacting the office directly, and patients have to look up the office details first.",
+    "quote": "you can reschedule by contacting your Aspen Dental office to let them know that you need to move your appointment.",
+    "page": 5,
+    "n": 2,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Emergency appointments start with a phone call to the local office, not online triage.",
+    "quote": "For urgent dental issues, call your local Aspen Dental office immediately. We prioritize emergency cases and will make every effort to see you the same day.",
+    "page": 5,
+    "n": 3,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "When a payment does not show up, the patient sends an email and staff check it by hand.",
+    "quote": "If your payment hasn't appeared after this timeframe, email  customerservice@aspendental.com  with your payment confirmation details.",
+    "page": 5,
+    "n": 4,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Declined payments also go to the customer service inbox for manual checking.",
+    "quote": "Check with your bank or card provider, then email  customerservice@aspendental.com  to verify or update your payment details.",
+    "page": 5,
+    "n": 5,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Billing questions are spread across a phone line, office phones and a shared email inbox.",
+    "quote": "For any billing or payment questions, call (833) 902-4848 or  email customerservice@aspendental.com .",
+    "page": 5,
+    "n": 6,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Requests for records for a second opinion are handled by staff one request at a time.",
+    "quote": "We'll gladly provide your dental records and X-rays upon request to facilitate your consultation with another provider.",
+    "page": 5,
+    "n": 7,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Patients are asked to bring paper records, medications and IDs to the first visit, which suggests intake is done by hand.",
+    "quote": "please bring your photo identification, any necessary medical records and a list of any current medications.",
+    "page": 5,
+    "n": 8,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Denture refunds follow a set process with time windows that staff have to track for each patient.",
+    "quote": "The guarantee period begins upon insert of final denture or hard reline and refund request must be submitted within 90 days thereafter.",
+    "page": 4,
+    "n": 9,
+    "source": {
+     "page": 4,
+     "url": "https://www.aspendental.com/dentures/dentures-cost/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Feedback is collected through a toll-free phone line.",
+    "quote": "Tell us about your experience by calling toll-free (844) 296-0187.",
+    "page": 2,
+    "n": 10,
+    "source": {
+     "page": 2,
+     "url": "https://www.aspendental.com/about/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Each booking widget pushes phone scheduling as an option, so phone booking volume is likely high.",
+    "quote": "Prefer to schedule by phone?",
+    "page": 1,
+    "n": 11,
+    "source": {
+     "page": 1,
+     "url": "https://www.aspendental.com/",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Price estimates are only given during an in-person visit, so each quote takes an appointment.",
+    "quote": "Schedule a visit today to receive a personalized estimate and explore affordable treatment options designed around your needs.",
+    "page": 3,
+    "n": 12,
+    "source": {
+     "page": 3,
+     "url": "https://www.aspendental.com/pricing-offers/",
+     "match": "exact"
+    }
+   }
+  ],
+  "tools": [
+   {
+    "name": "Patient billing portal",
+    "quote": "use our secure Aspen Dental patient billing portal to view your balance, make payments and update billing information.",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Customer service email inbox",
+    "quote": "For any billing or payment questions, call (833) 902-4848 or  email customerservice@aspendental.com .",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://www.aspendental.com/about/faq/",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Third-party financing lenders",
+    "quote": "We provide clear pricing and offers financing through 3rd-party lenders to help make treatment affordable",
+    "page": 4,
+    "source": {
+     "page": 4,
+     "url": "https://www.aspendental.com/dentures/dentures-cost/",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Smile preview photo tool",
+    "quote": "Snap a photo to preview what Aspen Dental can do for your smile. And your life.",
+    "page": 3,
+    "source": {
+     "page": 3,
+     "url": "https://www.aspendental.com/pricing-offers/",
+     "match": "exact"
+    }
+   }
+  ],
+  "opportunities": [
+   {
+    "title": "Sort billing emails and check payment status automatically",
+    "problem": "Patients whose payment has not shown up, or whose card was declined, email the shared customer service inbox, and staff check each one by hand. Billing questions also come in through a central phone line and office phones, so the same issue can be handled more than once.",
+    "signals": [
+     4,
+     5,
+     6
+    ],
+    "approach": "Sort incoming emails by type (missing payment, declined payment, balance question, other) with inbox rules and a text classifier. For missing payments, pull the confirmation details from the email and look them up in the patient billing portal records, then send a status reply. For declined payments, reply right away with a secure link to update card details in the billing portal and send the rest to staff.",
+    "measure": {
+     "metric": "Median time to first reply on billing emails, and share of missing or declined payment emails closed without a manual lookup",
+     "baseline": "In week 1, pull timestamps from the inbox for all billing emails and hand-tag a sample by type to get current reply time and volume by category",
+     "target": "Cut median first reply time by at least half from the week 1 figure, and close a clear share of declined-payment emails through the portal link with no staff touch"
+    },
+    "effort": "small",
+    "impact": "large",
+    "days_30": "Baseline reply times and email categories measured, sorting rules live on the inbox.",
+    "days_60": "Auto-replies for declined payments live, missing-payment lookup tested on a sample.",
+    "days_90": "Missing-payment lookup live, reply time and touch-free close rate reported against baseline.",
+    "rank": 1,
+    "confidence": "medium",
+    "assumption": "The plan assumes the billing inbox gets enough missing and declined payment emails to matter, and that the billing portal records can be looked up by a tool rather than only by staff logins.",
+    "ask": "How many emails does the customerservice@aspendental.com inbox get in a normal week, and what share are about missing or declined payments?"
+   },
+   {
+    "title": "Online cancel and reschedule from reminder messages",
+    "problem": "Patients cannot cancel or reschedule online. They have to find their office and call, and office staff handle each change by hand while also fielding phone bookings.",
+    "signals": [
+     1,
+     2,
+     11
+    ],
+    "approach": "Add cancel and reschedule links to appointment confirmations and reminders, connected to the same scheduling system that powers online booking. Freed slots go back into online availability right away, and a short waitlist can offer them to patients who want an earlier visit. Start with a pilot group of offices.",
+    "measure": {
+     "metric": "Share of cancellations and reschedules done online in pilot offices, and cancel or reschedule calls per office per week",
+     "baseline": "In week 1, have pilot offices tag incoming calls by reason for one week, and pull cancellation and reschedule counts from the scheduling system",
+     "target": "Move a meaningful share of cancellations and reschedules in pilot offices online, with a matching drop in related calls, and track how many freed slots are rebooked"
+    },
+    "effort": "medium",
+    "impact": "large",
+    "days_30": "Pilot offices chosen, call reasons tagged, scheduling system links scoped.",
+    "days_60": "Cancel and reschedule links live in reminders for pilot offices.",
+    "days_90": "Online share, call volume and slot refill rate reported, rollout plan for more offices drafted.",
+    "rank": 2,
+    "confidence": "medium",
+    "assumption": "The plan assumes the online booking system can also handle cancels and reschedules for existing appointments, and that the independently owned offices will agree to give up phone control of their schedules.",
+    "ask": "Does the system behind online booking already hold every appointment, including ones booked by phone, and could it accept a cancel or reschedule from a link without office staff stepping in?"
+   },
+   {
+    "title": "Track denture guarantee windows and refund requests",
+    "problem": "Denture refunds depend on a 90-day window that starts at final insert or hard reline, and staff have to track that date for each patient by hand. Missed or late tracking risks wrong decisions on refunds and unhappy patients.",
+    "signals": [
+     9
+    ],
+    "approach": "Record the insert or reline date as a set field, calculate the window end date automatically, and route refund requests through a simple form that checks eligibility. Send staff a list of open requests and windows closing soon.",
+    "measure": {
+     "metric": "Time from refund request to decision, and share of requests with the insert date and window checked automatically",
+     "baseline": "In week 1, pull recent refund requests and record how long each took to decide and how the window was checked",
+     "target": "Every new request has its window checked automatically, and time to decision is shorter than the week 1 figure"
+    },
+    "effort": "small",
+    "impact": "medium",
+    "days_30": "Current refund process mapped and recent request times measured.",
+    "days_60": "Window date field and request form live for pilot offices.",
+    "days_90": "Decision times reported against baseline, open-request list in weekly use.",
+    "rank": 4,
+    "confidence": "low",
+    "assumption": "The plan assumes staff track the 90-day window by hand and that refund requests are common enough to cause delays, but the website only shows that the policy exists.",
+    "ask": "How many denture refund requests come in each month, and how does staff check today whether a request falls inside the 90-day window?"
+   }
+  ],
+  "dropped": [
+   {
+    "title": "Digital intake forms before the first visit",
+    "reason": "The plan assumes intake is still done on paper, when the website only shows the normal advice to bring ID and a medication list that almost every dental office gives."
+   }
+  ],
+  "questions": [
+   "How many emails does the customerservice@aspendental.com inbox get in a normal week, and what share are about missing or declined payments?",
+   "Does the system behind online booking already hold every appointment, including ones booked by phone, and could it accept a cancel or reschedule from a link without office staff stepping in?",
+   "How many denture refund requests come in each month, and how does staff check today whether a request falls inside the 90-day window?",
+   "Which systems are shared by all 1,100+ offices, such as scheduling, billing and patient records, and which ones can each office choose for itself?",
+   "Who answers the (833) 902-4848 billing line and the customer service inbox, and how many people work on them?",
+   "Out of all the calls an office gets, which kind takes the most staff time each week?"
+  ],
+  "pages": [
+   {
+    "id": 1,
+    "url": "https://www.aspendental.com/",
+    "title": "Aspen Dental | Find a Dentist Near You for Dental Care",
+    "words": 967,
+    "text": "$29 New Patient Exam + X-rays¹\nAn easy way to take the first step and get clear answers about your smile at select locations.\nSchedule your appointment\nYour current office\nChange location\nEmergency\nBroken tooth/Tooth pain\nOther/Check up\nPrefer to schedule by phone?\n(610) 208-0400\n¹$29 new patient exam, without insurance: Offer available in select offices. For new patients that do not have dental insurance. New patients must be 21 or older to receive $29 exam and X-rays, a minimum $80 value; the value of the savings will vary based on doctor recommendation. Procedure code 150 and 140. Offer expires 12/31/26.\nCare is closer than you think\nSchedule your appointment call (800) 277-3633\n$29 new patient exam & X-rays¹\nfor new patients without insurance.\n20% off\ndentures  and implants²\nDentures starting at $499 per arch\nwith purchase of Aspen Dental Savings Plan³\nSchedule your appointment\nYour current office\nChange location\nEmergency\nBroken tooth/Tooth pain\nOther/Check up\nPrefer to schedule by phone?\n(610) 208-0400\nGreat Smiles. Greater Savings.\n$29 new patient exam & X-rays¹\nfor new patients without insurance.\n25% off\npremium dentures and implants²\nDentures starting at\n$499 per arch³\nSchedule your appointment\nYour current office\nChange location\nEmergency\nBroken tooth/Tooth pain\nOther/Check up\nPrefer to schedule by phone?\n(610) 208-0400\n¹Offer available in select offices. For new patients that do not have dental insurance. New patients must be 21 or older to receive $29 exam and X-rays, a minimum $80 value; the value of the savings will vary based on doctor recommendation. Procedure code 150 and 140. Offer expires 12/31/26.\n² Offer available in select offices. Not valid on previous or ongoing work and cannot be combined with other discounts or dental discount programs. Discount taken off usual and customary fees for dentures and implants. Patients with insurance receive either the 25% discount or insurance plan pricing, whichever is greater. Dental implants are not a recognized specialty. Offer expires 8/31/26.\n³Starting at price is based on a Basic single arch denture and is available to new and existing denture wearers. Additional charges for relines and other required dentistry services, including extractions.\nGet smiling today with 20% off dental services¹\nSchedule your appointment\nYour current office\nChange location\nEmergency\nBroken tooth/Tooth pain\nOther/Check up\nPrefer to schedule by phone?\n(610) 208-0400\n¹Offer available in select offices. For new patients that do not have dental insurance. New patients must be 21 or older to receive $29 exam and X-rays, a minimum $80 value; the value of the savings will vary based on doctor recommendation. Procedure code 150 and 140. Offer expires 12/31/26.\n²Not valid on previous or ongoing work and cannot be combined with other discounts or dental discount programs. Discount taken off usual and customary fees for dentures or implants and does not apply to services rendered by a specialist. Discount applies to the denture or implant only and not to related dentistry services, if any. Patients with insurance will receive either the 20% discount or insurance plan pricing, whichever discount is greater. Offer expires 12/31/26.\n³ Starting at price is based on a Basic single arch denture and is available to new and existing denture wearers using an Aspen Dental Savings Plan membership. Aspen Dental Savings Plan is NOT insurance, and costs $49/year. Additional charges for relines and other required dentistry services, including extractions. Please see plan terms and conditions for details.\nGreat Smiles. Greater Savings.\n$29 new patient exam & X-rays¹\nfor new patients without insurance.\nSchedule your appointment\nYour current office\nChange location\n25% off premium dentures²\n25% off premium dental implants²\nEmergency\nBroken tooth/Tooth pain\nOther/Check up\nPrefer to schedule by phone?\n(610) 208-0400\n¹Offer available in select offices. For new patients that do not have dental insurance. New patients must be 21 or older to receive $29 exam and X-rays, a minimum $80 value; the value of the savings will vary based on doctor recommendation. Procedure code 150 and 140. Offer expires 12/31/26.\n² Offer available in select offices. Not valid on previous or ongoing work and cannot be combined with other discounts or dental discount programs. Discount taken off usual and customary fees for dentures and implants. Patients with insurance receive either the 25% discount or insurance plan pricing, whichever is greater. Dental implants are not a recognized specialty. Offer expires 8/31/26.\nGreat Smiles. Greater Savings.\nNo insurance?\nFree exam & X-rays for new patients ¹\n20% off\ndentures  and implants²\nDentures starting at $499 per arch\nwith purchase of Aspen Dental Savings Plan³\nSchedule your appointment\nYour current office\nChange location\nEmergency\nBroken tooth/Tooth pain\nOther/Check up\nPrefer to schedule by phone?\n(610) 208-0400\nNo insurance? Free exam and X-rays for new patients¹\nSchedule appointment call (800) 277-3633\n¹For new patients that do not have dental insurance. New patients must be 21 or older to receive free exam and X-rays, a minimum $80 value; the value of the savings will vary based on doctor recommendation. Procedure code 150 and 140. Offer expires 9/30/26.\n²Not valid on previous or ongoing work and cannot be combined with other discounts or dental discount programs. Discount taken off usual and customary fees for dentures or implants and does not apply to services rendered by a specialist. Discount applies to the denture or implant only and not to related dentistry services, if any. Patients with insurance will receive either the 20% discount or insurance plan pricing, whichever discount is greater. Offer expires 12/31/26.\n³Starting at price is based on a Basic single arch denture and is available to new and existing denture wearers using an Aspen Dental Savings Plan membership. Aspen Dental Savings Plan is NOT insurance, and costs $49/year. Additional charges for relines and other required dentistry services, including extractions. Please see plan terms and conditions for details.\nExplore our services\n<div style=\"display:flex\" class="
+   },
+   {
+    "id": 2,
+    "url": "https://www.aspendental.com/about/",
+    "title": "About Aspen Dental: Our Story, Mission, & Expert Dental Care",
+    "words": 736,
+    "text": "Aspen Dental makes healthy smiles available for all\nAspen Dental makes healthy smiles available for all\nAt Aspen Dental, we’re dedicated to providing more people with the dental care they need, when they need it.\nWhether you need routine or emergency care, dentures, implants or clear aligners, we’re here for you when and where you need us.\nThe Aspen Dental mission statement\nSince 1998, Aspen Dental has been dedicated to one mission: ensuring that more Americans can access quality dental care in their communities.\nplay_arrow\n“Aspen Dental was founded in 1998 on a simple belief: That dentistry could be better for patients and providers alike. Together with the dentists we support, we’re committed to breaking down barriers — whether emotional, financial, or practical — so that patients can get the care they need.”\n-Bob Fontana, Chairman & CEO, TAG\nAspen Dental history\nKey historical milestones\n1998:   Aspen Dental was founded in Syracuse, New York.\n2000–2004:   Expanded rapidly from New York into Connecticut, Rhode Island, and Massachusetts, reaching over 60 locations.\n2004: Launched the  Practice Ownership Program (POP) , a structured pathway designed to help dentists transition from associates to practice owners.\n2014: Initiated the  Healthy Mouth Movement , a community outreach program providing free dental care to U.S. veterans.\n2021:  Introduced The Aspen Group (TAG) to reflect growth beyond dental into additional healthcare sectors, including urgent care (WellNow), medical aesthetics (Chapter), and veterinary care (Lovet Pet Health Care).\n2022:  Reached a major growth milestone by opening its 1,000th office in Norridge, Illinois.\n2023-2026:  Transitioned all offices to fully digital operations and continued geographic expansion.\nAspen Dental by the numbers\n25+\nyears in business\n10 million\nsmiles served\n3000+\ndental experts in our network\n1100+\nAspen Dental offices nationwide\nTAG Oral Care Center for Excellence\nExpanding access to care for underserved communities in Illinois\nThe TAG Oral Care Center for Excellence (OCC) is a first of its kind facility dedicated to providing cutting-edge, comprehensive dental care at no cost to underserved Illinois residents. It also offers TAG team members from across the country hands-on educational and training experiences.\nLearn more\nReal patients. Real stories.\nstar star star star star\n“I'm not worried about anything anymore, I can smile, I can laugh, I can just be myself.”\nAJ B.\nLas Vegas, NV\nstar star star star star\n“Now that I've got the dentures I can just go in, relax and eat. I don't have to be picky and choose what I'm going to eat and it really feels good.”\nErnest M.\nLas Vegas, NV\nSee more patient stories east\nPartners who bring out our best\nFrom innovative care technologies to affordable financing solutions, Aspen Dental partners with trusted organizations to bring you better, simpler care. Explore our partners .\nFollow Aspen Dental on social\nFacebook\nYoutube\nTiktok\nInstagram\nExplore our dental services\nMotto® clear aligners\nOne goal, one network: Independent dentists at The Aspen Group\nThere is no single provider of dental care called “Aspen Dental.” Each Aspen Dental branded practice is owned and operated by a licensed dentist. The Aspen Group. (“TAG”) provides administrative and business support services to Aspen Dental branded dental practices.\nTAG licenses the “Aspen Dental” brand name to the independently owned and operated dental practices that use its business support services. TAG does not own or operate the dental practices, employ or in any way supervise the dentists providing dental care, and control over the care provided is the sole responsibility of the independent practice and the dentists they employ. Services and office practices may vary across dental practices, and patients should contact the dental offices directly for all questions concerning their dental treatment.​\nThe term “Aspen Dental” issued throughout this website and, depending upon the context, may refer to an individual Aspen Dental branded dental practice or multiple Aspen Dental location dental practices.​\nTell us about your experience by calling toll-free (844) 296-0187.\nAspen Dental practice support\nAspen Dental practices are supported by The Aspen Group (TAG), a healthcare support organization focused on helping providers deliver better care to more people.\nHeadquartered in Chicago, TAG’s Practice Support Center provides business and administrative services to independently owned and operated Aspen Dental-branded practices across the country. This enables dental teams to stay focused on what matters most -- caring for their patients.\nIf you are an existing patient with questions or concerns, please contact your local Aspen Dental office for the fastest resolution.\nself.__next_f.push([1,\"1:\\\"/assets/aspenmarketing/_next/static/chunks/20x-t63ay2vv0.js\\\"\\n2:\\\"/assets/aspenmarketing/_next/static/chunks/1gqedeyjz9ewc.js\\\"\\n3:\\\"/assets/aspenmarketing/_next/static/chunks/39v18f8-p11ph.js\\\"\\n4:\\\"/assets/aspenmarketing/_next/static/chunks/3pyxf3-_w7cll.js\\\"\\n5:\\\"/assets/aspenmarketing/_next/static/chunks/01fdbw1jn5cri.js\\\"\\n6:\\\"/assets/aspenmarketing/_next/static/chunks/11cjxrl3xxq7r.js\\\"\\n7:\\\"/assets/aspenmarketing/_next/static/chunks/3msda_-9cy31_.js\\\"\\n8:\\\"/assets/aspenmarketing/_next/static/chunks/1n_ast0ma0k15.js\\\"\\n9:\\\"/assets/aspenmarketing/_next/static/chunks/3ly4omlg2nfcw.js\\\"\\na:\\\"/assets/aspenmarketing/_next/static/chunks/300ioyhropdj9.js\\\"\\nb:\\\"/assets/aspenmarketing/_next/static/chunks/3gumexv9yswyj.js\\\"\\nc:\\\"/assets/aspenmarketing/_next/static/chunks/128ndyd1n2_fu.js\\\"\\nd:\\\"/assets/aspenmarketing/_next/static/chunks/2ymeriolk0dwu.js\\\"\\ne:\\\"/assets/aspenmarketing/_next/static/chunks/26x30u5vfwoac.js\\\"\\nf:\\\"/assets/aspenmarketing/_next/static/chunks/0ov3c-0gdx3ra.js\\\"\\n10:\\\"HTTPAccessFallbackBoundary\\\"\\n11:I[141318,[\\\"$1\\\",\\\"$2\\\",\\\"$3\\\",\\\"$4\\\",\\\"$5\\\",\\\"$6\\\",\\\"$7\\\",\\\"$8\\\",\\\"$9\\\",\\\"$a\\\",\\\"$b\\\",\\\"$c\\\",\\\"$d\\\",\\\"$e\\\",\\\"$f\\\"],\\\"$10\\\"]\\n3e:\\\"/assets/aspenmarketing/_next/static/chunks/3cq2ohs50uqe-.js\\\"\\n3f:I[253348,[\\\"$1\\\",\\\"$2\\\",\\\"$3\\\",\\\"$4\\\",\\\"$5\\\",\\\"$6\\\",\\\"$7\\\",\\\"$8\\\",\\\"$9\\\",\\\"$a\\\",\\\"$b\\\",\\\"$c\\\",\\\"$d\\\",\\\"$e\\\",\\\"$f\\\",\\\"$3e\\\"],\\\"default\\\"]\\n:HL[\\\"/assets/aspenmarketing/_next/static/media/7ddd198311ba7843-s.p.3kq6k02b2ysv1.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n:HL[\\\"/assets/aspenmarketing/_next/static/media/f7aa21714c1c53f8-s.p.0-95eo-012xnf.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n12:T1639,@fon"
+   },
+   {
+    "id": 3,
+    "url": "https://www.aspendental.com/pricing-offers/",
+    "title": "Affordable Dental Costs & Flexible Financing Options",
+    "words": 622,
+    "text": "Aspen Dental price list for affordable care\nAspen Dental’s price list is designed to help you understand dental costs and plan your care with confidence. Because every smile is different, pricing may vary based on treatment, materials and individual needs. Personalized treatment plans include clear cost breakdowns before care begins, along with access to special offers and flexible payment options.\nDenture prices at Aspen Dental\nLearn more about denture prices to understand how factors like denture type, materials, and customization can affect the overall cost and help you choose the right option for your needs.\nExplore full denture cost Explore partial denture cost\nDental implant prices at Aspen Dental\nLearn more about implant prices to understand how factors like the number of implants, materials, and any additional procedures can affect overall cost and help you plan your treatment.\nExplore dental implants cost Explore implant dentures cost\nDental services prices\nDental checkup cost >\nRegular checkups help prevent costly emergency treatments. At Aspen Dental, we offer affordable care to make getting started easier. Prevention is always more affordable than treatment.\nTooth extraction cost >\nIf a tooth can’t be saved with a filling or root canal, an extraction may be recommended. Our team reviews all options first and provides comfortable care when removal is necessary.\nDental bridges cost >\nDental bridges replace missing teeth to restore function and appearance. As a fixed solution, they’re custom-made to match your smile and are often partially covered by dental insurance.\nDental crowns cost >\nDental crowns strengthen and restore teeth that can’t be treated with a filling. We use custom crowns designed for durability and a natural appearance.\nDental filling cost >\nTooth decay doesn’t have to lead to costly problems. We offer affordable filling options and work with insurance and financing plans to make treatment accessible.\nPeriodontal treatment cost >\nGum disease is common but highly treatable when caught early. Periodontal treatment (deep cleaning) removes infection and helps prevent more costly procedures later.\nRoot canal cost >\nRoot canal treatment relieves pain and retains your natural teeth. We provide comfortable care with clear pricing and offer insurance and financing options to make treatment more manageable.\nWisdom teeth removal cost >\nWisdom teeth are often removed to prevent crowding, infection, or damage to nearby teeth. We offer simple removal with anesthesia options, and work with you to manage cost.\nCosmetic dentistry pricing\nCosmetic dentistry cost guide >\nExplore cosmetic treatments designed to enhance your smile, from whitening to full smile makeovers. Options are available to fit different goals and budgets.\nMotto® clear aligners cost >\nMotto® clear aligners provide a clear, doctor-guided alternative to traditional braces. Flexible  3rd-party financing options help make treatment manageable.\nTeeth whitening cost >\nGet noticeably whiter teeth with professional, in-office treatment. Advanced technology and dental supervision help ensure safe, effective results.\nVeneers cost >\nPorcelain and composite veneers from Aspen Dental offer a simple way to enhance your smile. Designed to cover stains, chips, cracks and gaps, veneers create a more even, natural-looking appearance.\nEveryone deserves great dental health, including you.\nDiscover all the ways to save, so you can smile more.\nExplore our offers east\nAt Aspen Dental, we make dental care affordable\nSave on routine and major dental procedures with our savings plan. ¹\n¹The Aspen Dental Savings Plan is NOT insurance.  Please see plan terms and conditions for details.\nReady to learn more about Aspen Dental costs?\nSchedule a visit today to receive a personalized estimate and explore affordable treatment options designed around your needs.\nSchedule appointment call (800) 277-3633\nTry on your best smile\nSnap a photo to preview what Aspen Dental can do for your smile. And your life.\nPreview your smile\nself.__next_f.push([1,\"1:\\\"/assets/aspenmarketing/_next/static/chunks/20x-t63ay2vv0.js\\\"\\n2:\\\"/assets/aspenmarketing/_next/static/chunks/1gqedeyjz9ewc.js\\\"\\n3:\\\"/assets/aspenmarketing/_next/static/chunks/39v18f8-p11ph.js\\\"\\n4:\\\"/assets/aspenmarketing/_next/static/chunks/3pyxf3-_w7cll.js\\\"\\n5:\\\"/assets/aspenmarketing/_next/static/chunks/01fdbw1jn5cri.js\\\"\\n6:\\\"/assets/aspenmarketing/_next/static/chunks/11cjxrl3xxq7r.js\\\"\\n7:\\\"/assets/aspenmarketing/_next/static/chunks/3msda_-9cy31_.js\\\"\\n8:\\\"/assets/aspenmarketing/_next/static/chunks/1n_ast0ma0k15.js\\\"\\n9:\\\"/assets/aspenmarketing/_next/static/chunks/3ly4omlg2nfcw.js\\\"\\na:\\\"/assets/aspenmarketing/_next/static/chunks/300ioyhropdj9.js\\\"\\nb:\\\"/assets/aspenmarketing/_next/static/chunks/3gumexv9yswyj.js\\\"\\nc:\\\"/assets/aspenmarketing/_next/static/chunks/128ndyd1n2_fu.js\\\"\\nd:\\\"/assets/aspenmarketing/_next/static/chunks/2ymeriolk0dwu.js\\\"\\ne:\\\"/assets/aspenmarketing/_next/static/chunks/26x30u5vfwoac.js\\\"\\nf:\\\"/assets/aspenmarketing/_next/static/chunks/0ov3c-0gdx3ra.js\\\"\\n10:\\\"HTTPAccessFallbackBoundary\\\"\\n11:I[141318,[\\\"$1\\\",\\\"$2\\\",\\\"$3\\\",\\\"$4\\\",\\\"$5\\\",\\\"$6\\\",\\\"$7\\\",\\\"$8\\\",\\\"$9\\\",\\\"$a\\\",\\\"$b\\\",\\\"$c\\\",\\\"$d\\\",\\\"$e\\\",\\\"$f\\\"],\\\"$10\\\"]\\n3e:\\\"/assets/aspenmarketing/_next/static/chunks/3cq2ohs50uqe-.js\\\"\\n3f:I[253348,[\\\"$1\\\",\\\"$2\\\",\\\"$3\\\",\\\"$4\\\",\\\"$5\\\",\\\"$6\\\",\\\"$7\\\",\\\"$8\\\",\\\"$9\\\",\\\"$a\\\",\\\"$b\\\",\\\"$c\\\",\\\"$d\\\",\\\"$e\\\",\\\"$f\\\",\\\"$3e\\\"],\\\"default\\\"]\\n:HL[\\\"/assets/aspenmarketing/_next/static/media/7ddd198311ba7843-s.p.3kq6k02b2ysv1.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n:HL[\\\"/assets/aspenmarketing/_next/static/media/f7aa21714c1c53f8-s.p.0-95eo-012xnf.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n12:T1639,@font-face{font-family:Figtree;font-style:normal;font-weight:300 900;font-display:swap;src:url(/_next/static/media/400bf8aa837fcb7e-s.19g-lkcx7iw64.woff2)format(\\\"woff2\\\");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Figtree;font-style:normal;font-weight:300 900;font-display:swap;src:url(/_next/static/media/f7aa21714c1c53f8-s.p.0-95eo-012xnf.woff2)format(\\\"woff2\\\");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Figtree Fallback;src:local(Arial);ascent-override:94.3"
+   },
+   {
+    "id": 4,
+    "url": "https://www.aspendental.com/dentures/dentures-cost/",
+    "title": "Denture Costs: Types, Pricing & Savings Options | Aspen Dental",
+    "words": 1007,
+    "text": "How much do full dentures cost?\nFull dentures are a long-term way to restore your smile and confidence. They sit directly on your gums and stay in place with the help of adhesives, so you can eat, speak and smile with ease and confidence.\nKey takeaways\nFull dentures offer stability and comfort while restoring your smile\nWe provide clear pricing and offers financing through 3rd-party lenders to help make treatment affordable\nYour Aspen Dental care team is with you every step of the way, offering care and guidance you can trust\nDentures start at $499 per arch\nwith the purchase of an Aspen Dental Savings Plan membership¹\nAt Aspen Dental, we’re committed to making dentures affordable and accessible for everyone. Our Basic replacement denture starts at just $499 per arch with an Aspen Dental Savings Plan membership¹, providing a budget-friendly option for restoring your smile.\n¹The Aspen Dental Savings Plan is NOT insurance, and costs $49/year. Offer available in select offices. Price is for a Basic single arch denture. Additional charges for relines and other required dentistry services, including extractions. Please see plan terms and conditions for details.\nMore ways to smile for less\nWe offer replacement full denture solutions designed to fit your smile—and your budget. With transparent pricing and a range of replacement options, we make it simple to restore your smile with confidence.\nCustom features available\nIf you need greater customization, choose from Classic , Signature and Signature Elite dentures—each designed to provide superior comfort, durability and a natural look.\nTypes of dentures and cost: get the right fit, affordably\nAspen Dental offers a variety of denture options designed to fit your needs and budget, making quality dentures more accessible without compromise. F ull dentures and partial dentures are crafted with care to provide a natural look and comfortable fit, ensuring you find the right solution for your lifestyle.\nTo give you peace of mind, Aspen Dental backs its dentures with industry-leading warranties and our Denture Money-Back Guarantee ². If you’re not completely satisfied, we’ll make it right—or your money back.\nSignature Elite\nOur most advanced denture with refined personalization—made to recreate your smile.\nExplore Signature Elite\nSignature\nOur premier denture—custom designed for an optimal look, fit and feel.\nExplore Signature\nClassic\nOur classic denture for a smile you can rely on everyday.\nExplore Classic\nBasic\nOur entry denture—the most affordable option for a smart smile.\nExplore Basic\nTypes of dentures and cost: get the right fit, affordably\nAspen Dental offers a variety of denture options designed to fit your needs and budget, making quality dentures more accessible without compromise. F ull dentures and partial dentures are crafted with care to provide a natural look and comfortable fit, ensuring you find the right solution for your lifestyle.\nTo give you peace of mind, Aspen Dental backs its dentures with industry-leading warranties and our Denture Money-Back Guarantee ². If you’re not completely satisfied, we’ll make it right—or your money back.\n²The Denture Money-Back Guarantee applies to all full and partial dentures and covers the cost of the permanent denture(s) only. Additional adjustments may be offered prior to refund. The guarantee period begins upon insert of final denture or hard reline and refund request must be submitted within 90 days thereafter. Denture(s) must be returned within 90 days after refund request date.\nPricing eligible for patients with Aspen Dental Savings Plan membership\nMost Popular\nSIGNATURE ELITE\n$50/mo.\nwith 60 mo. financing*\nImportant mo. payment info\nAvg. cost: $1,841 per arch³\nSignature Elite east\nPremium fit & function\n12 tooth shades, 4 gum shades\n7-year leading warranty\nDenture Money-Back Guarantee⁴\nSIGNATURE\n$41/mo.\nwith 60 mo. financing*\nImportant mo. payment info\nAvg. cost: $1,488 per arch ³\nSignature east\nSuperior fit & function\n6 tooth shades, 4 gum shades\n5-year warranty\nDenture Money-Back Guarantee⁴\nCLASSIC\n$29/mo.\nwith 60 mo. financing*\nImportant mo. payment info\nA vg. cost: $1,071 per arch ³\nClassic east\nStandard fit & function\n3 tooth shades, 2 gum shades\n1-year warranty\nDenture Money-Back Guarantee⁴\nBASIC\n$42/mo.\nsuggested with 12 mo. special financing**\nImportant mo. payment info\nStarting at: $499 per arch ³\nBasic east\nBasic fit & function\n3 tooth shades, 1 gum shade\n6-month warranty\nDenture Money-Back Guarantee⁴\n³The average cost displayed reflects the national average out-of-pocket cost per arch for a replacement denture when using an Aspen Dental Savings Plan membership. Aspen Dental Savings Plan is NOT insurance, and costs $49/year. Offer available in select offices. Denture pricing varies based on location and is listed per arch: Signature Elite price ranges from $1,655 to $2,391, Signature denture price ranges from $1,295 to $1,971, Classic price ranges from $871 to $1,330, and Basic denture is $499 per arch. Additional charges may apply for relines and other required dentistry services, including extractions. Please see plan terms and conditions for details. For location specific pricing information, click here .\n⁴The Denture Money-Back Guarantee applies to all full and partial dentures and covers the cost of the permanent denture(s) only. Additional adjustments may be offered prior to refund. The guarantee period begins upon insert of final denture or hard reline and refund request must be submitted within 90 days thereafter. Denture(s) must be returned within 90 days after refund request date.\nFLEXILYTES COMBO\n$44/mo.\nwith 60 mo. financing*\nImportant mo. payment info\nAvg. cost: $1,620⁵\nFlexilytes Combo east\nOur premium hybrid partial​\nDurable acrylic base\nResin & metal frame\nHidden clasps\n2-year warranty\nCAST PARTIAL\n$38/mo.\nwith 60 mo. financing*\nImportant mo. payment info\nAvg. cost: $1,395⁵\nCast Partial east\nOur standard metal-based partial​\nDurable acrylic base\nFully metal frame\nWrap-around clasps\n6-month warranty​\n⁵The average cost displayed reflects the national average out-of-pocket cost per arch for a replacement partial denture when using an Aspen Dental Savings Plan membership. Aspen Dental Savings Plan is NOT insurance, and costs $49/year. Offer available in select offices. Partial denture pricing varies based on location and is listed per arch: Flexilytes Combo price ranges from $1,327 to $1,993, and Cast partial ranges from $1,167 to $1,721. Additional charges may a"
+   },
+   {
+    "id": 5,
+    "url": "https://www.aspendental.com/about/faq/",
+    "title": "Dental Questions and Answers",
+    "words": 971,
+    "text": "Frequently asked questions\nHave questions about your dental care? You’re in the right place. Get answers from dental experts on everything from services and emergency care to billing and payment options, and if you need additional support, the Aspen Dental Patient Advocacy Team is here to help.\nAppointment FAQs\nAre you accepting new patients? add_circle_outline\nAbsolutely, we love welcoming new patients. As a new Aspen Dental patient, your first appointment will include a comprehensive oral exam  and dental X-rays. Your Aspen Dental care team will discuss your personalized treatment plan, pricing options and any other questions you may have.\nHow do I cancel an Aspen Dental appointment (online or by phone)? add_circle_outline\nIf you need to cancel your appointment, call your  local Aspen Dental  office and let them know. They will assist you with the cancellation process.\nHow do I reschedule my appointment at Aspen Dental? add_circle_outline\nIf you need to reschedule your appointment at Aspen Dental, no worries. If you are a new or existing patient, you can reschedule by contacting your Aspen Dental office to let them know that you need to move your appointment. You can find your office’s information (phone number, hours, etc.) here by searching for your local office.\nAlso, you can find your office’s details in any previous communications you received from Aspen Dental regarding your appointment.\nHow quickly can I get an emergency dental appointment? add_circle_outline\nFor urgent dental issues, call your local Aspen Dental office immediately. We prioritize emergency cases and will make every effort to see you the same day. If you're experiencing severe pain or complications, don't wait—contact us right away. Please dial 9-1-1 if you are experiencing an emergency.\nCan I schedule a first appointment just for a preventive cleaning? add_circle_outline\nTo give you the best dental care possible, your Aspen Dental dentist will first perform an initial exam. With a more clear picture of your current oral health , they’ll create a treatment plan for you and can schedule your appointment for a dental cleaning .\nDoes Aspen Dental charge for missed appointments (no show fees)? add_circle_outline\nNo, Aspen Dental does not charge patients for missed appointments (no shows).\nI want a second opinion on my recommended treatment plan—is that okay? add_circle_outline\nWe fully support patients seeking second opinions, whether from another Aspen Dental provider or an outside dentist. We'll gladly provide your dental records and X-rays upon request to facilitate your consultation with another provider.\nFirst visit FAQs\nWhat should I bring to my first dental appointment? add_circle_outline\nTo prepare for your first Aspen Dental visit, please bring your photo identification, any necessary medical records and a list of any current medications. If you have any previous dental records or X-rays, it’s helpful to bring those as well.\nWhat should I expect during my first dental appointment? add_circle_outline\nDuring your initial dental appointment, you can expect a comprehensive dental examination. This includes X-rays , a thorough exam of your teeth and gums and a discussion about your dental and medical history. Your dentist will evaluate and discuss the best treatment plan for your overall  oral health , addressing any concerns or questions you may have. Please note that preventative teeth cleanings are not included in your first exam.\nHow long does a typical first dental appointment last? add_circle_outline\nThe first dental appointment lasts between 45 to 90 minutes on average. However, the duration of your first visit can vary depending on the complexity of your exam, any need for X-rays or additional screening and whether your smile requires any immediate treatment.\nWill the dentist discuss treatment options during the first visit? add_circle_outline\nYes, your dentist will go over any recommended treatments based on their evaluation of your oral health. They’ll talk through treatment options that align with your oral health needs and smile goals, answer any questions and work with you to create a personalized care plan for you and your smile.\nHow much is my first appointment at Aspen Dental going to cost? add_circle_outline\nWe believe that everyone deserves a healthy smile. So, our  dental care services  are not only thorough, but also affordable and accessible to you. Once you receive your personalized treatment plan, your Aspen Dental care team can help you make sure you get the care you need. We partner with 3rd-party financing options that offer flexible ways to pay and manage treatment costs. In addition, the Aspen Dental Savings Plan ¹ provides discounts on eligible dental services for patients without dental insurance.\n¹The Aspen Dental Savings Plan is NOT insurance. Please see plan terms and conditions for details.\nBilling & payments FAQs\nCan I pay my Aspen Dental bill online or over the phone? add_circle_outline\nYes, use our secure Aspen Dental patient billing portal to view your balance, make payments and update billing information. You can also pay by phone by calling your local Aspen Dental office or email customerservice@aspendental.com  for assistance.\nWhat is the Aspen Dental billing phone number? add_circle_outline\nFor any billing or payment questions, call (833) 902-4848 or  email customerservice@aspendental.com .\nHow do I update or change my billing information? add_circle_outline\nYou can update billing details like your address or payment method through the Aspen Dental patient services login. If you run into any issues, email customerservice@aspendental.com and we'll assist you.\nWhy was my payment method declined? add_circle_outline\nPayment methods may be declined due to incorrect information, insufficient funds or technical issues. Check with your bank or card provider, then email  customerservice@aspendental.com  to verify or update your payment details.\nMy payment isn’t showing on my account – what should I do? add_circle_outline\nPayments typically process within 1-2 business days. If your payment hasn't appeared after this timeframe, email  customerservice@aspendental.com  with your payment confirmation details. We'll help verify your payment and update your account immediately.\nHow do I dispute or ap"
+   }
+  ],
+  "stats": {
+   "quotes": 16,
+   "found": 16,
+   "words": 4303
+  },
+  "prompt": "2026-10-14.2",
+  "run": [
+   {
+    "step": "scout",
+    "status": "start",
+    "at": "2026-10-14T17:10:18.021Z"
+   },
+   {
+    "step": "scout",
+    "status": "done",
+    "detail": "Opened the homepage, found 34 useful links, picked 6 pages to read.",
+    "ms": 2189,
+    "pages": [
+     "https://www.aspendental.com/about/",
+     "https://www.aspendental.com/pricing-offers/",
+     "https://www.aspendental.com/dentures/dentures-cost/",
+     "https://www.aspendental.com/patient-resources/faq/",
+     "https://www.aspendental.com/patient-services/",
+     "https://www.aspendental.com/dental-services/"
+    ],
+    "at": "2026-10-14T17:10:20.211Z"
+   },
+   {
+    "step": "reader",
+    "status": "start",
+    "at": "2026-10-14T17:10:22.109Z"
+   },
+   {
+    "step": "reader",
+    "status": "done",
+    "detail": "Read 5 pages, 4,303 words after removing menus and footers.",
+    "ms": 1891,
+    "at": "2026-10-14T17:10:22.109Z"
+   },
+   {
+    "step": "analyst",
+    "status": "start",
+    "at": "2026-10-14T17:10:22.110Z"
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "detail": "Noted 12 signs of manual work and 4 tools in use.",
+    "ms": 15061,
+    "at": "2026-10-14T17:10:37.171Z"
+   },
+   {
+    "step": "planner",
+    "status": "start",
+    "at": "2026-10-14T17:10:37.172Z"
+   },
+   {
+    "step": "planner",
+    "status": "done",
+    "detail": "Drafted 4 opportunities, ranked by impact.",
+    "ms": 30737,
+    "at": "2026-10-14T17:11:07.909Z"
+   },
+   {
+    "step": "skeptic",
+    "status": "start",
+    "at": "2026-10-14T17:11:07.910Z"
+   },
+   {
+    "step": "skeptic",
+    "status": "done",
+    "detail": "Kept 3 of 4, cut 1, marked 2 as low confidence.",
+    "ms": 14581,
+    "at": "2026-10-14T17:11:22.491Z"
+   },
+   {
+    "step": "checker",
+    "status": "start",
+    "at": "2026-10-14T17:11:22.492Z"
+   },
+   {
+    "step": "checker",
+    "status": "done",
+    "detail": "Found 16 of 16 quotes on the pages they came from.",
+    "ms": 35,
+    "at": "2026-10-14T17:11:22.527Z"
+   }
+  ]
+ },
+ "meta": {
+  "engine": "claude-code",
+  "model": "claude-opus-5-5",
+  "generated_at": "2026-10-14T17:11:22.529Z",
+  "seconds": 65
+ }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works | First 90</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg?v={{VERSION}}" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v={{VERSION}}">
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <a class="wordmark" href="./">First <i>90</i></a>
+    <nav aria-label="Site"><a href="./">Plan a company</a></nav>
+  </header>
+  <main class="prose">
+    <h1>How it works</h1>
+    <p>First 90 reads a company's public website and writes the plan a new automation lead would bring to day one: the first things worth automating, how to measure each one, what is done by day 30, 60 and 90, and the questions that would prove it wrong.</p>
+
+    <h2>Six steps, three of them AI</h2>
+    <ol>
+      <li><b>Scout.</b> Opens the homepage and picks up to six telling pages: about, pricing, support, careers, returns, booking.</li>
+      <li><b>Reader.</b> Turns them into plain text and removes the menus and footers that repeat on every page.</li>
+      <li><b>Analyst.</b> Claude notes concrete signs of manual work, each with a quote from the page it came from.</li>
+      <li><b>Planner.</b> Claude ranks 3 to 5 opportunities, each with a metric, a week-one baseline and a 90-day target.</li>
+      <li><b>Skeptic.</b> A separate Claude pass challenges every idea, cuts the generic ones, and writes the question that would confirm or kill each one.</li>
+      <li><b>Checker.</b> Looks up every quote on its page. Anything not found word for word is marked.</li>
+    </ol>
+
+    <h2>What it can and cannot know</h2>
+    <p>It sees only public pages. It cannot see volumes, internal tools or decisions made on purpose, which is why every plan lists its assumptions and the questions to ask. Treat it as a well-prepared first conversation, not a verdict.</p>
+
+    <h2>How it is built</h2>
+    <ul>
+      <li>A Cloudflare Worker reads the site and streams each step to the page as it finishes.</li>
+      <li>Claude Opus 5.5 answers in fixed shapes (structured output), so every plan has the same parts.</li>
+      <li>Sample plans are recorded runs of the same pipeline, timings included.</li>
+      <li>The <a href="https://github.com/pingywon/first-90">source code</a> is public.</li>
+    </ul>
+  </main>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <p>An outside view from public pages. First 90 v{{VERSION}}</p>
+    <nav aria-label="Footer"><a href="./">Plan a company</a><a href="https://github.com/pingywon/first-90">Source</a></nav>
+  </div>
+</footer>
+</body>
+</html>
