@@ -8,6 +8,10 @@ routes = [{ pattern = "first90.meetdominic.me", custom_domain = true }]
 directory = "./dist"
 binding = "ASSETS"
 
+[[kv_namespaces]]
+binding = "F90_KV"
+id = "ceae812d07a742c2b49d8858fda1ae06"
+
 [vars]
 LIVE_AUDITS = "on"
 PLANS_PER_VISITOR = "2"
