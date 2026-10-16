@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First 90</title>
+<meta name="description" content="Any company site. A 90-day automation plan.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="kit.css?v=1.0.0">
+<style>
+@font-face { font-family: "Public Sans"; src: url("fonts/public-sans-normal.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+:root { --font: "Public Sans", system-ui, sans-serif; --accent: #0a8f62; --accent-ink: #ffffff; --accent-text: #0a8f62; --accent-soft: color-mix(in srgb, #0a8f62 12%, transparent); }
+:root[data-theme="dark"] { --accent: #3fd59b; --accent-ink: #0f1218; --accent-text: #3fd59b; --accent-soft: color-mix(in srgb, #3fd59b 16%, transparent); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #3fd59b; --accent-ink: #0f1218; --accent-text: #3fd59b; --accent-soft: color-mix(in srgb, #3fd59b 16%, transparent); } }
+.intro { padding: var(--s-12) 0 var(--s-8); text-align: center; display: flex; flex-direction: column; align-items: center; }
+.intro .sub { margin-left: auto; margin-right: auto; }
+.intro .row { justify-content: center; }
+.shot { display: block; padding: 0; overflow: hidden; aspect-ratio: 16 / 9; }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.trio { display: grid; gap: var(--s-4); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .trio { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.steps.n3 { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 720px) { .steps.n3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.steps.n4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 720px) { .steps.n4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.only-dark { display: none !important; }
+:root[data-theme="dark"] .only-dark { display: block !important; }
+:root[data-theme="dark"] .only-light { display: none !important; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .only-dark { display: block !important; } :root:not([data-theme="light"]) .only-light { display: none !important; } }
+</style>
+<script type="module">import { fillIcons, themeToggle } from "./kit.js"; fillIcons(); themeToggle(document.getElementById("theme"));</script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+  <a class="brand" href="./"><span class="brand-mark" data-icon="target"></span>First 90</a>
+  <nav class="nav" aria-label="Site"><a href="https://first90.meetdominic.me">Open</a><a class="wide" href="https://github.com/pingywon/first-90">GitHub</a><button class="icon-btn" id="theme" type="button"></button></nav>
+</div></header>
+<main class="container">
+  <section class="intro">
+    <span class="eyebrow" data-icon="sparkle">Built with Claude</span>
+    <h1 class="display">First 90</h1>
+    <p class="sub">Any company site. A 90-day automation plan.</p>
+    <div class="row"><a class="btn" href="https://first90.meetdominic.me" data-icon="play">Open the app</a><a class="btn ghost" href="https://github.com/pingywon/first-90" data-icon="github">Code</a></div>
+  </section>
+  <a class="shot card" href="https://first90.meetdominic.me"><img class="only-light" src="img/first-90-light.webp" width="1200" height="675" alt="First 90 screenshot"><img class="only-dark" src="img/first-90-dark.webp" width="1200" height="675" alt=""></a>
+  <section class="section"><div class="steps n3"><div class="step"><span class="ic" data-icon="target"></span><b>Automate first</b><small>One clear top pick</small></div><div class="step"><span class="ic" data-icon="layers"></span><b>Impact vs effort</b><small>Every idea on one chart</small></div><div class="step"><span class="ic" data-icon="chat"></span><b>Interview questions</b><small>Tests for each idea</small></div></div></section>
+  <section class="section"><div class="section-h"><h2>How it works</h2></div><div class="steps n4"><div class="step"><span class="ic" data-icon="search"></span><b>Scout</b><small>Picks the pages</small></div><div class="step"><span class="ic" data-icon="eye"></span><b>Analyst</b><small>Spots manual work</small></div><div class="step"><span class="ic" data-icon="route"></span><b>Planner</b><small>Ranks the ideas</small></div><div class="step"><span class="ic" data-icon="flag"></span><b>Skeptic</b><small>Cuts weak ideas</small></div></div></section>
+</main>
+<footer class="foot"><div class="container"><span>Dominic Gentile. Project page v1.0.0</span><nav aria-label="Footer"><a href="https://lab.meetdominic.me">AI Lab</a><a href="https://meetdominic.me">Resume</a></nav></div></footer>
+</body>
+</html>
