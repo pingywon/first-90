@@ -82,7 +82,7 @@ function matrix(opps) {
     const key = `${ex}-${im}`;
     const k = used.get(key) || 0;
     used.set(key, k + 1);
-    const x = pad + ex * (W - pad) + k * 28;
+    const x = pad + ex * (W - pad) - k * 26;
     const y = (1 - im) * (H - pad) + k * 4;
     svg.append(h("circle", { class: "dot", cx: x, cy: y, r: 13 }));
     svg.append(h("text", { class: "dot-n", x, y: y + 4.5, "text-anchor": "middle" }, String(i + 1)));

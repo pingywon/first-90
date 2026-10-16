@@ -29,3 +29,13 @@ export async function takeDailyAllowance(kv, { bucket, visitor, perVisitor, perD
   ]);
   return { ok: true, left: perVisitor - usedMine - 1 };
 }
+
+// Returns one use, for runs that failed before producing anything.
+export async function giveBackAllowance(kv, { bucket, visitor, now }) {
+  if (!kv) return;
+  const day = today(now);
+  await Promise.all([`limit:${bucket}:${day}:${visitor}`, `limit:${bucket}:${day}:all`].map(async (key) => {
+    const used = Number((await kv.get(key)) || 0);
+    if (used > 0) await kv.put(key, String(used - 1), { expirationTtl: 2 * DAY });
+  }));
+}

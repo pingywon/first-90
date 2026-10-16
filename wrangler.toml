@@ -14,7 +14,7 @@ id = "ceae812d07a742c2b49d8858fda1ae06"
 
 [vars]
 LIVE_AUDITS = "on"
-PLANS_PER_VISITOR = "2"
+PLANS_PER_VISITOR = "3"
 PLANS_PER_DAY = "25"
 
 # Secrets (wrangler secret put): ANTHROPIC_API_KEY, ANTHROPIC_WORKSPACE_ID, IP_SALT

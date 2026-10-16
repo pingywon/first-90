@@ -2,7 +2,7 @@ import { runAudit } from "./audit/pipeline.js";
 import { normalizeTarget, SiteError } from "./audit/site.js";
 import { apiModel, engineReady, EngineError, MODEL } from "./audit/engine.js";
 import { PROMPT_VERSION } from "./audit/prompts.js";
-import { takeDailyAllowance, visitorId } from "./limits.js";
+import { takeDailyAllowance, giveBackAllowance, visitorId } from "./limits.js";
 import { VERSION } from "./version.js";
 
 const JSON_HEADERS = { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", "x-content-type-options": "nosniff" };
@@ -25,13 +25,14 @@ async function handlePlan(request, env, ctx, deps) {
   } catch (err) {
     return problem(err.code || "bad_url", err.message, 400);
   }
+  const visitor = await visitorId(request, env.IP_SALT);
   const allowance = await takeDailyAllowance(env.F90_KV, {
     bucket: "plan",
-    visitor: await visitorId(request, env.IP_SALT),
-    perVisitor: Number(env.PLANS_PER_VISITOR || 2),
+    visitor,
+    perVisitor: Number(env.PLANS_PER_VISITOR || 3),
     perDay: Number(env.PLANS_PER_DAY || 25),
   });
-  if (!allowance.ok) return problem("limit", "That is today's limit for live plans. The samples are always open.", 429);
+  if (!allowance.ok) return problem("limit", "All out for today. Come back tomorrow.", 429);
 
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
@@ -47,6 +48,7 @@ async function handlePlan(request, env, ctx, deps) {
       });
       await send("result", { audit, meta: { version: VERSION, model: MODEL, generated_at: new Date().toISOString() } });
     } catch (err) {
+      await giveBackAllowance(env.F90_KV, { bucket: "plan", visitor }).catch(() => {});
       const known = err instanceof SiteError || err instanceof EngineError;
       await send("failure", { code: known ? err.code : "server", message: known ? err.message : "Something went wrong. Try again." });
     } finally {

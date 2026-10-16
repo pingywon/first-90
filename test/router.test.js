@@ -53,9 +53,26 @@ test("failures arrive as a plain message in the stream", async () => {
   assert.doesNotMatch(failure.message, /network down/);
 });
 
+test("each visitor gets 3 plans a day, then a come-back-tomorrow message", async () => {
+  const env = { MOCK_ENGINE: "1", F90_KV: fakeKV() };
+  for (let i = 0; i < 3; i++) assert.equal((await route(plan("example.com", "198.51.100.9"), env, null, deps)).status, 200);
+  const fourth = await route(plan("example.com", "198.51.100.9"), env, null, deps);
+  assert.equal(fourth.status, 429);
+  assert.equal((await fourth.json()).error.message, "All out for today. Come back tomorrow.");
+});
+
+test("a failed plan does not use up an allowance", async () => {
+  const env = { MOCK_ENGINE: "1", F90_KV: fakeKV(), PLANS_PER_VISITOR: "1" };
+  const broken = { ...deps, fetchImpl: async () => new Response("no", { status: 503, headers: { "content-type": "text/html" } }) };
+  await (await route(plan("example.com", "198.51.100.8"), env, null, broken)).text();
+  const again = await route(plan("example.com", "198.51.100.8"), env, null, deps);
+  assert.equal(again.status, 200);
+  await again.text();
+});
+
 test("each visitor gets a daily allowance", async () => {
   const env = { MOCK_ENGINE: "1", F90_KV: fakeKV(), PLANS_PER_VISITOR: "1", PLANS_PER_DAY: "2" };
-  assert.equal((await route(plan("example.com", "198.51.100.1"), env, null, deps)).status, 200);
+  assert.equal((await (await route(plan("example.com", "198.51.100.1"), env, null, deps)).text()).includes("event: result"), true);
   assert.equal((await route(plan("example.com", "198.51.100.1"), env, null, deps)).status, 429);
   assert.equal((await route(plan("example.com", "198.51.100.2"), env, null, deps)).status, 200);
   assert.equal((await route(plan("example.com", "198.51.100.3"), env, null, deps)).status, 429);
