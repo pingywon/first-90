@@ -13,7 +13,7 @@ binding = "F90_KV"
 id = "ceae812d07a742c2b49d8858fda1ae06"
 
 [vars]
-LIVE_AUDITS = "off"
+LIVE_AUDITS = "on"
 PLANS_PER_VISITOR = "2"
 PLANS_PER_DAY = "25"
 
