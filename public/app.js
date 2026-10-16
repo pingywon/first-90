@@ -1,4 +1,5 @@
-import { h, renderAudit, teamPanel, boardSquares } from "./render.js";
+import { h, fillIcons, themeToggle } from "./kit.js";
+import { renderAudit, renderPreview, teamStrip } from "./render.js";
 
 const landing = document.getElementById("landing");
 const view = document.getElementById("result-view");
@@ -7,27 +8,23 @@ const input = document.getElementById("site-input");
 const btn = document.getElementById("plan-btn");
 const notice = document.getElementById("form-notice");
 
-boardSquares(document.getElementById("hero-board"));
+fillIcons();
+themeToggle(document.getElementById("theme"));
 
 let meta = { live: false };
 const metaReady = fetch("api/meta").then((r) => (r.ok ? r.json() : meta)).then((m) => (meta = m)).catch(() => meta);
-
 const session = {
   get() { try { return JSON.parse(sessionStorage.getItem("f90:last") || "null"); } catch { return null; } },
   set(v) { try { sessionStorage.setItem("f90:last", JSON.stringify(v)); } catch { /* fine without it */ } },
 };
-
-function say(message, kind) {
-  notice.textContent = message;
-  notice.classList.toggle("error", kind === "error");
-  notice.hidden = !message;
-}
+const say = (m) => { notice.textContent = m; notice.hidden = !m; };
 
 async function loadSamples() {
   const list = await (await fetch("samples/index.json")).json();
-  document.getElementById("sample-list").replaceChildren(...list.map((s) => h("li", {},
-    h("button", { type: "button", onclick: () => (location.hash = `#sample/${s.id}`) }, h("strong", {}, s.label), h("span", {}, s.kind)),
-  )));
+  document.getElementById("sample-list").replaceChildren(...list.map((s) => h("button", { type: "button", class: "pick", onclick: () => (location.hash = `#sample/${s.id}`) },
+    h("span", { class: "ic mono" }, s.label[0]), h("span", {}, h("b", {}, s.label), h("small", {}, s.kind)))));
+  const pick = list.find((s) => s.id === "casper") || list[0];
+  if (pick) renderPreview(document.getElementById("preview"), await (await fetch(`samples/${pick.id}.json`)).json());
 }
 
 function showLanding() {
@@ -40,11 +37,11 @@ function showLanding() {
 function showAudit(record, source) {
   landing.hidden = true;
   view.hidden = false;
-  const team = teamPanel({ recorded: true });
-  renderAudit(view, { audit: record.audit, meta: record.meta, source, team });
+  const team = teamStrip({ recorded: true });
+  renderAudit(view, { audit: record.audit, meta: record.meta, source, team, onBack: () => { location.hash = ""; } });
   record.audit.run.forEach(team.apply);
   team.finish(record.audit.run);
-  team.panel.append(h("button", { type: "button", class: "btn quiet", onclick: () => team.replay(record.audit.run) }, "Replay the run"));
+  team.replayBtn.addEventListener("click", () => team.replay(record.audit.run));
   document.title = `${record.audit.company.name.replace(/\s*\([^)]*\)\s*$/, "")} | First 90`;
   window.scrollTo(0, 0);
 }
@@ -71,19 +68,16 @@ async function readEvents(res, onEvent) {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const url = input.value.trim();
-  if (!url) return say("Enter a company website, like example.com.", "error");
+  if (!url) return say("Enter a site, like example.com.");
   await metaReady;
-  if (!meta.live) return say("Live plans are paused right now. Open a sample to see a full plan.", "error");
-
+  if (!meta.live) return say("Live plans paused. Try a sample.");
   btn.disabled = true;
   say("");
   landing.hidden = true;
   view.hidden = false;
-  const team = teamPanel({ recorded: false });
-  view.replaceChildren(h("div", { class: "result-head" }, h("a", { class: "back", href: "#" }, "New plan"), h("p", { class: "site" }, url), h("h1", {}, "Planning…")),
-    h("div", { class: "result-grid" }, h("div", { class: "result-main" }, h("p", { class: "headline" }, "The team is reading the site. Each step shows up as it finishes.")), team.panel));
+  const team = teamStrip({ recorded: false });
+  view.replaceChildren(h("div", { class: "r-head" }, h("h1", { class: "r-title" }, url), h("p", { class: "r-does" }, "Planning. About two minutes.")), team.panel);
   window.scrollTo(0, 0);
-
   try {
     const res = await fetch("api/plan", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ url }) });
     if (!res.ok) {
@@ -100,12 +94,12 @@ form.addEventListener("submit", async (e) => {
     if (failure) throw new Error(failure.message);
     if (!result) throw new Error("The plan did not finish. Try again.");
     session.set(result);
-    location.hash = "#plan";
     if (location.hash === "#plan") route();
+    else location.hash = "#plan";
   } catch (err) {
     location.hash = "";
     showLanding();
-    say(err.message, "error");
+    say(err.message);
   } finally {
     btn.disabled = false;
   }
@@ -120,7 +114,6 @@ async function route() {
       return showAudit(await res.json(), "sample");
     } catch {
       location.hash = "";
-      return showLanding();
     }
   }
   if (location.hash === "#plan") {
@@ -128,13 +121,15 @@ async function route() {
     if (last) return showAudit(last, "live");
   }
   showLanding();
+  if (location.hash === "#samples") document.getElementById("samples").scrollIntoView();
 }
 
-document.querySelectorAll("[data-home]").forEach((a) => a.addEventListener("click", (e) => {
+document.querySelector("[data-home]").addEventListener("click", (e) => {
   e.preventDefault();
   if (location.hash) location.hash = "";
   else showLanding();
-}));
+  window.scrollTo(0, 0);
+});
 window.addEventListener("hashchange", route);
 loadSamples().catch(() => {});
 route();

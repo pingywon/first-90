@@ -4,64 +4,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>First 90</title>
-<meta name="description" content="Paste a company's website. Get the first things worth automating there, how to measure each one, and what to ask in the interview.">
+<meta name="description" content="Any company site. A 90-day automation plan.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#edf1ee" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121a17" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg?v={{VERSION}}" type="image/svg+xml">
 <link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="kit.css?v={{VERSION}}">
 <link rel="stylesheet" href="styles.css?v={{VERSION}}">
 <script type="module" src="app.js?v={{VERSION}}"></script>
 </head>
 <body>
-<div class="wrap">
-  <header class="masthead">
-    <a class="wordmark" href="#" data-home>First <i>90</i></a>
-    <nav aria-label="Site"><a href="how.html">How it works</a></nav>
-  </header>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="./" data-home><span class="brand-mark" data-icon="target"></span>First 90</a>
+    <nav class="nav" aria-label="Site">
+      <a class="wide" href="#samples">Samples</a>
+      <a href="how.html">How it works</a>
+      <a class="wide" href="https://lab.meetdominic.me">Lab</a>
+      <button class="icon-btn" id="theme" type="button"></button>
+    </nav>
+  </div>
+</header>
 
-  <main id="landing" class="landing">
+<main id="landing" class="container">
+  <section class="hero">
     <div>
-      <h1>The first 90 days, planned from the outside.</h1>
-      <p class="lede">Paste a company's website. Get the first things worth automating there, how to measure each one, and what to ask in the interview.</p>
-
-      <form class="plan-form" id="plan-form" novalidate>
-        <label for="site-input">Company website</label>
-        <div class="field">
-          <input id="site-input" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="example.com">
-          <button class="btn" type="submit" id="plan-btn">Plan it</button>
+      <span class="eyebrow" data-icon="users">6-step AI team</span>
+      <h1 class="display">What to automate first.</h1>
+      <p class="sub">Any company site. A 90-day plan.</p>
+      <form class="card stack-4" id="plan-form" novalidate>
+        <label class="field"><span>Company site</span>
+          <input class="input" id="site-input" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="example.com">
+        </label>
+        <div class="row">
+          <button class="btn" type="submit" id="plan-btn" data-icon="bolt">Plan it</button>
+          <span class="help">Reads up to 7 public pages</span>
         </div>
-        <p class="form-hint">Reads a handful of public pages. Takes about two minutes.</p>
         <p class="notice" id="form-notice" role="status" hidden></p>
       </form>
-
-      <section class="samples" aria-labelledby="samples-title">
-        <h2 id="samples-title">Or open a sample plan</h2>
-        <ul class="sample-list" id="sample-list"></ul>
-      </section>
     </div>
+    <div id="preview" aria-label="Example plan"></div>
+  </section>
 
-    <figure class="board" aria-label="A 90-day plan in three phases">
-      <div class="board-grid fill" id="hero-board" aria-hidden="true"></div>
-      <dl class="board-key">
-        <div><dt>Days 1 to 30</dt><dd>Measure and pilot</dd></div>
-        <div><dt>Days 31 to 60</dt><dd>Roll out</dd></div>
-        <div><dt>Days 61 to 90</dt><dd>Prove the result</dd></div>
-      </dl>
-      <figcaption>Every plan ends with a number to beat, a way to measure it in week one, and the questions that would prove it wrong.</figcaption>
-    </figure>
-  </main>
+  <section class="section" id="samples">
+    <div class="section-h"><h2>Sample plans</h2></div>
+    <div class="grid three" id="sample-list"></div>
+  </section>
 
-  <main id="result-view" class="result" hidden></main>
-</div>
+  <section class="section">
+    <div class="section-h"><h2>The AI team</h2></div>
+    <div class="steps six">
+      <div class="step"><span class="ic" data-icon="search"></span><b>Scout</b><small>Picks the pages</small></div>
+      <div class="step"><span class="ic" data-icon="doc"></span><b>Reader</b><small>Strips menus</small></div>
+      <div class="step"><span class="ic" data-icon="eye"></span><b>Analyst</b><small>Spots manual work</small></div>
+      <div class="step"><span class="ic" data-icon="route"></span><b>Planner</b><small>Ranks the ideas</small></div>
+      <div class="step"><span class="ic" data-icon="flag"></span><b>Skeptic</b><small>Cuts weak ideas</small></div>
+      <div class="step"><span class="ic" data-icon="shield"></span><b>Checker</b><small>Verifies quotes</small></div>
+    </div>
+  </section>
+</main>
 
-<footer class="site">
-  <div class="wrap">
-    <p>An outside view from public pages. First 90 v{{VERSION}}</p>
-    <nav aria-label="Footer">
-      <a href="how.html">How it works</a>
-      <a href="https://github.com/pingywon/first-90">Source</a>
-    </nav>
+<main id="result-view" class="container view" hidden></main>
+
+<footer class="foot">
+  <div class="container">
+    <span>Outside view from public pages. First 90 v{{VERSION}}</span>
+    <nav aria-label="Footer"><a href="how.html">How it works</a><a href="https://lab.meetdominic.me">Lab</a><a href="https://github.com/pingywon/first-90">GitHub</a></nav>
   </div>
 </footer>
 </body>

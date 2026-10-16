@@ -1,186 +1,189 @@
-export function h(tag, attrs = {}, ...children) {
-  const el = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs || {})) {
-    if (v === false || v == null) continue;
-    if (k === "class") el.className = v;
-    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
-    else el.setAttribute(k, v === true ? "" : v);
-  }
-  for (const c of children.flat()) {
-    if (c == null || c === false) continue;
-    el.append(c instanceof Node ? c : document.createTextNode(String(c)));
-  }
-  return el;
-}
+import { h, icon } from "./kit.js";
 
 export const STEPS = [
-  { step: "scout", label: "Scout", job: "Finds the pages worth reading" },
-  { step: "reader", label: "Reader", job: "Turns them into plain text" },
-  { step: "analyst", label: "Analyst", job: "Notes signs of manual work" },
-  { step: "planner", label: "Planner", job: "Drafts the 90-day plan" },
-  { step: "skeptic", label: "Skeptic", job: "Challenges every idea" },
-  { step: "checker", label: "Checker", job: "Matches every quote to its page" },
+  { step: "scout", label: "Scout" },
+  { step: "reader", label: "Reader" },
+  { step: "analyst", label: "Analyst" },
+  { step: "planner", label: "Planner" },
+  { step: "skeptic", label: "Skeptic" },
+  { step: "checker", label: "Checker" },
 ];
 
-const secs = (ms) => (ms < 1000 ? "<1s" : `${Math.round(ms / 1000)}s`);
+const secs = (ms) => (ms == null ? "" : ms < 1000 ? "<1s" : `${Math.round(ms / 1000)}s`);
+const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
+const cleanName = (n) => n.replace(/\s*\([^)]*\)\s*$/, "").trim() || n;
 const path = (url) => {
-  try {
-    const u = new URL(url);
-    return u.pathname === "/" ? u.hostname.replace(/^www\./, "") : u.pathname.replace(/\/$/, "");
-  } catch {
-    return url;
-  }
+  try { const u = new URL(url); return u.pathname === "/" ? "home" : u.pathname.replace(/\/$/, ""); } catch { return url; }
 };
 
-export function boardSquares(el, { animate = true } = {}) {
-  el.replaceChildren(...Array.from({ length: 90 }, (_, i) => {
-    const day = i + 1;
-    const span = h("span", { class: `${day <= 30 ? "p1" : day <= 60 ? "p2" : "p3"}${day % 30 === 0 ? " mark" : ""}` });
-    if (animate) span.style.animationDelay = `${i * 12}ms`;
-    return span;
-  }));
-}
-
-// The team panel. Returns an updater for live runs and a replay for recorded ones.
-export function teamPanel({ recorded }) {
+// The AI team strip. Live runs update it step by step; recorded runs can replay.
+export function teamStrip({ recorded }) {
   const rows = new Map();
   const list = h("ol", {}, STEPS.map((s) => {
-    const what = h("span", { class: "what" }, s.job);
-    const time = h("span", { class: "secs" }, "");
-    const li = h("li", { class: "waiting" }, h("span", { class: "dot", "aria-hidden": "true" }), h("div", {}, h("span", { class: "who" }, s.label), what), time);
-    rows.set(s.step, { li, what, time, job: s.job });
+    const time = h("small", {}, "Waiting");
+    const li = h("li", { class: "waiting" }, h("b", {}, s.label), time);
+    rows.set(s.step, { li, time });
     return li;
   }));
-  const total = h("p", { class: "total" });
-  const panel = h("aside", { class: "team", "aria-label": "How this plan was made" },
-    h("h2", {}, "The team"),
-    h("p", { class: "sub" }, recorded ? "A recorded run of this plan." : "Working on it now."),
-    list, total);
-
+  const total = h("span", { class: "count" }, "");
+  const replayBtn = h("button", { type: "button", class: "btn ghost sm", hidden: !recorded }, icon("play"), "Replay");
+  const panel = h("section", { class: "card team", "aria-label": "AI team" },
+    h("div", { class: "card-h" }, h("h2", {}, icon("users"), "AI team ", total), replayBtn), list);
   const apply = (e) => {
     const r = rows.get(e.step);
     if (!r) return;
-    if (e.status === "start") {
-      r.li.className = "working";
-      r.what.textContent = `${r.job}…`;
-    } else {
-      r.li.className = "done";
-      r.what.textContent = e.detail || r.job;
-      if (e.ms != null) r.time.textContent = secs(e.ms);
-    }
+    r.li.className = e.status === "start" ? "working" : "done";
+    r.time.textContent = e.status === "start" ? "Working" : secs(e.ms);
   };
-  const reset = () => rows.forEach((r) => { r.li.className = "waiting"; r.what.textContent = r.job; r.time.textContent = ""; });
+  const reset = () => rows.forEach((r) => { r.li.className = "waiting"; r.time.textContent = "Waiting"; });
   const finish = (run) => {
     const ms = run.filter((e) => e.status === "done").reduce((n, e) => n + (e.ms || 0), 0);
-    total.textContent = `Total ${Math.round(ms / 1000)} seconds, 3 model calls, ${STEPS.length} steps.`;
+    total.textContent = `${Math.round(ms / 1000)}s`;
   };
-
-  let replaying = false;
-  const replay = async (run, speed = 12) => {
-    if (replaying) return;
-    replaying = true;
+  let busy = false;
+  const replay = async (run) => {
+    if (busy) return;
+    busy = true;
     reset();
     total.textContent = "";
     for (const e of run) {
-      if (e.status === "done") await new Promise((r) => setTimeout(r, Math.min(2200, Math.max(250, (e.ms || 0) / speed))));
+      if (e.status === "done") await new Promise((r) => setTimeout(r, Math.min(1800, Math.max(250, (e.ms || 0) / 14))));
       apply(e);
     }
     finish(run);
-    replaying = false;
+    busy = false;
   };
-  return { panel, apply, finish, replay, reset };
+  return { panel, apply, finish, replay, replayBtn };
 }
 
-export function renderAudit(root, { audit, meta, source, team }) {
-  root.replaceChildren();
-  const c = { ...audit.company, name: audit.company.name.replace(/\s*\([^)]*\)\s*$/, "").trim() || audit.company.name };
-  const read = meta?.generated_at ? new Date(meta.generated_at).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "today";
-  root.append(h("div", { class: "result-head" },
-    h("a", { class: "back", href: "#" }, "New plan"),
-    h("p", { class: "site" }, audit.site),
-    h("h1", {}, c.name),
-    h("p", { class: "basis" }, `${source === "sample" ? "Sample plan. " : ""}An outside view from ${audit.pages.length} public pages, read ${read}. ${audit.stats.found} of ${audit.stats.quotes} quotes found on their pages.`),
-    h("p", { class: "headline" }, audit.headline),
+const EFFORT = { small: 0.18, medium: 0.4, large: 0.8 };
+const IMPACT = { small: 0.18, medium: 0.6, large: 0.84 };
+
+function matrix(opps) {
+  const W = 320, H = 240, pad = 26;
+  const cw = (W - pad) / 2, ch = (H - pad) / 2;
+  const svg = h("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Impact versus effort chart" });
+  const quads = [
+    { x: pad, y: 0, label: "Quick wins", win: true },
+    { x: pad + cw, y: 0, label: "Big bets" },
+    { x: pad, y: ch, label: "Fill-ins" },
+    { x: pad + cw, y: ch, label: "Skip" },
+  ];
+  for (const q of quads) {
+    svg.append(h("rect", { class: `q${q.win ? " win" : ""}`, x: q.x + 1, y: q.y + 1, width: cw - 2, height: ch - 2, rx: 8 }));
+    svg.append(h("text", { class: "ql", x: q.x + 10, y: q.y + 18 }, q.label));
+  }
+  svg.append(h("text", { class: "ax", x: pad + cw, y: H - 6, "text-anchor": "middle" }, "Effort"));
+  svg.append(h("text", { class: "ax", x: 12, y: ch, "text-anchor": "middle", transform: `rotate(-90 12 ${ch})` }, "Impact"));
+  const used = new Map();
+  opps.forEach((o, i) => {
+    const ex = EFFORT[o.effort] ?? 0.4;
+    const im = IMPACT[o.impact] ?? 0.6;
+    const key = `${ex}-${im}`;
+    const k = used.get(key) || 0;
+    used.set(key, k + 1);
+    const x = pad + ex * (W - pad) + k * 28;
+    const y = (1 - im) * (H - pad) + k * 4;
+    svg.append(h("circle", { class: "dot", cx: x, cy: y, r: 13 }));
+    svg.append(h("text", { class: "dot-n", x, y: y + 4.5, "text-anchor": "middle" }, String(i + 1)));
+  });
+  return svg;
+}
+
+const tile = (k, v, cls, ic) => h("div", { class: `tile ${cls || ""}` }, h("span", { class: "k" }, icon(ic), k), h("span", { class: "v small" }, v));
+
+export function renderPreview(root, record) {
+  const a = record.audit;
+  const o = a.opportunities[0];
+  root.replaceChildren(h("div", { class: "card stack-4" },
+    h("div", { class: "pv-head" }, h("b", {}, cleanName(a.company.name)), h("span", { class: "chip ok" }, icon("check"), `${a.stats.found}/${a.stats.quotes} quotes`)),
+    h("div", { class: "pv-one" }, h("span", { class: "rk" }, "#1"), h("div", {}, h("b", {}, o.title), h("small", {}, o.measure.target))),
+    h("div", { class: "matrix" }, matrix(a.opportunities)),
+  ));
+}
+
+export function renderAudit(root, { audit, meta, source, team, onBack }) {
+  const name = cleanName(audit.company.name);
+  const flash = (n) => {
+    const t = root.querySelector(`#signal-${n}`);
+    if (!t) return;
+    const box = root.querySelector("#evidence");
+    if (box && !box.open) box.open = true;
+    t.scrollIntoView({ block: "start", behavior: "smooth" });
+    t.classList.add("lit");
+    setTimeout(() => t.classList.remove("lit"), 1800);
+  };
+  const read = meta?.generated_at ? new Date(meta.generated_at).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "today";
+  root.replaceChildren(h("div", { class: "r-head" },
+    h("div", { class: "bar" },
+      h("button", { type: "button", class: "btn ghost sm", onclick: onBack }, icon("arrowLeft"), "New"),
+      h("span", { class: "chip accent" }, icon("globe"), audit.site),
+      source === "sample" ? h("span", { class: "chip" }, "Sample") : null,
+    ),
+    h("h1", { class: "r-title" }, name),
+    audit.company.what_they_do ? h("p", { class: "r-does" }, audit.company.what_they_do) : null,
   ));
 
-  const main = h("div", { class: "result-main" });
-  const grid = h("div", { class: "result-grid" }, main);
-  if (team) grid.append(team.panel);
-  root.append(grid);
+  if (team) root.append(team.panel);
 
-  const block = (title, ...body) => h("section", { class: "block" }, h("h2", {}, title), ...body);
+  const one = audit.opportunities[0];
+  root.append(h("section", { class: "card top" },
+    h("span", { class: "rk" }, "1"),
+    h("div", {}, h("span", { class: "lbl" }, "Automate first"), h("h2", { class: "top-title" }, one.title), h("p", {}, one.problem)),
+    h("div", { class: "goal" }, h("small", {}, "90-day goal"), h("b", {}, one.measure.target)),
+  ));
 
-  main.append(block("What they do", h("dl", { class: "facts" },
-    [["Business", c.what_they_do], ["Customers", c.customers], ["How they sell", c.how_they_sell], ["Size", c.size_hints]]
-      .filter(([, v]) => v && v.trim())
-      .map(([k, v]) => h("div", {}, h("dt", {}, k), h("dd", {}, v))),
-  )));
+  root.append(h("div", { class: "tiles" },
+    tile("Ideas", String(audit.opportunities.length), "accent", "bolt"),
+    tile("Pages read", String(audit.pages.length), "", "doc"),
+    tile("Signs found", String(audit.signals.length), "", "eye"),
+    tile("Quotes checked", `${audit.stats.found}/${audit.stats.quotes}`, audit.stats.found === audit.stats.quotes ? "ok" : "bad", "shield"),
+  ));
 
-  const signalLink = (n) => {
-    const s = audit.signals[n - 1];
-    return s ? h("a", { href: `#signal-${n}`, onclick: (e) => { e.preventDefault(); const t = root.querySelector(`#signal-${n}`); t?.scrollIntoView({ block: "start", behavior: "smooth" }); t?.classList.add("lit"); setTimeout(() => t?.classList.remove("lit"), 1600); } }, `#${n}`) : null;
-  };
-
-  main.append(block("The plan", h("ol", { class: "opps" }, audit.opportunities.map((o, i) => h("li", { class: "opp" },
-    h("span", { class: "rank", "aria-hidden": "true" }, String(i + 1)),
-    h("div", {},
-      h("h3", {}, o.title),
-      h("p", { class: "tags" },
-        h("span", {}, "Impact ", h("b", {}, o.impact)),
-        h("span", {}, "Effort ", h("b", {}, o.effort)),
-        h("span", { class: o.confidence === "low" ? "low" : "" }, "Confidence ", h("b", {}, o.confidence)),
-      ),
-      h("p", {}, o.problem),
-      h("p", {}, h("span", { class: "label" }, "How: "), o.approach),
-      h("div", { class: "measure" }, h("dl", {},
-        h("dt", {}, "Measure"), h("dd", {}, o.measure.metric),
-        h("dt", {}, "Baseline in week 1"), h("dd", {}, o.measure.baseline),
-        h("dt", {}, "Target by day 90"), h("dd", {}, o.measure.target),
-      )),
-      h("ol", { class: "phases", "aria-label": "Milestones" },
-        h("li", {}, h("b", {}, "Day 30"), o.days_30),
-        h("li", {}, h("b", {}, "Day 60"), o.days_60),
-        h("li", {}, h("b", {}, "Day 90"), o.days_90),
-      ),
-      o.signals.length ? h("p", { class: "rests" }, "Based on signs ", o.signals.map(signalLink)) : null,
-      o.assumption || o.ask ? h("div", { class: "assume" },
-        o.assumption ? h("p", {}, h("span", { class: "label" }, "Assumes: "), o.assumption) : null,
-        o.ask ? h("p", {}, h("span", { class: "label" }, "Ask: "), o.ask) : null,
-      ) : null,
+  root.append(h("div", { class: "grid two" },
+    h("section", { class: "card matrix" }, h("div", { class: "card-h" }, h("h2", {}, icon("target"), "Impact vs effort")), matrix(audit.opportunities)),
+    h("section", { class: "card" }, h("div", { class: "card-h" }, h("h2", {}, icon("calendar"), "90-day roadmap")),
+      h("div", { class: "road" }, [["Day 30", "days_30"], ["Day 60", "days_60"], ["Day 90", "days_90"]].map(([t, k]) => h("section", {},
+        h("h3", {}, t), h("ul", {}, audit.opportunities.map((o, i) => h("li", {}, h("i", {}, String(i + 1)), h("span", {}, o[k]))))))),
     ),
-  )))));
+  ));
 
-  main.append(block("By day 30, 60 and 90", h("div", { class: "by-day" },
-    [["By day 30", "days_30"], ["By day 60", "days_60"], ["By day 90", "days_90"]].map(([title, key]) => h("section", {},
-      h("h3", {}, title),
-      h("ul", {}, audit.opportunities.map((o) => h("li", {}, o[key]))),
-    )),
-  )));
+  root.append(h("section", { class: "section" },
+    h("div", { class: "section-h" }, h("h2", {}, "The plan")),
+    h("div", { class: "grid three" }, audit.opportunities.map((o, i) => h("article", { class: "card opp" },
+      h("div", { class: "opp-h" }, h("span", { class: "rk" }, String(i + 1)), h("h3", {}, o.title)),
+      h("div", { class: "chips" },
+        h("span", { class: "chip accent" }, `Impact ${o.impact}`),
+        h("span", { class: "chip" }, `Effort ${o.effort}`),
+        h("span", { class: `chip ${o.confidence === "low" ? "warn" : o.confidence === "high" ? "ok" : ""}` }, `${cap(o.confidence)} confidence`),
+      ),
+      h("dl", { class: "kv" },
+        h("div", {}, h("dt", {}, "Today"), h("dd", {}, o.problem)),
+        h("div", {}, h("dt", {}, "Fix"), h("dd", {}, o.approach)),
+        h("div", {}, h("dt", {}, "Measure"), h("dd", {}, o.measure.metric)),
+        h("div", {}, h("dt", {}, "Goal"), h("dd", {}, h("b", {}, o.measure.target))),
+      ),
+      o.ask ? h("p", { class: "ask" }, h("b", {}, "Ask: "), o.ask) : null,
+      o.signals.length ? h("p", { class: "evid" }, "Evidence", o.signals.map((n) => h("a", { href: `#signal-${n}`, onclick: (e) => { e.preventDefault(); flash(n); } }, `#${n}`))) : null,
+    ))),
+  ));
 
-  main.append(block("Signs of manual work", h("ol", { class: "signals" }, audit.signals.map((s) => h("li", { id: `signal-${s.n}` },
-    h("span", { class: "n" }, `#${s.n}`),
-    h("div", {},
-      h("p", {}, s.observation),
-      h("blockquote", {}, s.quote),
-      h("p", { class: "src" }, s.source
-        ? [h("span", { class: "ok" }, "Found on "), h("a", { href: s.source.url, rel: "noopener" }, path(s.source.url))]
-        : h("span", { class: "miss" }, "Not found word for word on the pages. Treat with care.")),
-    ),
-  )))));
+  root.append(h("div", { class: "grid two" },
+    h("section", { class: "card" }, h("div", { class: "card-h" }, h("h2", {}, icon("chat"), "Interview questions")),
+      h("ol", { class: "qs" }, audit.questions.slice(0, 6).map((q) => h("li", {}, q)))),
+    h("details", { class: "card more", id: "evidence" },
+      h("summary", {}, h("span", {}, "Evidence ", h("span", { class: "count" }, `(${audit.signals.length})`))),
+      h("ol", { class: "signals" }, audit.signals.map((s) => h("li", { id: `signal-${s.n}` },
+        h("span", { class: "n" }, `#${s.n}`),
+        h("div", {},
+          h("p", {}, s.observation),
+          h("q", {}, s.quote),
+          s.source
+            ? h("span", { class: "src" }, icon("check"), "Found on", h("a", { href: s.source.url, rel: "noopener" }, path(s.source.url)))
+            : h("span", { class: "src miss" }, "Not found word for word"),
+        ),
+      )))),
+  ));
 
-  if (audit.tools.length) {
-    main.append(block("Tools they mention", h("ul", { class: "questions" }, audit.tools.map((t) => h("li", {}, h("b", {}, t.name), `: “${t.quote}”`)))));
-  }
-
-  main.append(block("Questions for the interview", h("ol", { class: "questions" }, audit.questions.map((q) => h("li", {}, q)))));
-
-  if (audit.dropped.length) {
-    main.append(block("Cut by the skeptic", h("ul", { class: "dropped" }, audit.dropped.map((d) => h("li", {}, h("b", {}, d.title), d.reason ? `. ${d.reason}` : "")))));
-  }
-
-  main.append(block("Pages read", h("ul", { class: "pages" }, audit.pages.map((p) => h("li", {},
-    h("a", { href: p.url, rel: "noopener" }, path(p.url)), h("span", {}, `${p.words.toLocaleString("en-US")} words`),
-  )))));
-
-  main.append(h("p", { class: "fine" }, `${audit.caveat} Not affiliated with or reviewed by ${c.name}. Written by Claude from public pages; check the sources before relying on it.`));
+  root.append(h("p", { class: "fine" }, `${source === "sample" ? "Sample. " : ""}Read ${read} from ${audit.pages.length} public pages. ${audit.caveat} Not affiliated with ${name}.`));
 }

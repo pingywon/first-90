@@ -5,18 +5,18 @@
  "audit": {
   "site": "basecamp.com",
   "company": {
-   "name": "Basecamp (made by 37signals)",
-   "what_they_do": "Basecamp is web-based project management software. It puts to-dos, message boards, chat, calendars, card tables, files and check-ins in one place for each project.",
-   "customers": "Companies, teams, freelancers and studios that manage projects and work with clients. The plans range from a free personal plan to an Unlimited plan for larger organizations.",
-   "how_they_sell": "Mostly self-serve online. There is a free plan, 30-day or 45-day free trials, and fixed monthly or annual prices with no per-user fees. Personal demos can be booked with the team. Support runs through a web form, around the clock on paid plans, with priority support and personalized onboarding on the top plan. Customers cancel on their own without contacting anyone.",
-   "size_hints": "In business for 27 years, privately held and debt-free. 2,026 organizations signed up in one week. Tens of thousands of companies use the product. More than 200,000 newsletter subscribers."
+   "name": "Basecamp",
+   "what_they_do": "Project management and team communication software",
+   "customers": "Teams, companies and freelancers working with clients",
+   "how_they_sell": "Self-serve online signup, free plan, trials, optional demos",
+   "size_hints": "27 years in business, privately held, 2,026 signups last week"
   },
-  "headline": "The first thing worth automating at Basecamp is sorting contact form messages and matching them to accounts, because every pre-sales, support and priority request goes into one hand-sorted queue that the site says is running slower than usual.",
-  "caveat": "37signals builds its own tools and often does things by hand on purpose, so the website cannot show what in-house automation already exists or which manual steps the company wants to keep.",
+  "headline": "The first thing worth automating at Basecamp is support triage and drafted replies to shorten web form wait times.",
+  "caveat": "Public pages show stated practices, not ticket volumes, staffing, or which manual steps are deliberate choices.",
   "signals": [
    {
-    "observation": "Pre-sales questions, help requests and other questions all go through one contact form to the team. Someone has to sort each one by hand.",
-    "quote": "For pre-sales questions, customers who need a hand, or other inquiries, reach out to our team.",
+    "observation": "Support runs through a web form, and replies are slower right now",
+    "quote": "We read and respond to every message, though response times may be a bit longer than usual right now.",
     "page": 4,
     "n": 1,
     "source": {
@@ -26,8 +26,8 @@
     }
    },
    {
-    "observation": "Every message gets a personal reply, and the page warns that replies are slower than usual. This points to a support backlog.",
-    "quote": "We read and respond to every message, though response times may be a bit longer than usual right now.",
+    "observation": "Support form relies on customers typing in long free-text details",
+    "quote": "Share all the details. The more we know, the better we can help you.",
     "page": 4,
     "n": 2,
     "source": {
@@ -37,19 +37,19 @@
     }
    },
    {
-    "observation": "The support form asks for an email and account URL typed in by hand. Staff then have to match each request to an account.",
-    "quote": "This is where we’ll get back to you. Double check that it’s right.",
-    "page": 4,
+    "observation": "Demos and live Q&A sessions are booked with staff",
+    "quote": "Want a walkthrough? Live Q&A session? Book a personal demo with our team.",
+    "page": 2,
     "n": 3,
     "source": {
-     "page": 4,
-     "url": "https://basecamp.com/support",
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
      "match": "exact"
     }
    },
    {
-    "observation": "Demos and live Q&A sessions are booked with the team one at a time.",
-    "quote": "Want a walkthrough? Live Q&A session? Book a personal demo with our team.",
+    "observation": "Top-tier onboarding is done by staff, one team at a time",
+    "quote": "One of our experts is happy to walk your team through Basecamp to get you up to speed.",
     "page": 2,
     "n": 4,
     "source": {
@@ -59,8 +59,8 @@
     }
    },
    {
-    "observation": "Top-plan customers get onboarding walkthroughs from staff. Each one takes staff time.",
-    "quote": "One of our experts is happy to walk your team through Basecamp to get you up to speed.",
+    "observation": "Annual billing accepts check, ACH and wire payments",
+    "quote": "Annual billing by check, ACH, wire, or credit card.",
     "page": 2,
     "n": 5,
     "source": {
@@ -70,32 +70,10 @@
     }
    },
    {
-    "observation": "Annual billing can be paid by check, ACH or wire. These payments usually need manual matching and reconciliation.",
-    "quote": "Annual billing by check, ACH, wire, or credit card.",
-    "page": 2,
-    "n": 6,
-    "source": {
-     "page": 2,
-     "url": "https://basecamp.com/pricing",
-     "match": "exact"
-    }
-   },
-   {
-    "observation": "Priority support moves top-plan tickets to the front of a shared queue. That requires sorting tickets by plan.",
-    "quote": "Jump to the front of the queue when you contact support.",
-    "page": 2,
-    "n": 7,
-    "source": {
-     "page": 2,
-     "url": "https://basecamp.com/pricing",
-     "match": "exact"
-    }
-   },
-   {
-    "observation": "The CEO invites questions by direct email, which adds an inbox that has to be read by hand.",
+    "observation": "Customers are invited to email the CEO directly with questions",
     "quote": "You can always contact me directly if you have any questions at jason@basecamp.com",
     "page": 3,
-    "n": 8,
+    "n": 6,
     "source": {
      "page": 3,
      "url": "https://basecamp.com/about",
@@ -103,8 +81,30 @@
     }
    },
    {
-    "observation": "Support passes customer feedback on new features to the developers who built them, one item at a time.",
+    "observation": "Developers take support feedback by hand after each launch",
     "quote": "Be the first port of call for support when they get feedback from customers.",
+    "page": 6,
+    "n": 7,
+    "source": {
+     "page": 6,
+     "url": "https://basecamp.com/guides/seven-shipping-principles",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Error tracker is watched by people after launches",
+    "quote": "Pay attention to the error tracker for a while after launching.",
+    "page": 6,
+    "n": 8,
+    "source": {
+     "page": 6,
+     "url": "https://basecamp.com/guides/seven-shipping-principles",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Customer feedback beyond fixes gets filed and weighed later",
+    "quote": "all the feedback that goes beyond that is filed for consideration against all the other ideas and claims for our time.",
     "page": 6,
     "n": 9,
     "source": {
@@ -114,159 +114,156 @@
     }
    },
    {
-    "observation": "Feedback beyond fixes is logged and weighed against other ideas. This is a manual triage step.",
-    "quote": "all the feedback that goes beyond that is filed for consideration against all the other ideas and claims for our time.",
-    "page": 6,
+    "observation": "User limits force a plan upgrade past 20 people",
+    "quote": "If you want to invite more than 20 people, you’ll need to upgrade to a higher package.",
+    "page": 2,
     "n": 10,
     "source": {
-     "page": 6,
-     "url": "https://basecamp.com/guides/seven-shipping-principles",
-     "match": "exact"
-    }
-   },
-   {
-    "observation": "After each launch, developers watch the error tracker themselves for a while.",
-    "quote": "Pay attention to the error tracker for a while after launching.",
-    "page": 6,
-    "n": 11,
-    "source": {
-     "page": 6,
-     "url": "https://basecamp.com/guides/seven-shipping-principles",
-     "match": "exact"
-    }
-   },
-   {
-    "observation": "Riskier releases wait for manual exploratory testing by QA, which can hold up shipping.",
-    "quote": "If you need exploratory testing done by QA to feel confident that your work is solid enough for the criticality at stake",
-    "page": 6,
-    "n": 12,
-    "source": {
-     "page": 6,
-     "url": "https://basecamp.com/guides/seven-shipping-principles",
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
      "match": "exact"
     }
    }
   ],
   "tools": [
    {
-    "name": "Basecamp",
-    "quote": "So we had to build our own project management system from scratch.",
-    "page": 3,
+    "name": "ChatGPT and Claude connectors (MCP)",
+    "quote": "Official Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.",
+    "page": 2,
     "source": {
-     "page": 3,
-     "url": "https://basecamp.com/about",
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
      "match": "exact"
     }
    },
    {
-    "name": "Zoom",
-    "quote": "Weekly Meeting Link https://basecamp.zoom.us/j/87050254412",
-    "page": 1,
+    "name": "Outlook, Google Calendar, HEY Calendar",
+    "quote": "you can subscribe in Outlook, Google Calendar, HEY Calendar, and more.",
+    "page": 5,
     "source": {
-     "page": 1,
-     "url": "https://basecamp.com/",
+     "page": 5,
+     "url": "https://basecamp.com/features",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Figma, Google Docs, Dropbox",
+    "quote": "even cloud files from Figma, Google Docs, and Dropbox neatly organized inside your projects.",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://basecamp.com/features",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Basecamp API and CLI",
+    "quote": "Connect other services with the Basecamp API , add 3rd party integrations , work from the command line (CLI)",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://basecamp.com/features",
      "match": "exact"
     }
    }
   ],
   "opportunities": [
    {
-    "title": "Sort and account-match contact form messages",
-    "problem": "Pre-sales questions, help requests and other questions all arrive through one form. Staff sort each message by hand, match a typed email and account URL to an account, and pull top-plan tickets to the front, while the page warns that replies are slower than usual.",
+    "title": "Support triage and draft replies",
+    "problem": "Free-text web form tickets wait longer than usual for a first reply.",
     "signals": [
      1,
-     2,
-     3,
-     7,
-     8
+     2
     ],
-    "approach": "When a form is submitted, look up the email and account URL in the account database and attach the plan, status and account link to the ticket. Rules first, with a language model classifier only if needed, tag each message as pre-sales, support, billing or feedback and send it to the right queue, with top-plan tickets flagged as priority. Mail to the CEO's direct address can be forwarded into the same flow.",
+    "approach": "Add structured form fields, auto-tag topics, and draft replies from help docs for staff review.",
     "measure": {
-     "metric": "Median time from form submit to first human reply, split by category and plan, plus share of messages matched to an account with no staff lookup",
-     "baseline": "In week 1, pull submit and first-reply timestamps for the last 4 weeks of form messages from the support tool, and time a sample of manual sorts and account lookups",
-     "target": "Cut median first reply time by at least a third from the measured baseline, and match at least 80% of messages to an account automatically"
+     "metric": "Median first reply time",
+     "baseline": "Median hours to first reply across all tickets in week 1.",
+     "target": "Median first reply time cut by half"
     },
     "effort": "medium",
     "impact": "large",
-    "days_30": "Baseline measured, account lookup live, plan shown on every ticket.",
-    "days_60": "Category tags and priority routing live, misroutes reviewed weekly with support leads.",
-    "days_90": "CEO inbox folded in, before and after reply times reported to support.",
+    "days_30": "Form fields and topic tags live",
+    "days_60": "Draft replies used on top topics",
+    "days_90": "First reply time halved, results reported",
     "rank": 1,
     "confidence": "medium",
-    "assumption": "The plan assumes staff sort and match each form message by hand today, when 37signals may already route tickets with its own in-house tools and the slow-reply notice may reflect a short-term staffing gap.",
-    "ask": "When a form message comes in today, what happens before a person reads it, and how much of a support person's time goes to sorting and looking up accounts rather than answering?"
+    "assumption": "Slow replies are lasting and caused by ticket volume, not a short-term gap.",
+    "ask": "What is your median first reply time now, and what caused the recent slowdown?"
    },
    {
-    "title": "Match check, ACH and wire payments to annual invoices",
-    "problem": "Annual plans can be paid by check, ACH or wire, and these payments usually need someone to match each deposit to an invoice and account by hand. Slow matching can leave paid accounts looking unpaid and delay revenue reporting.",
+    "title": "Demo booking and onboarding sessions",
+    "problem": "Staff book demos, Q&A sessions and onboarding one team at a time.",
     "signals": [
-     6
+     3,
+     4
     ],
-    "approach": "Pull bank deposit data each day and match it to open invoices by invoice number, amount and payer name. Clear matches mark the invoice and account as paid, and unclear ones go to a short review list for finance.",
+    "approach": "Self-serve scheduling with intake form, reminders, and recorded group walkthroughs for common questions.",
     "measure": {
-     "metric": "Share of non-card payments matched with no manual work, and days from deposit to account marked paid",
-     "baseline": "In week 1, count last quarter's check, ACH and wire payments from bank and billing records and log how long each took to apply",
-     "target": "Match most clean payments automatically and apply them within one business day of the deposit"
+     "metric": "Staff hours per demo",
+     "baseline": "Count demos booked and staff minutes spent, including back-and-forth email.",
+     "target": "Staff time per demo down by a third"
     },
     "effort": "medium",
     "impact": "medium",
-    "days_30": "Payment volume and time-to-apply measured, match rules agreed with finance.",
-    "days_60": "Daily matching running alongside the manual process for checking.",
-    "days_90": "Automatic posting live for clean matches, review list for the rest.",
+    "days_30": "Booking page and intake form live",
+    "days_60": "Reminders and group sessions running",
+    "days_90": "Show rate and staff hours reported",
     "rank": 2,
     "confidence": "low",
-    "assumption": "The plan assumes enough annual customers pay by check, ACH or wire to make manual matching a real cost, but the site only shows that these payment options exist.",
-    "ask": "How many check, ACH and wire payments do you get each month, and how long does it take to mark one as paid?"
+    "assumption": "Demo booking is manual today and demo volume is high enough to matter.",
+    "ask": "How many demos and onboarding calls run each week, and how are they booked?"
    },
    {
-    "title": "Route feature feedback to the right team and idea log",
-    "problem": "Support passes feedback on new features to the developers who built them one item at a time. Feedback beyond fixes is filed by hand to be weighed later, which takes support time and hides how often the same request comes up.",
+    "title": "Post-launch feedback and error routing",
+    "problem": "Developers watch error trackers and sort launch feedback by hand.",
     "signals": [
-     9,
-     10
+     7,
+     8,
+     9
     ],
-    "approach": "Support tags a ticket with the feature name, and the feedback posts automatically to that feature's Basecamp project with customer and plan attached. Requests that are not fixes go to a shared idea log that groups duplicates and keeps a count.",
+    "approach": "Tag tickets by launch, alert on error spikes, file ideas to Basecamp via API.",
     "measure": {
-     "metric": "Time from ticket to feedback showing in the feature's Basecamp project, and support minutes spent forwarding",
-     "baseline": "In week 1, sample recent forwarded feedback and time each handoff from ticket to developer",
-     "target": "Feedback reaches the right project within minutes of tagging, with no manual forwarding"
+     "metric": "Developer hours on triage",
+     "baseline": "Log developer hours on feedback and errors during week 1.",
+     "target": "Triage hours per launch cut by half"
     },
-    "effort": "small",
+    "effort": "medium",
     "impact": "medium",
-    "days_30": "Feature tag list agreed with support and product, handoff time measured.",
-    "days_60": "Auto-posting to Basecamp projects live for new features.",
-    "days_90": "Idea log with duplicate counts in use for planning.",
+    "days_30": "Launch tags and error alerts set up",
+    "days_60": "Ideas filed automatically to one project",
+    "days_90": "Two launches compared against baseline",
     "rank": 4,
     "confidence": "medium",
-    "assumption": "The plan assumes forwarding feedback and filing ideas takes real support time, when the handbook may describe a choice to have people read and weigh feedback by hand.",
-    "ask": "How does a piece of feature feedback get from a support ticket to the right developer today, and do you know how often the same request comes up?"
+    "assumption": "Hand triage is a cost to cut, not a practice developers value.",
+    "ask": "How many developer hours does each launch spend on feedback and watching errors?"
    }
   ],
   "dropped": [
    {
-    "title": "Self-serve booking and prep for demos and onboarding",
-    "reason": "The plan assumes demos and onboarding calls are frequent and slow to book, when most customers sign up on their own and these calls may be rare."
+    "title": "Upgrade path at 20 users",
+    "reason": "Many accounts reach 20 people and stall instead of upgrading."
    },
    {
-    "title": "Alert developers to new errors after each launch",
-    "reason": "The plan assumes the error tracker has no alerting today, which is unlikely for a mature engineering team, and the idea would fit almost any software company."
+    "title": "Check, ACH and wire matching",
+    "reason": "Check, ACH and wire payments come in often enough to cost real time."
    }
   ],
   "questions": [
-   "When a form message comes in today, what happens before a person reads it, and how much of a support person's time goes to sorting and looking up accounts rather than answering?",
-   "How many check, ACH and wire payments do you get each month, and how long does it take to mark one as paid?",
-   "How does a piece of feature feedback get from a support ticket to the right developer today, and do you know how often the same request comes up?",
-   "How many people work in support, and how many messages do they handle in a typical week?",
-   "Which manual tasks do you want to keep done by people on purpose, and which ones would you gladly hand off?",
-   "What tools does support use today to receive, tag and track tickets, and are any of them built in-house?"
+   "What is your median first reply time now, and what caused the recent slowdown?",
+   "How many demos and onboarding calls run each week, and how are they booked?",
+   "How many developer hours does each launch spend on feedback and watching errors?",
+   "Which team spends the most hours on repeat work each week?",
+   "What tools handle support, scheduling and billing today?",
+   "Which manual steps do you keep on purpose as part of how you work?"
   ],
   "pages": [
    {
     "id": 1,
     "url": "https://basecamp.com/",
     "title": "Basecamp",
-    "words": 1176,
-    "text": "Have an account? Sign in\nWant an account? Sign up free\nMenu\nPricing & sign up\nBasecamp 5 is here\nFeatures\nPaths\nAPI, CLI, Skills\nThousands of people in Basecamp now\nHave an account? Sign in\nWant an account? Sign up free\nPricing & sign up — A free plan + paid upgrades\nBasecamp 5 is here — A massive upgrade for 2026\nFeatures — Remarkably simple, surprisingly capable\nPaths — Why so many switch to Basecamp\nAPI, CLI, Skills — Developer tools, AI Agent-ready\nReliable to the core — A multi-decade track record\nThousands of people are working in Basecamp right now\nTry Basecamp Free\nor\nTake a 3-minute tour\nSee how Basecamp works\nManage projects, coordinate teams, and master your company with Basecamp.\nFamously straightforward and easy‑to‑use, there’s simply nothing else like it.\nWebsite Redesign Project\nMessage Board\nGeoff Collier\nJun 1\nWelcome to Basecamp!\nAt Enormicom, we like to work with our clients\ndirectly and we do that in Basecamp. We're so happy\nyou're here! ✨ The project that we're working on ...\nInvoices\nHi all! Hope you're doing well! Before we div...\nPulling the launch in by two weeks\nQuick but important update on timing. Afte...\nPlease Welcome Kurt!\nHey team! Exciting news — we’ve got a new...\nProduct assets\nHey Tim! Hope you're having a smooth and ...\nLogo Inspiration\nProject Tasks\nDiscovery & Design\nRun project kickoff and define scope\nGather brand assets, photos, and copy from cli...\nWalk client through visual mockups for sign-off\nRevise mockups based on client feedback\nBuild & Launch\nBuild homepage and global navigation\nBuild out key pages\nProject Assets & Proofs\nLogo Inspiration 16 items\nProofs 3 items\nClient Uploads 3 items\nFAQ Entries.md Kurt Holloway • Jul 20 • 27.9 KB\nBudget Breakdown Leah Bernstein • May 12 • Google Doc\nOld Designs Leah Bernstein • Apr 28 • Basecamp file\nHero Image.png Leah Bernstein • Jul 20 • 1.86 MB\nDeadlines & Milestones\nJuly 2026\nSun Mon Tue Wed Thu Fri Sat\n28\n29\n30\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\nJul 21\nTeam Sync\nTue, Jul 21, 11:00 - 11:30 PDT\nJul 23\nCatchup Call\nThu, Jul 23, 15:30 - 16:00 PDT\nJul 27\nWeekly Kick-Off\nMon, Jul 27, 9:00 - 9:30 PDT\nWorkflow\nBrief (3)\n(9) Design\n(6) Review\n(4) Build\n(2) QA\n(2) Live\nExternal links\nDesign Playground https://figma.com/board/bE4ThLx0RsE3\nClient Files https://drive.google.com/drive/u/0/folders/1XnF\nWeekly Meeting Link https://basecamp.zoom.us/j/87050254412\nWebsite Redesign Project\nBookmark\nMessage Board\nAll messages\nCategories\nNewest post\nFilter…\nWelcome to Basecamp!\n📢 Announcement by Geoff Collier • Jun 1 • At Enormicom, we like to work with our clients directly and we do\nthat in Basecamp. We're so happy you're here! ✨ The project that we're working on is focused on the redesig...\nInvoices\n✨ FYI by Leah Bernstein • May 13 • Hi all! Hope you're doing well! Before we dive too deep into the project, I\nwanted to give a quick breakdown of how invoicing will work — just to keep everything smooth and...\nPulling the launch in by two weeks\n📢 Announcement by Chad Neidt • Apr 29 • Quick but important update on timing. After conversations with\nleadership and our partner teams, we've decided to move the launch of the new website forward by two...\nPlease Welcome Kurt!\n📢 Announcement by Chad Neidt • Apr 20 • Hey team! Exciting news — we’ve got a new designer joining the\ncrew! Please help me welcome Kurt to the team as we kick off the next phase of the Nine to Thrive website...\nProduct assets\n✨ FYI by Sofía Castillo Rivera • Apr 14 • Hey Tim! Hope you're having a smooth and productive week! Quick\nnudge — I’m getting everything prepped on my end for the website build, and now I just need the goods from...\nProject Details\n📢 Announcement by Liza Randall • Apr 8 • Who Why How Expectations Deliverables\nScoping this project\n✨ FYI by Daniel Yates • Apr 2 • As promised, I recorded a video of myself scoping the project into\nbite-sized chunks and creating to-dos for those chunks. I'm not done scoping (are we ever?), but this is a...\nNext steps\nLiza Randall • Mar 27 • I'd like us to play around a bit with this logo designed by Geoff: [GC] Let's stick\nwith the colors and see what else we can come up with.\nWebsite Redesign Project\nBookmark\nProject Assets & Proofs\nAll files\nImages\nFile type\nSort manually\nFilter…\nOff\nKeep folders open\nLogo Inspiration\n16 items\nProofs\n3 items\nClient Uploads\n3 items\nFAQ Entries.md\nKurt Holloway • Jul 20 • 27.9 KB\nBudget Breakdown\nLeah Bernstein • May 12 • Google Doc\nOld Designs\nLeah Bernstein • Apr 28 • Basecamp file\nHero Image.png\nLeah Bernstein • Jul 20 • 1.86 MB\nClient Logos\nLeah Bernstein • May 19 • Dropbox file\nWebsite Redesign Project\nBookmark\nProject Tasks\nView as\nFilter…\nLeah Bernstein\nUpdate\nUpdated Monday at 1:38pm · See history\n3/3\nAdd a to-do\nDiscovery & Design\nClient kickoff, content gathering, sitemap, and visual design.\nRun project kickoff and define scope 3 Geoff C. Fri, Jul 31 1/3\nGather brand assets, photos, and copy from client Daniel Y. Fri, Jul 31\nWalk client through visual mockups for sign-off Kurt H. Fri, Aug 7\nRevise mockups based on client feedback Daniel Y. Fri, Aug 14\n4 completed\nAdd a to-do\nBuild & Launch\nFront-end build, QA, SEO/analytics setup, and production launch.\nBuild homepage and global navigation Daniel Y. Fri, Aug 14\nBuild out key pages Geoff C. Fri, Aug 21\nQA across browsers and mobile breakpoints Leah B. Fri, Aug 28\nDeploy to production and hand off credentials to client Kurt H. Fri, Sep 4\n5 completed\nAdd a to-do\nWebsite Redesign Project Project Assets & Proofs\nBookmark\nLogo Inspiration\nAll files\nImages\nFile type\nSort manually\nFilter…\nWebsite Redesign Project\nBookmark\nDeadlines & Milestones\nCalendar\nAgenda\nFilter…\nNext 6 Weeks\nSun Mon Tue Wed Thu Fri Sat\n19\n20\nToday, Jul 21 Team Sync 11:00 - 11:30\n22\n23 Catchup Call 15:30 - 16:00\n24\n25\n26\n27 Weekly Kick-Off 07:00 - 07:30\n28\n29 Programmer Hangout 08:00 - 08:30\n30\n31 Weekly Wrap-Up 13:00 - 13:30\nAug 1, 2026\n5 Product Meeting 10:00 - 11:00\n10 Weekly Kick-Off 07:00 - 07:30\n11 Client Meeting 10:00 - 11:30\n12\n13\n14 Weekly Wrap-Up 13:00 - 13:30\n15\n16\n17\n18 Team Sync 11:00 - 11:30\n19\n20 Catchup Call 15:30 - 16:00\n21\n22\n23\n24 Weekly Kick-Off 07:00 - 07:30\n25\n26 Programmer Hangout 08:00 - 08:30\n27\n28 Weekly Wrap-Up 13:00 - 13:30\n29\n30\n31\nSep 1, 2026 Team Sync 11:00 - 11:30\n3 Product Meeting 10:00 - 11:00\n7 Weekly Kick-Off 07:00 - 07:30\n10\n11 Weekly Wrap-Up 13:00 - 13:30\n12\n13\n14\n15 Client Meeting 10:00 - 11:30\n16\n17 Catchup Call 15:30 - 16:00\n18\n19\nWebsite Redesign Project\nBookmark\n"
+    "words": 1196,
+    "text": "Have an account? Sign in\nWant an account? Sign up free\nMenu\nPricing & sign up\nBasecamp 5 is here\nFeatures\nPaths\nAPI, CLI, Skills\nThousands of people in Basecamp now\nHave an account? Sign in\nWant an account? Sign up free\nPricing & sign up — A free plan + paid upgrades\nBasecamp 5 is here — A massive upgrade for 2026\nFeatures — Remarkably simple, surprisingly capable\nPaths — Why so many switch to Basecamp\nAPI, CLI, Skills — Developer tools, AI Agent-ready\nReliable to the core — A multi-decade track record\nThousands of people are working in Basecamp right now\nTry Basecamp Free\nor\nTake a 3-minute tour\nSee how Basecamp works\nManage projects, coordinate teams, and master your company with Basecamp.\nFamously straightforward and easy‑to‑use, there’s simply nothing else like it.\napp.basecamp.com\nWebsite Redesign Project\nMessage Board\nGeoff Collier\nJun 1\nWelcome to Basecamp!\nAt Enormicom, we like to work with our clients\ndirectly and we do that in Basecamp. We're so happy\nyou're here! ✨ The project that we're working on ...\nInvoices\nHi all! Hope you're doing well! Before we div...\nPulling the launch in by two weeks\nQuick but important update on timing. Afte...\nPlease Welcome Kurt!\nHey team! Exciting news — we’ve got a new...\nProduct assets\nHey Tim! Hope you're having a smooth and ...\nLogo Inspiration\nProject Tasks\nDiscovery & Design\nRun project kickoff and define scope\nGather brand assets, photos, and copy from cli...\nWalk client through visual mockups for sign-off\nRevise mockups based on client feedback\nBuild & Launch\nBuild homepage and global navigation\nBuild out key pages\nProject Assets & Proofs\nLogo Inspiration 16 items\nProofs 3 items\nClient Uploads 3 items\nFAQ Entries.md Kurt Holloway • Jul 20 • 27.9 KB\nBudget Breakdown Leah Bernstein • May 12 • Google Doc\nOld Designs Leah Bernstein • Apr 28 • Basecamp file\nHero Image.png Leah Bernstein • Jul 20 • 1.86 MB\nDeadlines & Milestones\nJuly 2026\nSun Mon Tue Wed Thu Fri Sat\n28\n29\n30\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\nJul 21\nTeam Sync\nTue, Jul 21, 11:00 - 11:30 PDT\nJul 23\nCatchup Call\nThu, Jul 23, 15:30 - 16:00 PDT\nJul 27\nWeekly Kick-Off\nMon, Jul 27, 9:00 - 9:30 PDT\nWorkflow\nBrief (3)\n(9) Design\n(6) Review\n(4) Build\n(2) QA\n(2) Live\nWebsite Redesign Project\nBookmark\nMessage Board\nAll messages\nCategories\nNewest post\nFilter…\nWelcome to Basecamp!\n📢 Announcement by Geoff Collier • Jun 1 • At Enormicom, we like to work with our clients directly and we do\nthat in Basecamp. We're so happy you're here! ✨ The project that we're working on is focused on the redesig...\nInvoices\n✨ FYI by Leah Bernstein • May 13 • Hi all! Hope you're doing well! Before we dive too deep into the project, I\nwanted to give a quick breakdown of how invoicing will work — just to keep everything smooth and...\nPulling the launch in by two weeks\n📢 Announcement by Chad Neidt • Apr 29 • Quick but important update on timing. After conversations with\nleadership and our partner teams, we've decided to move the launch of the new website forward by two...\nPlease Welcome Kurt!\n📢 Announcement by Chad Neidt • Apr 20 • Hey team! Exciting news — we’ve got a new designer joining the\ncrew! Please help me welcome Kurt to the team as we kick off the next phase of the Nine to Thrive website...\nProduct assets\n✨ FYI by Sofía Castillo Rivera • Apr 14 • Hey Tim! Hope you're having a smooth and productive week! Quick\nnudge — I’m getting everything prepped on my end for the website build, and now I just need the goods from...\nProject Details\n📢 Announcement by Liza Randall • Apr 8 • Who Why How Expectations Deliverables\nScoping this project\n✨ FYI by Daniel Yates • Apr 2 • As promised, I recorded a video of myself scoping the project into\nbite-sized chunks and creating to-dos for those chunks. I'm not done scoping (are we ever?), but this is a...\nWebsite Redesign Project\nBookmark\nProject Assets & Proofs\nAll files\nImages\nFile type\nSort manually\nFilter…\nOff\nKeep folders open\nLogo Inspiration\n16 items\nProofs\n3 items\nClient Uploads\n3 items\nFAQ Entries.md\nKurt Holloway • Jul 20 • 27.9 KB\nBudget Breakdown\nLeah Bernstein • May 12 • Google Doc\nOld Designs\nLeah Bernstein • Apr 28 • Basecamp file\nHero Image.png\nLeah Bernstein • Jul 20 • 1.86 MB\nWebsite Redesign Project\nBookmark\nProject Tasks\nView as\nFilter…\nLeah Bernstein\nUpdate\nUpdated Monday at 1:38pm · See history\n3/3\nDiscovery & Design\nClient kickoff, content gathering, sitemap, and visual design.\nRun project kickoff and define scope 3 Geoff C. Fri, Jul 31 1/3\nGather brand assets, photos, and copy from client Daniel Y. Fri, Jul 31\nWalk client through visual mockups for sign-off Kurt H. Fri, Aug 7\nRevise mockups based on client feedback Daniel Y. Fri, Aug 14\n4 completed\nAdd a to-do\nBuild & Launch\nFront-end build, QA, SEO/analytics setup, and production launch.\nBuild homepage and global navigation Daniel Y. Fri, Aug 14\nBuild out key pages Geoff C. Fri, Aug 21\nQA across browsers and mobile breakpoints Leah B. Fri, Aug 28\nWebsite Redesign Project Project Assets & Proofs\nBookmark\nLogo Inspiration\nAll files\nImages\nFile type\nSort manually\nFilter…\nWebsite Redesign Project\nBookmark\nDeadlines & Milestones\nCalendar\nAgenda\nFilter…\nNext 6 Weeks\nSun Mon Tue Wed Thu Fri Sat\n19\n20\nToday, Jul 21 Team Sync 11:00 - 11:30\n22\n23 Catchup Call 15:30 - 16:00\n24\n25\n26\n27 Weekly Kick-Off 07:00 - 07:30\n28\n29 Programmer Hangout 08:00 - 08:30\n30\n31 Weekly Wrap-Up 13:00 - 13:30\nAug 1, 2026\n5 Product Meeting 10:00 - 11:00\n10 Weekly Kick-Off 07:00 - 07:30\n11 Client Meeting 10:00 - 11:30\n12\n13\n14 Weekly Wrap-Up 13:00 - 13:30\n15\n16\n17\n18 Team Sync 11:00 - 11:30\n19\n20 Catchup Call 15:30 - 16:00\n21\n22\n23\n24 Weekly Kick-Off 07:00 - 07:30\n25\n26 Programmer Hangout 08:00 - 08:30\n27\n28 Weekly Wrap-Up 13:00 - 13:30\n29\n30\n31\nSep 1, 2026 Team Sync 11:00 - 11:30\n3 Product Meeting 10:00 - 11:00\n7 Weekly Kick-Off 07:00 - 07:30\n10\n11 Weekly Wrap-Up 13:00 - 13:30\n12\n13\n14\n15 Client Meeting 10:00 - 11:30\n16\n17 Catchup Call 15:30 - 16:00\n18\n19\nWebsite Redesign Project\nBookmark\nWorkflow\nFilter…\nBrief (3)\nSingle-color variant for\nembroidery + merch By Liza R. on May 13\nDecide on the final file\ndelivery pack for handoff By Liza R. on May 13\nFinal export package for client\nhandoff (SVG / PNG / EPS /… By Geoff C. on Jun 4\nDesign (9)\nDefine button states\n(default, hover, active,… By Sofía C. on Apr 29\nMockups for new newsletter\nsignup module — light,… By Kurt H. on May 12 1\nAlternate Logo Designs By Geoff C. on May 8 Wed, May 20 3/3 5\nSite search redesign —\ncurrent input is buried an"
    },
    {
     "id": 2,
@@ -314,20 +311,20 @@
   "stats": {
    "quotes": 14,
    "found": 14,
-   "words": 5366
+   "words": 5386
   },
-  "prompt": "2026-10-14.2",
+  "prompt": "2026-10-16.1",
   "run": [
    {
     "step": "scout",
     "status": "start",
-    "at": "2026-10-14T17:10:17.789Z"
+    "at": "2026-10-16T18:23:04.201Z"
    },
    {
     "step": "scout",
     "status": "done",
     "detail": "Opened the homepage, found 12 useful links, picked 6 pages to read.",
-    "ms": 550,
+    "ms": 1012,
     "pages": [
      "https://basecamp.com/pricing",
      "https://basecamp.com/about",
@@ -336,74 +333,74 @@
      "https://basecamp.com/guides/seven-shipping-principles",
      "https://basecamp.com/books"
     ],
-    "at": "2026-10-14T17:10:18.339Z"
+    "at": "2026-10-16T18:23:05.214Z"
    },
    {
     "step": "reader",
     "status": "start",
-    "at": "2026-10-14T17:10:18.723Z"
+    "at": "2026-10-16T18:23:06.045Z"
    },
    {
     "step": "reader",
     "status": "done",
-    "detail": "Read 7 pages, 5,366 words after removing menus and footers.",
-    "ms": 376,
-    "at": "2026-10-14T17:10:18.723Z"
+    "detail": "Read 7 pages, 5,386 words after removing menus and footers.",
+    "ms": 818,
+    "at": "2026-10-16T18:23:06.045Z"
    },
    {
     "step": "analyst",
     "status": "start",
-    "at": "2026-10-14T17:10:18.723Z"
+    "at": "2026-10-16T18:23:06.046Z"
    },
    {
     "step": "analyst",
     "status": "done",
-    "detail": "Noted 12 signs of manual work and 2 tools in use.",
-    "ms": 23469,
-    "at": "2026-10-14T17:10:42.192Z"
+    "detail": "Noted 10 signs of manual work and 4 tools in use.",
+    "ms": 23225,
+    "at": "2026-10-16T18:23:29.271Z"
    },
    {
     "step": "planner",
     "status": "start",
-    "at": "2026-10-14T17:10:42.193Z"
+    "at": "2026-10-16T18:23:29.279Z"
    },
    {
     "step": "planner",
     "status": "done",
     "detail": "Drafted 5 opportunities, ranked by impact.",
-    "ms": 43450,
-    "at": "2026-10-14T17:11:25.643Z"
+    "ms": 48281,
+    "at": "2026-10-16T18:24:17.560Z"
    },
    {
     "step": "skeptic",
     "status": "start",
-    "at": "2026-10-14T17:11:25.643Z"
+    "at": "2026-10-16T18:24:17.597Z"
    },
    {
     "step": "skeptic",
     "status": "done",
     "detail": "Kept 3 of 5, cut 2, marked 3 as low confidence.",
-    "ms": 17497,
-    "at": "2026-10-14T17:11:43.140Z"
+    "ms": 20067,
+    "at": "2026-10-16T18:24:37.664Z"
    },
    {
     "step": "checker",
     "status": "start",
-    "at": "2026-10-14T17:11:43.141Z"
+    "at": "2026-10-16T18:24:37.665Z"
    },
    {
     "step": "checker",
     "status": "done",
     "detail": "Found 14 of 14 quotes on the pages they came from.",
-    "ms": 28,
-    "at": "2026-10-14T17:11:43.169Z"
+    "ms": 47,
+    "at": "2026-10-16T18:24:37.712Z"
    }
   ]
  },
  "meta": {
   "engine": "claude-code",
   "model": "claude-opus-5-5",
-  "generated_at": "2026-10-14T17:11:43.171Z",
-  "seconds": 85
+  "generated_at": "2026-10-16T18:24:37.716Z",
+  "seconds": 94
  }
 }
