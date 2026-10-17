@@ -164,3 +164,8 @@ details.more[open] > summary::after { transform: rotate(-135deg); }
 .view > * + * { margin-top: var(--s-5); }
 .card-h h2 svg, .card-h h3 svg { width: 18px; height: 18px; flex: none; color: var(--accent-text); }
 .card-h h2, .card-h h3 { white-space: nowrap; }
+
+.howto { list-style: none; padding: 0; margin: 0 0 var(--s-6); display: grid; gap: var(--s-2); counter-reset: howto; }
+.howto li { counter-increment: howto; display: flex; align-items: center; gap: var(--s-3); font-weight: 700; }
+.howto li::before { content: counter(howto); flex: none; width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-size: 0.85rem; font-weight: 850; }
+@media (min-width: 720px) { .howto { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); } }
