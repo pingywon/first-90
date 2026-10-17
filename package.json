@@ -1,8 +1,23 @@
 {
   "name": "first-90",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "description": "Paste a company website. Get the first things worth automating there, how to measure them, and what to ask in the interview.",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.14.0",
+    "wrangler": "^3.114.17"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.js",
+    "e2e": "node e2e/phone.mjs",
+    "samples": "node scripts/make-samples.mjs",
+    "deploy": "node scripts/build.mjs && node --test test/*.test.js && wrangler deploy"
+  }
 }

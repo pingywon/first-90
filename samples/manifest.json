@@ -1,0 +1,5 @@
+[
+  { "id": "basecamp", "label": "Basecamp", "kind": "Software", "url": "https://basecamp.com" },
+  { "id": "casper", "label": "Casper", "kind": "Online retail", "url": "https://casper.com" },
+  { "id": "aspen-dental", "label": "Aspen Dental", "kind": "Dental care", "url": "https://www.aspendental.com" }
+]

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First 90</title>
+<meta name="description" content="Any company site. A 90-day automation plan.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg?v={{VERSION}}" type="image/svg+xml">
+<link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="kit.css?v={{VERSION}}">
+<link rel="stylesheet" href="styles.css?v={{VERSION}}">
+<script type="module" src="app.js?v={{VERSION}}"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="./" data-home><span class="brand-mark" data-icon="target"></span>First 90</a>
+    <nav class="nav" aria-label="Site">
+      <a class="wide" href="#samples">Samples</a>
+      <a href="how.html">How it works</a>
+      <a class="wide" href="https://lab.meetdominic.me">Lab</a>
+      <button class="icon-btn" id="theme" type="button"></button>
+    </nav>
+  </div>
+</header>
+
+<main id="landing" class="container">
+  <section class="hero">
+    <div>
+      <span class="eyebrow" data-icon="users">6-step AI team</span>
+      <h1 class="display">What to automate first.</h1>
+      <p class="sub">Any company site. A 90-day plan.</p>
+      <ol class="howto" aria-label="How it works"><li>Enter a site</li><li>AI team digs in</li><li>Get a 90-day plan</li></ol>
+      <form class="card stack-4" id="plan-form" novalidate>
+        <label class="field"><span>Company site</span>
+          <input class="input" id="site-input" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="example.com">
+        </label>
+        <div class="row">
+          <button class="btn" type="submit" id="plan-btn" data-icon="bolt">Plan it</button>
+          <span class="help">3 free plans a day</span>
+        </div>
+        <p class="notice" id="form-notice" role="status" hidden></p>
+      </form>
+    </div>
+    <div id="preview" aria-label="Example plan"></div>
+  </section>
+
+  <section class="section" id="samples">
+    <div class="section-h"><h2>Sample plans</h2></div>
+    <div class="grid three" id="sample-list"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>The AI team</h2></div>
+    <div class="steps six">
+      <div class="step"><span class="ic" data-icon="search"></span><b>Scout</b><small>Picks the pages</small></div>
+      <div class="step"><span class="ic" data-icon="doc"></span><b>Reader</b><small>Strips menus</small></div>
+      <div class="step"><span class="ic" data-icon="eye"></span><b>Analyst</b><small>Spots manual work</small></div>
+      <div class="step"><span class="ic" data-icon="route"></span><b>Planner</b><small>Ranks the ideas</small></div>
+      <div class="step"><span class="ic" data-icon="flag"></span><b>Skeptic</b><small>Cuts weak ideas</small></div>
+      <div class="step"><span class="ic" data-icon="shield"></span><b>Checker</b><small>Verifies quotes</small></div>
+    </div>
+  </section>
+</main>
+
+<main id="result-view" class="container view" hidden></main>
+
+<footer class="foot">
+  <div class="container">
+    <span>Outside view from public pages. First 90 v{{VERSION}}</span>
+    <nav aria-label="Footer"><a href="how.html">How it works</a><a href="https://lab.meetdominic.me">Lab</a><a href="https://github.com/pingywon/first-90">GitHub</a></nav>
+  </div>
+</footer>
+</body>
+</html>

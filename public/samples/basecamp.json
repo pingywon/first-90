@@ -1,0 +1,406 @@
+{
+ "id": "basecamp",
+ "label": "Basecamp",
+ "kind": "Software",
+ "audit": {
+  "site": "basecamp.com",
+  "company": {
+   "name": "Basecamp",
+   "what_they_do": "Project management and team communication software",
+   "customers": "Teams, companies and freelancers working with clients",
+   "how_they_sell": "Self-serve online signup, free plan, trials, optional demos",
+   "size_hints": "27 years in business, privately held, 2,026 signups last week"
+  },
+  "headline": "The first thing worth automating at Basecamp is support triage and drafted replies to shorten web form wait times.",
+  "caveat": "Public pages show stated practices, not ticket volumes, staffing, or which manual steps are deliberate choices.",
+  "signals": [
+   {
+    "observation": "Support runs through a web form, and replies are slower right now",
+    "quote": "We read and respond to every message, though response times may be a bit longer than usual right now.",
+    "page": 4,
+    "n": 1,
+    "source": {
+     "page": 4,
+     "url": "https://basecamp.com/support",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Support form relies on customers typing in long free-text details",
+    "quote": "Share all the details. The more we know, the better we can help you.",
+    "page": 4,
+    "n": 2,
+    "source": {
+     "page": 4,
+     "url": "https://basecamp.com/support",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Demos and live Q&A sessions are booked with staff",
+    "quote": "Want a walkthrough? Live Q&A session? Book a personal demo with our team.",
+    "page": 2,
+    "n": 3,
+    "source": {
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Top-tier onboarding is done by staff, one team at a time",
+    "quote": "One of our experts is happy to walk your team through Basecamp to get you up to speed.",
+    "page": 2,
+    "n": 4,
+    "source": {
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Annual billing accepts check, ACH and wire payments",
+    "quote": "Annual billing by check, ACH, wire, or credit card.",
+    "page": 2,
+    "n": 5,
+    "source": {
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Customers are invited to email the CEO directly with questions",
+    "quote": "You can always contact me directly if you have any questions at jason@basecamp.com",
+    "page": 3,
+    "n": 6,
+    "source": {
+     "page": 3,
+     "url": "https://basecamp.com/about",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Developers take support feedback by hand after each launch",
+    "quote": "Be the first port of call for support when they get feedback from customers.",
+    "page": 6,
+    "n": 7,
+    "source": {
+     "page": 6,
+     "url": "https://basecamp.com/guides/seven-shipping-principles",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Error tracker is watched by people after launches",
+    "quote": "Pay attention to the error tracker for a while after launching.",
+    "page": 6,
+    "n": 8,
+    "source": {
+     "page": 6,
+     "url": "https://basecamp.com/guides/seven-shipping-principles",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Customer feedback beyond fixes gets filed and weighed later",
+    "quote": "all the feedback that goes beyond that is filed for consideration against all the other ideas and claims for our time.",
+    "page": 6,
+    "n": 9,
+    "source": {
+     "page": 6,
+     "url": "https://basecamp.com/guides/seven-shipping-principles",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "User limits force a plan upgrade past 20 people",
+    "quote": "If you want to invite more than 20 people, you’ll need to upgrade to a higher package.",
+    "page": 2,
+    "n": 10,
+    "source": {
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
+     "match": "exact"
+    }
+   }
+  ],
+  "tools": [
+   {
+    "name": "ChatGPT and Claude connectors (MCP)",
+    "quote": "Official Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.",
+    "page": 2,
+    "source": {
+     "page": 2,
+     "url": "https://basecamp.com/pricing",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Outlook, Google Calendar, HEY Calendar",
+    "quote": "you can subscribe in Outlook, Google Calendar, HEY Calendar, and more.",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://basecamp.com/features",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Figma, Google Docs, Dropbox",
+    "quote": "even cloud files from Figma, Google Docs, and Dropbox neatly organized inside your projects.",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://basecamp.com/features",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Basecamp API and CLI",
+    "quote": "Connect other services with the Basecamp API , add 3rd party integrations , work from the command line (CLI)",
+    "page": 5,
+    "source": {
+     "page": 5,
+     "url": "https://basecamp.com/features",
+     "match": "exact"
+    }
+   }
+  ],
+  "opportunities": [
+   {
+    "title": "Support triage and draft replies",
+    "problem": "Free-text web form tickets wait longer than usual for a first reply.",
+    "signals": [
+     1,
+     2
+    ],
+    "approach": "Add structured form fields, auto-tag topics, and draft replies from help docs for staff review.",
+    "measure": {
+     "metric": "Median first reply time",
+     "baseline": "Median hours to first reply across all tickets in week 1.",
+     "target": "Median first reply time cut by half"
+    },
+    "effort": "medium",
+    "impact": "large",
+    "days_30": "Form fields and topic tags live",
+    "days_60": "Draft replies used on top topics",
+    "days_90": "First reply time halved, results reported",
+    "rank": 1,
+    "confidence": "medium",
+    "assumption": "Slow replies are lasting and caused by ticket volume, not a short-term gap.",
+    "ask": "What is your median first reply time now, and what caused the recent slowdown?"
+   },
+   {
+    "title": "Demo booking and onboarding sessions",
+    "problem": "Staff book demos, Q&A sessions and onboarding one team at a time.",
+    "signals": [
+     3,
+     4
+    ],
+    "approach": "Self-serve scheduling with intake form, reminders, and recorded group walkthroughs for common questions.",
+    "measure": {
+     "metric": "Staff hours per demo",
+     "baseline": "Count demos booked and staff minutes spent, including back-and-forth email.",
+     "target": "Staff time per demo down by a third"
+    },
+    "effort": "medium",
+    "impact": "medium",
+    "days_30": "Booking page and intake form live",
+    "days_60": "Reminders and group sessions running",
+    "days_90": "Show rate and staff hours reported",
+    "rank": 2,
+    "confidence": "low",
+    "assumption": "Demo booking is manual today and demo volume is high enough to matter.",
+    "ask": "How many demos and onboarding calls run each week, and how are they booked?"
+   },
+   {
+    "title": "Post-launch feedback and error routing",
+    "problem": "Developers watch error trackers and sort launch feedback by hand.",
+    "signals": [
+     7,
+     8,
+     9
+    ],
+    "approach": "Tag tickets by launch, alert on error spikes, file ideas to Basecamp via API.",
+    "measure": {
+     "metric": "Developer hours on triage",
+     "baseline": "Log developer hours on feedback and errors during week 1.",
+     "target": "Triage hours per launch cut by half"
+    },
+    "effort": "medium",
+    "impact": "medium",
+    "days_30": "Launch tags and error alerts set up",
+    "days_60": "Ideas filed automatically to one project",
+    "days_90": "Two launches compared against baseline",
+    "rank": 4,
+    "confidence": "medium",
+    "assumption": "Hand triage is a cost to cut, not a practice developers value.",
+    "ask": "How many developer hours does each launch spend on feedback and watching errors?"
+   }
+  ],
+  "dropped": [
+   {
+    "title": "Upgrade path at 20 users",
+    "reason": "Many accounts reach 20 people and stall instead of upgrading."
+   },
+   {
+    "title": "Check, ACH and wire matching",
+    "reason": "Check, ACH and wire payments come in often enough to cost real time."
+   }
+  ],
+  "questions": [
+   "What is your median first reply time now, and what caused the recent slowdown?",
+   "How many demos and onboarding calls run each week, and how are they booked?",
+   "How many developer hours does each launch spend on feedback and watching errors?",
+   "Which team spends the most hours on repeat work each week?",
+   "What tools handle support, scheduling and billing today?",
+   "Which manual steps do you keep on purpose as part of how you work?"
+  ],
+  "pages": [
+   {
+    "id": 1,
+    "url": "https://basecamp.com/",
+    "title": "Basecamp",
+    "words": 1196,
+    "text": "Have an account? Sign in\nWant an account? Sign up free\nMenu\nPricing & sign up\nBasecamp 5 is here\nFeatures\nPaths\nAPI, CLI, Skills\nThousands of people in Basecamp now\nHave an account? Sign in\nWant an account? Sign up free\nPricing & sign up — A free plan + paid upgrades\nBasecamp 5 is here — A massive upgrade for 2026\nFeatures — Remarkably simple, surprisingly capable\nPaths — Why so many switch to Basecamp\nAPI, CLI, Skills — Developer tools, AI Agent-ready\nReliable to the core — A multi-decade track record\nThousands of people are working in Basecamp right now\nTry Basecamp Free\nor\nTake a 3-minute tour\nSee how Basecamp works\nManage projects, coordinate teams, and master your company with Basecamp.\nFamously straightforward and easy‑to‑use, there’s simply nothing else like it.\napp.basecamp.com\nWebsite Redesign Project\nMessage Board\nGeoff Collier\nJun 1\nWelcome to Basecamp!\nAt Enormicom, we like to work with our clients\ndirectly and we do that in Basecamp. We're so happy\nyou're here! ✨ The project that we're working on ...\nInvoices\nHi all! Hope you're doing well! Before we div...\nPulling the launch in by two weeks\nQuick but important update on timing. Afte...\nPlease Welcome Kurt!\nHey team! Exciting news — we’ve got a new...\nProduct assets\nHey Tim! Hope you're having a smooth and ...\nLogo Inspiration\nProject Tasks\nDiscovery & Design\nRun project kickoff and define scope\nGather brand assets, photos, and copy from cli...\nWalk client through visual mockups for sign-off\nRevise mockups based on client feedback\nBuild & Launch\nBuild homepage and global navigation\nBuild out key pages\nProject Assets & Proofs\nLogo Inspiration 16 items\nProofs 3 items\nClient Uploads 3 items\nFAQ Entries.md Kurt Holloway • Jul 20 • 27.9 KB\nBudget Breakdown Leah Bernstein • May 12 • Google Doc\nOld Designs Leah Bernstein • Apr 28 • Basecamp file\nHero Image.png Leah Bernstein • Jul 20 • 1.86 MB\nDeadlines & Milestones\nJuly 2026\nSun Mon Tue Wed Thu Fri Sat\n28\n29\n30\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\nJul 21\nTeam Sync\nTue, Jul 21, 11:00 - 11:30 PDT\nJul 23\nCatchup Call\nThu, Jul 23, 15:30 - 16:00 PDT\nJul 27\nWeekly Kick-Off\nMon, Jul 27, 9:00 - 9:30 PDT\nWorkflow\nBrief (3)\n(9) Design\n(6) Review\n(4) Build\n(2) QA\n(2) Live\nWebsite Redesign Project\nBookmark\nMessage Board\nAll messages\nCategories\nNewest post\nFilter…\nWelcome to Basecamp!\n📢 Announcement by Geoff Collier • Jun 1 • At Enormicom, we like to work with our clients directly and we do\nthat in Basecamp. We're so happy you're here! ✨ The project that we're working on is focused on the redesig...\nInvoices\n✨ FYI by Leah Bernstein • May 13 • Hi all! Hope you're doing well! Before we dive too deep into the project, I\nwanted to give a quick breakdown of how invoicing will work — just to keep everything smooth and...\nPulling the launch in by two weeks\n📢 Announcement by Chad Neidt • Apr 29 • Quick but important update on timing. After conversations with\nleadership and our partner teams, we've decided to move the launch of the new website forward by two...\nPlease Welcome Kurt!\n📢 Announcement by Chad Neidt • Apr 20 • Hey team! Exciting news — we’ve got a new designer joining the\ncrew! Please help me welcome Kurt to the team as we kick off the next phase of the Nine to Thrive website...\nProduct assets\n✨ FYI by Sofía Castillo Rivera • Apr 14 • Hey Tim! Hope you're having a smooth and productive week! Quick\nnudge — I’m getting everything prepped on my end for the website build, and now I just need the goods from...\nProject Details\n📢 Announcement by Liza Randall • Apr 8 • Who Why How Expectations Deliverables\nScoping this project\n✨ FYI by Daniel Yates • Apr 2 • As promised, I recorded a video of myself scoping the project into\nbite-sized chunks and creating to-dos for those chunks. I'm not done scoping (are we ever?), but this is a...\nWebsite Redesign Project\nBookmark\nProject Assets & Proofs\nAll files\nImages\nFile type\nSort manually\nFilter…\nOff\nKeep folders open\nLogo Inspiration\n16 items\nProofs\n3 items\nClient Uploads\n3 items\nFAQ Entries.md\nKurt Holloway • Jul 20 • 27.9 KB\nBudget Breakdown\nLeah Bernstein • May 12 • Google Doc\nOld Designs\nLeah Bernstein • Apr 28 • Basecamp file\nHero Image.png\nLeah Bernstein • Jul 20 • 1.86 MB\nWebsite Redesign Project\nBookmark\nProject Tasks\nView as\nFilter…\nLeah Bernstein\nUpdate\nUpdated Monday at 1:38pm · See history\n3/3\nDiscovery & Design\nClient kickoff, content gathering, sitemap, and visual design.\nRun project kickoff and define scope 3 Geoff C. Fri, Jul 31 1/3\nGather brand assets, photos, and copy from client Daniel Y. Fri, Jul 31\nWalk client through visual mockups for sign-off Kurt H. Fri, Aug 7\nRevise mockups based on client feedback Daniel Y. Fri, Aug 14\n4 completed\nAdd a to-do\nBuild & Launch\nFront-end build, QA, SEO/analytics setup, and production launch.\nBuild homepage and global navigation Daniel Y. Fri, Aug 14\nBuild out key pages Geoff C. Fri, Aug 21\nQA across browsers and mobile breakpoints Leah B. Fri, Aug 28\nWebsite Redesign Project Project Assets & Proofs\nBookmark\nLogo Inspiration\nAll files\nImages\nFile type\nSort manually\nFilter…\nWebsite Redesign Project\nBookmark\nDeadlines & Milestones\nCalendar\nAgenda\nFilter…\nNext 6 Weeks\nSun Mon Tue Wed Thu Fri Sat\n19\n20\nToday, Jul 21 Team Sync 11:00 - 11:30\n22\n23 Catchup Call 15:30 - 16:00\n24\n25\n26\n27 Weekly Kick-Off 07:00 - 07:30\n28\n29 Programmer Hangout 08:00 - 08:30\n30\n31 Weekly Wrap-Up 13:00 - 13:30\nAug 1, 2026\n5 Product Meeting 10:00 - 11:00\n10 Weekly Kick-Off 07:00 - 07:30\n11 Client Meeting 10:00 - 11:30\n12\n13\n14 Weekly Wrap-Up 13:00 - 13:30\n15\n16\n17\n18 Team Sync 11:00 - 11:30\n19\n20 Catchup Call 15:30 - 16:00\n21\n22\n23\n24 Weekly Kick-Off 07:00 - 07:30\n25\n26 Programmer Hangout 08:00 - 08:30\n27\n28 Weekly Wrap-Up 13:00 - 13:30\n29\n30\n31\nSep 1, 2026 Team Sync 11:00 - 11:30\n3 Product Meeting 10:00 - 11:00\n7 Weekly Kick-Off 07:00 - 07:30\n10\n11 Weekly Wrap-Up 13:00 - 13:30\n12\n13\n14\n15 Client Meeting 10:00 - 11:30\n16\n17 Catchup Call 15:30 - 16:00\n18\n19\nWebsite Redesign Project\nBookmark\nWorkflow\nFilter…\nBrief (3)\nSingle-color variant for\nembroidery + merch By Liza R. on May 13\nDecide on the final file\ndelivery pack for handoff By Liza R. on May 13\nFinal export package for client\nhandoff (SVG / PNG / EPS /… By Geoff C. on Jun 4\nDesign (9)\nDefine button states\n(default, hover, active,… By Sofía C. on Apr 29\nMockups for new newsletter\nsignup module — light,… By Kurt H. on May 12 1\nAlternate Logo Designs By Geoff C. on May 8 Wed, May 20 3/3 5\nSite search redesign —\ncurrent input is buried an"
+   },
+   {
+    "id": 2,
+    "url": "https://basecamp.com/pricing",
+    "title": "Basecamp — Pricing",
+    "words": 1073,
+    "text": "No per-user fees, everyone’s included.\nJust clear, fixed prices.\n2,026 organizations signed up last week. You’re in good company.\nFree\n1 project\nFreelancer\n3 projects, 5 GB\nStudio Not sure? Start here\n10 projects, 25 GB\nPro The sweet spot\n25 projects, 100 GB\nUnlimited Edition\nUnlimited projects, 1 TB\nFree\nOne free project for personal use.\nSign up free\n1 project\nThe free plan is limited to one project. You can always upgrade for more.\n1 GB storage space\nYou can upgrade if you ever need more file storage.\n5 users max\nBring your own AI agents\nCLI access and skills for AI agents you run on your computer.\nChatGPT and Claude AI connectors\nOfficial Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.\nProject templates\nMultiple tools per project\nTime tracking\nEnhanced admin features\nFreelancer, $25 /mo\nGet organized, impress your clients.\nStart a 30-day free trial\nUp to 3 active projects\nArchived or deleted projects don’t count against your total. You could have dozens of projects, but only 3 can be active at once.\n5 GB storage space\nYou can upgrade if you ever need more file storage.\n20 users max, no per-user fees\nAdd up to 20 people to your account. If you want to invite more than 20 people, you’ll need to upgrade to a higher package. STUDIO and higher include unlimited people.\nBring your own AI agents\nCLI access and skills for AI agents you run on your computer.\nChatGPT and Claude AI connectors\nOfficial Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.\n24/7/365 support\nProject templates\nMultiple tools per project\nTime tracking\nEnhanced admin features\nAnnual billing\nStudio, $59 /mo\nA great place to start with room to grow.\nStart a 30-day free trial\nUp to 10 active projects\nArchived or deleted projects don’t count against your total. You could have dozens of projects, but only 10 can be active at once.\n25 GB storage space\nYou can upgrade if you ever need more file storage.\nUNLIMITED users, no per-user fees\nAdd as many people as you want at no additional cost.\nUNLIMITED tools per project\nAdd multiple message boards, chat rooms, card tables, or other tools to a single project.\nProject templates\nCreate reusable project and to-do list templates with the same structure, workflows, and setup across projects.\nBring your own AI agents\nCLI access and skills for AI agents you run on your computer.\nChatGPT and Claude AI connectors\nOfficial Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.\n24/7/365 support\nTime tracking\nEnhanced admin features\nAnnual billing\nPro, $99 /mo\nJust about everything for just about everyone.\nStart a 30-day free trial\nUp to 25 active projects\nArchived or deleted projects don’t count against your total. For example, you could have a hundred projects, but only 25 can be active at once.\n100 GB storage space\nYou can upgrade if you ever need more file storage.\nUNLIMITED users, no per-user fees\nAdd as many people as you want at no additional cost.\nUNLIMITED tools per project\nAdd multiple message boards, chat rooms, card tables, or other tools to a single project.\nProject templates\nCreate reusable project and to-do list templates with the same structure, workflows, and setup across projects.\nTime tracking\nTrack hours/time spent working on projects.\nBring your own AI agents\nCLI access and skills for AI agents you run on your computer.\nChatGPT and Claude AI connectors\nOfficial Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.\n24/7/365 support\nEnhanced admin features\nAnnual billing\nUnlimited, $299 /mo, billed annually\nTop-of-the-line for those who want the best.\nStart a 45-day free trial\nUNLIMITED projects\nRun as many projects as you’d like. There are no limits on the Unlimited Edition.\n1000 GB storage space\nYou can buy 1 TB of additional space if you ever need it.\nUNLIMITED users, no per-user fees\nAdd as many people as you want at no additional cost.\nUNLIMITED tools per project\nAdd multiple message boards, chat rooms, card tables, or other tools to a single project.\nProject templates\nCreate reusable project and to-do list templates with the same structure, workflows, and setup across projects.\nTime tracking\nTrack hours/time spent working on projects.\nEnhanced admin features\nGives account owners and admins greater control over access, permissions, and more.\nBring your own AI agents\nCLI access and skills for AI agents you run on your computer.\nChatGPT and Claude AI connectors\nOfficial Basecamp support for ChatGPT, Claude, and AI agents with full MCP support.\nPriority 24/7/365 support\nJump to the front of the queue when you contact support.\nPersonalized onboarding\nOne of our experts is happy to walk your team through Basecamp to get you up to speed.\nAnnual billing + extra payment options\nAnnual billing by check, ACH, wire, or credit card.\nExtended 45-day free trial\nOther levels include a 30-day free trial, UNLIMITED includes 45 days.\nWant a walkthrough? Live Q&A session? Book a personal demo with our team.\nBasecamp is beautiful software that has resisted every wrong trend and stayed true to the things that mattered most. Highly recommended.\nTobi Lutke\nShopify Co-Founder & CEO\nTake a minute to meet some of our customers\nThe same core features are included with every package\nMessage Boards for internal announcements\nTo-dos for tracking work and accountability\nCard Tables is our take on Kanban for process tracking\nCampfires & Pings for group chat and direct messaging\nScheduling for deadlines, milestones, and events\nDocs & Files for storing assets\nReports & Automatic Check-ins for staying up on things\nConnect your AI agents , Claude, ChatGPT, Muse, Grok Bot, and others\nRock-solid reliability and a record you can trust\nA stable, well-run company is part of the deal, too\nWe’ve been running an upstanding, trustworthy, sustainable business for nearly three decades. You can’t build reliable software unless you build a reliable company.\n27 profitable, financially responsible years in business\nZero debt, privately held, and built to stay, not exit\n99.99% historical uptime, with full transparency\nGold standard, famously great customer service\nExtensive learning library free for all customers\nDirect access to our CEO via email\nRisk-free, cancel anytime, no long-term lock-in\nWith Basecamp, cancellation is entirely self-serve, no questions asked, no retention specialists trying to talk you out of it. Cancel any time, no long-term contracts to lock you in. Simple, straightforward, and fair, just as it s"
+   },
+   {
+    "id": 3,
+    "url": "https://basecamp.com/about",
+    "title": "Basecamp — Where we came from",
+    "words": 618,
+    "text": "Born out of desperate necessity to stop embarrassing ourselves in front of our clients, the story of how Basecamp was born is likely your story, too.\nHey there, I’m Jason Fried, one of the co-founders here. I’ve been running 37signals — the business that makes Basecamp — for 27 years.\nPeople often ask me why we built Basecamp. They’ve never seen anything like it before, so they’re curious where the idea came from.\nI wish I could credit a spark of genius, or some deep insight. But I can’t. Truth is, we built Basecamp out of desperate necessity . We needed it bad. Without it, we were embarrassing ourselves.\nWay back when, we used to be a design firm. As we grew, we kept taking on more and more projects. We thought we could handle it, while still providing the same level of service, but we couldn’t. We were fooling ourselves. Sound familiar?\nIt wasn’t that we didn’t have the skills — we just didn’t have the right tools, nor the method, to juggle the additional workload. We were disorganized, we were dropping balls, and stuff was slipping.\nQuality was suffering, and, as is often the case in situations like this, our clients noticed before we noticed. That was the especially painful and uncomfortable part.\nWe needed a better way to manage projects, track feedback, and make progress. Email, chat, spreadsheets, calls, scattered documents, information here, there, and everywhere just wasn’t cutting it. Systems like that work for a minute, and then they fall apart fast — especially as you grow and add more people to the mix.\nWe looked around and tried a few things, but the popular tools we tried simply didn’t cut it. So we had to build our own project management system from scratch.\nWe focused on building a simple, straightforward collection of tools that could track work so everyone knew who was doing what, keep feedback and revisions on the record, centralize communication so no one missed anything, and schedule important milestones.\nWe started using the system with our clients. They kept asking “What is this? We could totally use this for our own projects!” And that’s when the lightbulb went on — maybe this is a product for others, and not just for us? If we need it, surely others need it.\nSo we tweaked it, tightened it up, polished the rough edges, and put it on the market. It was an instant hit.\nTurns out, tens of thousands of other companies had similar struggles managing their projects, and needed what we needed.\nAnd about a year or so after we first released it, it was generating more revenue for us than our web design business. So we stopped doing web design and have been focused on building Basecamp ever since.\nBased on feedback, and our own ideas, we’ve made thousands of improvements over the years, with so much more to come. Basecamp defined a category, and continues to constantly push that category forward in innovative ways.\nIt’s been an incredible ride so far, and we have so many people to thank. But most of all, we feel a deep sense of responsibility to continue to make the best product we can for companies who desperately seek a better way to work. We’re here for them, 23 years and running.\nThanks for reading, and for giving Basecamp a try . You can always contact me directly if you have any questions at jason@basecamp.com . I look forward to hearing from you.\nJason Fried, jason@basecamp.com\nCo-founder & CEO\nJoin more than 200,000 people who get our email newsletter. We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll find interesting."
+   },
+   {
+    "id": 4,
+    "url": "https://basecamp.com/support",
+    "title": "Basecamp — Get help from the Basecamp support team",
+    "words": 145,
+    "text": "There are no stupid questions. For pre-sales questions, customers who need a hand, or other inquiries, reach out to our team. We read and respond to every message, though response times may be a bit longer than usual right now.\nWhat do you need help with?\nThis helps make sure you get the right answer fast.\nRequired\nWhat’s your question, comment, or issue?\nShare all the details. The more we know, the better we can help you.\nRequired\nSend us a file, screenshot, or document\nHold the shift key to select multiple files.\nWhat’s your email address?\nThis is where we’ll get back to you. Double check that it’s right.\nRequired\nWhat’s your account URL?\nExample: https://app.basecamp.com/8675309\nSend support request\nJoin more than 200,000 people who get our email newsletter. We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll find interesting."
+   },
+   {
+    "id": 5,
+    "url": "https://basecamp.com/features",
+    "title": "Basecamp — Features, benefits, benefits, and benefits",
+    "words": 713,
+    "text": "Where there’s work, there’s Basecamp\nIf there are tasks to do, discussions to have, decisions to make, files to share, deadlines to hit, relationships to manage, and work to deliver, Basecamp helps make it happen. Here’s just some of what Basecamp can do for you.\nThe Project page keeps it all together\nEvery project in Basecamp gets its own page. Add the tools you need (to-dos, message boards, chat, a calendar, card tables), then invite co-workers, clients, even AI Agents. Everything stays organized, automatically.\nMessage Boards for announcements and discussions\nMessage Boards replace email. Announcements and discussions live as posts, with every reply attached right below. It’s all in one place, so even people you bring in later can get up to speed quickly.\nTo-do Lists for tracking all the little things\nMake a list, or ten lists. Assign items, set due dates, attach files, even create subtasks. It’s all so simple when it’s in Basecamp for your entire team to see.\nHill Charts show you where things really stand\nIs the project going to be done on time? Are people stuck? Basecamp’s Hill Charts let you know exactly where things really stand. Interesting, tell me more .\nCard Tables for tracking work through stages\nCard Tables are our take on kanban boards. Add cards, set up columns, and move work through phases. Perfect for bug and issue tracking, software development, production work, or anything with distinct stages.\nCampfire chats for quick, casual conversations\nWith Basecamp you don’t need Slack, WhatsApp, or another chat app. Just chat in Basecamp instead. Perfect for real-time conversations, quick file sharing, random questions, stuff like that.\nThe Basecamp Calendar for big dates\nAdd a built-in calendar to your project for deadlines, milestones, events, and meetings. A global calendar brings every project together, and you can subscribe in Outlook, Google Calendar, HEY Calendar, and more.\nAutomatic Check-ins for recurring questions\nCut back on meetings by setting up Automatic Check-ins. Basecamp asks your team questions on a schedule, like “What are you working on this week?” every Monday at 9am, and saves everyone’s answers in one place.\nDocs & Files for reference materials, assets, and links\nDocs & Files keeps images, documents, PDFs, even cloud files from Figma, Google Docs, and Dropbox neatly organized inside your projects. Brand assets, approved designs, all in one spot everyone can find.\nMy Tasks, Events, Today, Bookmarks, and Notes\nGet instant access to your tasks, events, bookmarks, and notes, right from the “My Bar” at the bottom of the screen. It’s keyboard accessible too, so you can pop your assignments up without touching the mouse.\nReports for high-level overviews\nGet an instant read on where things stand with Basecamp’s Reports.\nEverything Views are like having x-ray vision\nA real game changer, Everything Views pull everything of one type onto a single page, no matter which project it’s in. Know someone uploaded a file but don’t remember where? Check “All Files” and it’ll be right there.\nThe Lineup is your bird’s eye view\nWant to see every project plotted on a timeline based on start and end dates? Then you want The Lineup. See overlaps, see beginnings and ends, see who’s on what, even see key dates superimposed over everything. You’ll love it.\nAPI, CLI, SDK, Skills, and Integrations\nConnect other services with the Basecamp API , add 3rd party integrations , work from the command line (CLI) , or invite your favorite AI agent . Claude, Codex, OpenCode, Cursor — all are welcome.\nKeyboard shortcuts speed everything up\nHit SHIFT and little keys appear next to everything you can navigate to. Add that letter to jump right there, no mouse required.\nDecide what clients get to see\nWorking with a client? Basecamp’s Client mode lets you decide what they should — and shouldn’t — see, project by project. Hide unfinished work, keep conversations on the record, and collaborate together. It’s a win-win.\nActivity that’s easy to absorb\nIn Basecamp, activity is neatly organized by topic, clearly attributed, and time-stamped. Scroll back to see what happened yesterday, last week, or since the beginning of time. Quiet stretches show too.\nJoin more than 200,000 people who get our email newsletter. We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll find interesting."
+   },
+   {
+    "id": 6,
+    "url": "https://basecamp.com/guides/seven-shipping-principles",
+    "title": "Basecamp — Seven Shipping Principles",
+    "words": 1181,
+    "text": "Seven Shipping Principles\nCore fundamentals that inform how we go about building — and shipping — great software at a sustainable pace.\nWe only ship good work\nThis might sound self-evident, but in reality there are all sorts of pressures that might lead you to ship mediocre or even iffy work. We promised the feature! We spent a lot of time on it! It’s not horrible ! From the user’s perspective, it’s actually sorta fine?\nNone of these excuses are adequate reasons for us to ship anything but good work at 37signals. This means solid implementations in terms of design and programming, CSS and JavaScript, Ruby and operations. Work we’d be pleased to have to revisit 9 months later without a sigh of dread.\nMost things we work on at 37signals will be around until the end of the internet . So whatever short-term gain you can capture by shipping short of good, you’ll lose when you have to work on it again later (and eventually you will!).\nThis isn’t just about productivity, now or in the future, but also about pride in the work. The delight that comes from working with code and design that’s properly built. It’s hard to put a specific price on that, but easy to recognize the smile it puts on your face.\nThis is not a general license to gold-plate everything. We intentionally constrain ourselves through the cycles in Shape Up , such that we don’t end up spending 2 months on stuff that warranted 2 weeks worth of work. Not every batch of work is going to be a 10/10. But if it’s less than 8/10, it probably shouldn’t go out the door. If it’s less than a 7/10, there’s no way it should go out the door, except as an emergency patch you immediately return to cleanup.\nShipping good work takes discipline and sacrifice. We will afford ourselves both.\nWe ship when we’re confident\nThe reason we do automated and exploratory testing is so we can ship work with confidence that it won’t cause major problems. But exactly how much confidence is required depends both on the team and the criticality of the problem. It’s a measure to gauge in relation to the specifics of the work, not mindlessly delegate to a standardized process.\nIf you’re working on a small change that’s of low criticality, you don’t need the same due diligence as if you’re working on a big change of high criticality. That might seem obvious, but it’s easy just to run the familiar process, and forget to check whether it makes sense for the particulars.\nHigh criticality work involves anything that mutates or munges data. If you can lose data, it’s high criticality. It also involves anything that makes larger changes to existing and big features. If you’re rewriting how todos in Basecamp work, you better be pretty sure you’ve checked everything twice or thrice. If a bug makes it to production on high criticality work, it’s a big deal.\nLower criticality work is anything that merely changes the presentation of existing data, or works on entirely new sets of data, or deals with screens or features off the critical path. If a bug makes it to production on lower criticality work, it won’t be a big deal. You fix it and move on.\nIt’s up to the team to gauge whether what they’re working on is high or lower criticality or somewhere in-between. It also depends on who works on it. Someone well-versed in the domain? A lead with 10 years of experience? They’ll deem more things lower criticality than someone who just started recently. This is natural and right.\nIf you need exploratory testing done by QA to feel confident that your work is solid enough for the criticality at stake, that’s what you should do. Even if it means waiting a bit to be able to ship. But if you’re confident that the work is likely to be good enough for the criticality at stake, you should just ship, stick around to deal with issues, and keep moving forward.\nYou gauge your confidence, and if in doubt, check with someone more senior. The process, the tools, and the testing are there to increase your confidence. Not to tell you when it’s time to ship or not.\nWe ship when the work is finished\nIt’s rare here to keep work that’s essentially finished behind a feature flag for long if at all. We don’t start a lot of highly speculative projects. If it’s been kicked off, it’s because we’ve decided we need it, and that means it’s going out the kitchen when it’s cooked.\nThis means we’re not sitting on a large inventory of possibly-maybe projects that linger behind a feature flag until something magical happens. We clear the decks so we can get on with new work.\nThat runs the risk that we’ll occasionally ship a project that isn’t quite right once we see it in the wild. That’s okay. If it’s bad enough, we’ll fix it then. We don’t have billions of users. They won’t die or leave in droves just because we launch something that perhaps could have been better if it had been done a different way from the start.\nThe momentum of shipping good work has a quality all of its own. We don’t halt the momentum unless it’s properly bad, we don’t linger around second-guessing ourselves ad nauseam. The show must go on.\nWe own the issues after we ship\nClean up your own mess if you make one. Pay attention to the error tracker for a while after launching. Be the first port of call for support when they get feedback from customers. If you did the work, you have the context, and you should put it straight if it’s crooked.\nThis sometimes means that you will have started something new and then get pulled away to fix something old. If it’s a substantial issue, that’s just what it is. You put the new on hold while you fix the old.\nBut you also have to keep the line on what “substantial” means. Almost everything we ship is met with a range of feedback. People will want more or less or different or better or whatever no matter how perfect the work. You can spend an eternity refining and reworking even the smallest change if you let yourself. We don’t let ourselves.\nSo you’re on the hook to make it right, to make it work as intended, but all the feedback that goes beyond that is filed for consideration against all the other ideas and claims for our time.\nShip it, fix it, forget it.\nWe don’t ship if it isn’t right\nIt can be frustrating when work is held in the 11th hour because an issue or an insight that just popped up gives us pause. Why didn’t you mention this three weeks ago? Yes, it’s indeed better to get feedback early, but often that’s just not possible, because the issue or the insight isn’t apparent until it’s go time. "
+   },
+   {
+    "id": 7,
+    "url": "https://basecamp.com/books",
+    "title": "Basecamp — Books we’ve written",
+    "words": 460,
+    "text": "On top of making Basecamp, we write books about what we’ve learned running our own business. They’re filled with practical advice you won’t find anywhere else.\nShape Up is for product development teams who struggle to ship. Written by the innovators behind Basecamp — one of the biggest and longest-running software as a service apps — the book gives teams the tools to address the risks and unknowns at each stage of the product development process. Full of eye-opening insights, Shape Up will help you break free of “best practices” that aren’t really working, think deeper about the right problems, and start shipping meaningful projects your team can celebrate.\nBuy the print edition\nRead it online\nDownload a PDF\nIt Doesn’t Have to Be Crazy at Work\nChaos shouldn’t be the natural state at work. Anxiety isn’t a prerequisite for progress. Sitting in meetings all day isn’t required for success. These are all perversions of work — side effects of broken models and “best” practices. This book treats the patient, calls out false cures, and pushes back against ritualistic time-sucks that have infected the way people work these days.\nAmazon\nApple Books\nBarnes & Noble\nIndiebound\nPorchlight\nREWORK\nNew York Times bestseller! Most business books give you the same old advice: write a business plan, study the competition, seek investors, yadda yadda. If you’re looking for a book like that, put this one back on the shelf. REWORK is the perfect playbook for anyone who’s ever dreamed of doing it on their own. Entrepreneurs, small-business owners, and artists who don’t want to starve will all find valuable guidance in these pages.\nAmazon\nApple Books\nBarnes & Noble\nIndiebound\nPorchlight\nREMOTE\nOffice not required. As an employer , restricting hiring to your local region means you’re not getting the best people you can. As an employee , restricting your job search to companies within a reasonable commute means you’re not working for the best company you can. REMOTE shows both employers and employees how they can work together, remotely, from any desk, in any space, in any place, anytime, anywhere.\nAmazon\nApple Books\nBarnes & Noble\nIndiebound\nPorchlight\nThe smarter, faster, easier way to build a successful web application. Getting Real is packed with keep-it-simple insights, contrarian points of view, and unconventional approaches to software design. This isn’t a technical book or a design tutorial, it’s a book of ideas . Anyone working on a web app — including entrepreneurs, designers, programmers, executives, or marketers — will find value and inspiration in this book.\nRead it online\nDownload a PDF\nAmazon\nApple Books\nBarnes & Noble\nJoin more than 200,000 people who get our email newsletter. We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll find interesting."
+   }
+  ],
+  "stats": {
+   "quotes": 14,
+   "found": 14,
+   "words": 5386
+  },
+  "prompt": "2026-10-16.1",
+  "run": [
+   {
+    "step": "scout",
+    "status": "start",
+    "at": "2026-10-16T18:23:04.201Z"
+   },
+   {
+    "step": "scout",
+    "status": "done",
+    "detail": "Opened the homepage, found 12 useful links, picked 6 pages to read.",
+    "ms": 1012,
+    "pages": [
+     "https://basecamp.com/pricing",
+     "https://basecamp.com/about",
+     "https://basecamp.com/support",
+     "https://basecamp.com/features",
+     "https://basecamp.com/guides/seven-shipping-principles",
+     "https://basecamp.com/books"
+    ],
+    "at": "2026-10-16T18:23:05.214Z"
+   },
+   {
+    "step": "reader",
+    "status": "start",
+    "at": "2026-10-16T18:23:06.045Z"
+   },
+   {
+    "step": "reader",
+    "status": "done",
+    "detail": "Read 7 pages, 5,386 words after removing menus and footers.",
+    "ms": 818,
+    "at": "2026-10-16T18:23:06.045Z"
+   },
+   {
+    "step": "analyst",
+    "status": "start",
+    "at": "2026-10-16T18:23:06.046Z"
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "detail": "Noted 10 signs of manual work and 4 tools in use.",
+    "ms": 23225,
+    "at": "2026-10-16T18:23:29.271Z"
+   },
+   {
+    "step": "planner",
+    "status": "start",
+    "at": "2026-10-16T18:23:29.279Z"
+   },
+   {
+    "step": "planner",
+    "status": "done",
+    "detail": "Drafted 5 opportunities, ranked by impact.",
+    "ms": 48281,
+    "at": "2026-10-16T18:24:17.560Z"
+   },
+   {
+    "step": "skeptic",
+    "status": "start",
+    "at": "2026-10-16T18:24:17.597Z"
+   },
+   {
+    "step": "skeptic",
+    "status": "done",
+    "detail": "Kept 3 of 5, cut 2, marked 3 as low confidence.",
+    "ms": 20067,
+    "at": "2026-10-16T18:24:37.664Z"
+   },
+   {
+    "step": "checker",
+    "status": "start",
+    "at": "2026-10-16T18:24:37.665Z"
+   },
+   {
+    "step": "checker",
+    "status": "done",
+    "detail": "Found 14 of 14 quotes on the pages they came from.",
+    "ms": 47,
+    "at": "2026-10-16T18:24:37.712Z"
+   }
+  ]
+ },
+ "meta": {
+  "engine": "claude-code",
+  "model": "claude-opus-5-5",
+  "generated_at": "2026-10-16T18:24:37.716Z",
+  "seconds": 94
+ }
+}

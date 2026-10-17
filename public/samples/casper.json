@@ -1,0 +1,424 @@
+{
+ "id": "casper",
+ "label": "Casper",
+ "kind": "Online retail",
+ "audit": {
+  "site": "casper.com",
+  "company": {
+   "name": "Casper",
+   "what_they_do": "Designs and sells mattresses, pillows, bedding and bedroom furniture",
+   "customers": "Home sleepers in the US and Canada",
+   "how_they_sell": "Online store, own retail stores, partner stores, phone, chat",
+   "size_hints": "110,000+ five star reviews, part of Carpenter Co"
+  },
+  "headline": "The first thing worth automating at Casper is mattress and furniture return requests, which today need a phone call.",
+  "caveat": "Call volumes, return rates and the tools behind the site cannot be seen from outside.",
+  "signals": [
+   {
+    "observation": "Mattress and furniture returns require a phone call",
+    "quote": "For larger items like mattresses or furniture, please contact us at +1 888-498-0003 .",
+    "page": 4,
+    "n": 1,
+    "source": {
+     "page": 4,
+     "url": "https://casper.com/pages/contact",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Refunds take up to two weeks to post",
+    "quote": "Refunds will be credited back to your account within two weeks.",
+    "page": 7,
+    "n": 2,
+    "source": {
+     "page": 7,
+     "url": "https://casper.com/pages/returns",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Some product returns start with an email to support",
+    "quote": "If this product isn't right for you or your pup, email our Customer Experience team here for assistance.",
+    "page": 7,
+    "n": 3,
+    "source": {
+     "page": 7,
+     "url": "https://casper.com/pages/returns",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Live support has set hours, a bot covers nights",
+    "quote": "Our virtual assistant is available from 9pm-9am Monday - Friday and 6pm-9am Saturday/Sunday.",
+    "page": 4,
+    "n": 4,
+    "source": {
+     "page": 4,
+     "url": "https://casper.com/pages/contact",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Questions also come in through a general web form",
+    "quote": "Fill out the form with your personal information and send us a",
+    "page": 4,
+    "n": 5,
+    "source": {
+     "page": 4,
+     "url": "https://casper.com/pages/contact",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Customers must answer two calls to accept delivery",
+    "quote": "You must answer both calls and confirm verbally to accept the delivery.",
+    "page": 6,
+    "n": 6,
+    "source": {
+     "page": 6,
+     "url": "https://casper.com/pages/delivery",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Partner sends a separate confirmation and scheduling link",
+    "quote": "our partner RXO Logistics will send you an order confirmation (separate from your Casper order confirmation) with a scheduling link.",
+    "page": 6,
+    "n": 7,
+    "source": {
+     "page": 6,
+     "url": "https://casper.com/pages/delivery",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Removal appointments depend on customer confirming by text or call",
+    "quote": "You must respond to this text or call to confirm. If you're unable to respond, your appointment may be rescheduled.",
+    "page": 6,
+    "n": 8,
+    "source": {
+     "page": 6,
+     "url": "https://casper.com/pages/delivery",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Order tracking relies on finding the shipping email",
+    "quote": "To track your package, simply locate your shipping confirmation email and click on the tracking number.",
+    "page": 4,
+    "n": 9,
+    "source": {
+     "page": 4,
+     "url": "https://casper.com/pages/contact",
+     "match": "exact"
+    }
+   },
+   {
+    "observation": "Comparison prices are researched by hand every quarter",
+    "quote": "Our team conducts thorough market research every quarter to ensure our comparable value is always accurate to the bedding market",
+    "page": 4,
+    "n": 10,
+    "source": {
+     "page": 4,
+     "url": "https://casper.com/pages/contact",
+     "match": "exact"
+    }
+   }
+  ],
+  "tools": [
+   {
+    "name": "Affirm",
+    "quote": "Sleep now & pay over time with Affirm or Katapault.",
+    "page": 1,
+    "source": {
+     "page": 1,
+     "url": "https://casper.com/",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Katapault",
+    "quote": "Katapault: Zero Credit Required. Lease to own. Pay over time on your own schedule.",
+    "page": 1,
+    "source": {
+     "page": 1,
+     "url": "https://casper.com/",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "UPS My Choice",
+    "quote": "When you sign up for UPS My Choice®, you can keep a closer eye on your shipments, modify your shipping preferences",
+    "page": 6,
+    "source": {
+     "page": 6,
+     "url": "https://casper.com/pages/delivery",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "RXO Logistics",
+    "quote": "RXO will work with you to schedule a delivery date and removal if you opted into product removal at the time of purchase.",
+    "page": 6,
+    "source": {
+     "page": 6,
+     "url": "https://casper.com/pages/delivery",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "LoadUp",
+    "quote": "LoadUp will send you an email (separate from your Casper order confirmation) with a link to schedule your appointment.",
+    "page": 6,
+    "source": {
+     "page": 6,
+     "url": "https://casper.com/pages/delivery",
+     "match": "exact"
+    }
+   },
+   {
+    "name": "Live chat and virtual assistant",
+    "quote": "Start a chat and get the answers you need—without the fluff.",
+    "page": 4,
+    "source": {
+     "page": 4,
+     "url": "https://casper.com/pages/contact",
+     "match": "exact"
+    }
+   }
+  ],
+  "opportunities": [
+   {
+    "title": "Large-item return requests",
+    "problem": "Mattress and furniture returns need a phone call. Refunds take up to two weeks.",
+    "signals": [
+     1,
+     2,
+     3
+    ],
+    "approach": "Online return form creates a ticket, books pickup, and sends status texts through refund.",
+    "measure": {
+     "metric": "Share of returns self-served",
+     "baseline": "Count large-item returns by channel from phone and ticket logs.",
+     "target": "Half of large returns started online"
+    },
+    "effort": "medium",
+    "impact": "large",
+    "days_30": "Return paths and call reasons mapped",
+    "days_60": "Online return form live for mattresses",
+    "days_90": "Status texts running, baseline compared",
+    "rank": 1,
+    "confidence": "high",
+    "assumption": "Phone returns are a cost, not a deliberate step to save the sale.",
+    "ask": "How many large returns come by phone monthly, and how many does the agent save?"
+   },
+   {
+    "title": "Delivery and removal confirmations",
+    "problem": "Partners send separate links. Missed calls or texts push appointments back.",
+    "signals": [
+     6,
+     7,
+     8
+    ],
+    "approach": "Pull partner scheduling status into Casper order messages, with reminders before each confirmation call.",
+    "measure": {
+     "metric": "Rescheduled delivery rate",
+     "baseline": "Pull RXO and LoadUp reschedules for last 90 days.",
+     "target": "Reschedules down by a quarter"
+    },
+    "effort": "medium",
+    "impact": "large",
+    "days_30": "Partner data feeds and reschedule causes known",
+    "days_60": "Reminder messages live for RXO deliveries",
+    "days_90": "Removal confirmations added, results reported",
+    "rank": 2,
+    "confidence": "medium",
+    "assumption": "Casper can get live scheduling status from RXO and LoadUp systems.",
+    "ask": "How many deliveries were rescheduled last quarter because a call or text was missed?"
+   },
+   {
+    "title": "Order status in chat",
+    "problem": "Tracking needs the shipping email. Night questions go to a bot.",
+    "signals": [
+     9,
+     4,
+     5
+    ],
+    "approach": "Virtual assistant looks up orders by email and order number, then returns live tracking.",
+    "measure": {
+     "metric": "Order status contact share",
+     "baseline": "Tag one week of chats, forms and calls by reason.",
+     "target": "Most tracking questions closed without an agent"
+    },
+    "effort": "small",
+    "impact": "medium",
+    "days_30": "Contact reasons tagged, lookup designed",
+    "days_60": "Bot order lookup live in chat",
+    "days_90": "Web form routes tracking questions to lookup",
+    "rank": 3,
+    "confidence": "low",
+    "assumption": "The bot cannot already look up orders, and tracking questions are common.",
+    "ask": "What share of chats and calls are order status, and can the bot answer them?"
+   }
+  ],
+  "dropped": [
+   {
+    "title": "Comparison price checks",
+    "reason": "The quarterly research takes real staff time and competitor prices are easy to scrape."
+   }
+  ],
+  "questions": [
+   "How many large returns come by phone monthly, and how many does the agent save?",
+   "How many deliveries were rescheduled last quarter because a call or text was missed?",
+   "What share of chats and calls are order status, and can the bot answer them?",
+   "What are the top five reasons customers contact you each month?",
+   "Which help desk and order system do your agents use today?",
+   "What data do RXO and LoadUp share with you, and how often?"
+  ],
+  "pages": [
+   {
+    "id": 1,
+    "url": "https://casper.com/",
+    "title": "The Best Bed for Better Sleep | Casper Online Mattress Store",
+    "words": 1088,
+    "text": "Take the Quiz\nSave up to 25% on mattresses.*\nFriends don’t let friends pay full price.\nShop mattresses\nShop sale\nEnjoy 30% savings on bundles.*\nWe make sure our friends get what they need.\nShop sale\n*Savings based on Comp. Value.\n<div class=\"section brand-proofpoints__main-container section-blends section-full\"style=\"--section-spacing-block-start: 0px; --section-spacing-block-end: 0px; margin-block-start: 32px; margin-block-end: 32px;\"\">\n100-Night Risk-Free Trial*\nLove your sleep guarantee.\n10-Year Limited Warranty*\nSleep easy, rest assured.\nFree Mattress Delivery\nWhite glove delivery available.\n110,000+ 5 Star Reviews*\nReal sleepers just like you.\nThe Casper Promise\n100-Night Risk-Free Trial\nYour 100-night mattress trial begins when your items are delivered. We believe you should sleep on your mattress to decide if you like it, and it can take the body 30 nights to adjust to a new mattress. If you’re not 100% in love after the first 30-Night Adjustment Period, returns are free and easy. We’ll set up a courier to pack up and remove the product on your schedule. (No, you don’t have to squeeze it back in the box.) *You can find all the details of our Risk-Free Trial by visiting our Trial & Returns Page .\nLimited 10 Year Warranty*\nCasper mattresses have a 10-year limited warranty, with exception of clearance items which have a 5-year warranty, that’s years of great sleep in your future. The mattress warranty covers manufacturing defects that are not associated with an unsupportive foundation or adjustable bed base. *You can find all the details of our warranty information by visiting our Warranty Page .\nQuick, Simple Financing Options\nSleep now & pay over time with Affirm or Katapault. Learn more .\nAffirm: Pay over 3-24 months with rates as low as 0% APR, subject to eligibility.\nKatapault: Zero Credit Required. Lease to own. Pay over time on your own schedule.\nFree, No-Contact Mattress Delivery*\nEvery Casper mattress ships directly to your doorstep for free via UPS. If you are looking for a hands-free option in-home delivery is available for a fee at checkout.\n*Select products ineligible for free shipping or returns where indicated. Additional shipping fees apply to AK and HI. You can find all shipping details on our Shipping & Delivery Page .\nOver 110,000+ 5-star reviews\nSee all reviews\n\"Wish I bought it sooner\"\n\"As a night shift nurse I really struggle to sleep well. This mattress saved me! Worth every penny. It's the perfect mix of soft and firm so I don't sink in but don't feel like I'm sleeping on a box spring.\"\nDanielle Q. — New York, NY\nWhat's keeping you up at night?\nThere's a Casper for everyone.\nAvailable as:\nThe One or Cloud One\nFrom:\n$699\nThe Hybrids\nAvailable as:\nDream or Snow or Dream with QuickCool™ Cover\nFrom:\n$1,215\nThe Maxes\nAvailable as:\nDream Max or Snow Max or Dream Max with QuickCool™ Cover\nFrom:\n$2,040\nFinancing options as low as 0% APR on mattresses*\n*See if you qualify.\nFriends & Family Sale\nSave up to 30% sitewide.\nEnjoy savings on mattresses, pillows, adjustable bases and more, and get ready to brag about your bed.\nShop all\nSave up to 25% on mattresses\nSave 30% on bundles\nSave up to 30% on furniture\nSave 20% on 2+ pillows\nSave 10% on bedding\nSave 10% on accessories\nA Christmas Casper\nCarol\nSee what a good mattress could do for you,\n& dont miss Paramount's\nShop mattresses\nRest assured\nLimited Warranty*\nDecade of durability.\nQuick & simple\nFinancing options\nSleep now, pay over time.\nLove your sleep\nRisk-free trial*\n100-night love your sleep guarantee.\nFree delivery\nMattresses ship free*\nWhite-glove delivery available.\nSleep now, pay over time.\nFlexible payments\nMonthly options with rates as low as 0% APR, subject to eligibility.\nZero credit required\nLease to own. Pay over time on your own schedule.\nExplore financing options\nYour story is our story.\nPrevious\nShop the room\nOur most popular mattress just got an upgrade.\nOriginal Pillow Double Pack\nSupports your head and neck without flattening.\nSuperSoft Sheet Set\n\"These sheets are amazing! So soft and comfortable. It’s like sleeping in a hug!!\" - Theresa\nSuperSoft Duvet Cover\n\"These sheets are amazing! So soft and comfortable. It’s like sleeping in a hug!!\" - Theresa\nShop the room\nSnow Max\nMaximum support, and cooling all night.\nPercale Duvet Cover\n\"I love the luxurious hotel-quality percale sheets. They wash very well, yet are a very classic display of luxury and timelessness!\" - Michelle\n\"They feel amazing and keep me cool all night.\" - Alan\nOur fluffiest pillow yet surrounds you in luxurious comfort.\nShop the room\nDream\nPremium support and comfort. Less interruptions.\nOriginal Pillow Double Pack\nSupports your head and neck without flattening.\nShop the room\nSnow Max\nMaximum support, and cooling all night.\nDown Pillow Double Pack\nOur fluffiest pillow yet surrounds you in luxurious comfort.\nShop the room\nFoundation\nShop the room\nSnow\nA memory foam bed that actually sleeps cool.\n\"They feel amazing and keep me cool all night.\" - Alan\nSnow Technology from cover to core works to keep you cool all night long.\nShop the room\nSnow\nA memory foam bed that actually sleeps cool.\n\"They feel amazing and keep me cool all night.\" - Alan\nSnow Technology from cover to core works to keep you cool all night long.\nShop the room\nDream Max\nMaximum support, minimum aches and pains.\nNext\n“When a brand redesigns its mattresses, the changes are usually superficial, and the firmness and feel remain the same, but the Casper One is a big departure from the old Casper Original. It's significantly firmer and also has a different feel.” - CNET\n\"Right out of the box, I could tell this mattress was different from others. It was cool to the touch and there were no off-gassing odors, loose threads or indication of poor workmanship. It felt luxurious, plush and surprisingly thick. I expected that initial coolness to disappear as soon as I added sheets, but it didn’t.\" - The Spruce\n“When I lay on the Casper Snow mattress, I feel like I'm melting into fresh, crisp, powdery snow.” - Conde Nast Traveler\nPrevious\nNext\nFind a Casper store near you\nFeel the difference in person. Try products for yourself and chat with a Sleep Specialist at a store near you.\nOur Sleep Specialists are dedicated to helping you find the mattress of your dreams. Give us a call or chat with us now.\nEmail us\nCall +1-888-498-0003\nFrequently Asked Questions\nWhat makes Casper mattresses different?\nCasper mattresses are developed by a team of sleep obsessed engineers and designer"
+   },
+   {
+    "id": 2,
+    "url": "https://casper.com/pages/why-casper",
+    "title": "Why Choose Casper Mattresses - Benefits & Features | Casper",
+    "words": 1036,
+    "text": "Don't just take our word for it. Casper mattresses are highly ranked by Consumer Reports.\n*Consumer Reports does not endorse products or services.\nWhat is Consumer Reports\nAn independent, nonprofit organization with the mission of empowering and informing consumers.\nTesters, researchers, journalists, policy makers and more work side by side.\nDoes not accept advertising, sponsorship or free samples.\nPromotes truth, transparency, and fairness in the marketplace.\nOut of 99 rated mattresses, The One came out on top.\nGuess we picked a good name.\nConsumer Reports named The One the top-rated all-foam mattress of 2026.* Discover why.\n*Consumer Reports does not endorse products or service.\nRead the report\nInspired by our original all-foam mattress and perfected over a decade, The One offers supportive and breathable bliss.\nShop now\nCasper also has four of the top innerspring mattresses rated by Consumer Reports.*\n*Consumer Reports does not endorse products or service.\nOur mattresses Dream, Snow, Dream Max, and Snow Max were all highly-ranked by Consumer Reports. See why.\nRead the report\nDream and Snow give you the balanced comfort and support only hybrids can offer.\nShop Hybrids\nWith superior support and all-night alignment, Dream Max is the mattress we’ve been dreaming of.\nShop Dream Max\nLet's find the perfect sleep solution for you.\nTake our 2 minute quiz and change your sleep for good.\nTake our mattress quiz\nDiscover the Casper difference.\nWe obsess over every thread.\nHere's how our dream team ensures the best sleep humanly possible:\nProduct tests\n(not counting snoozes)\nPrototyping and testing machines\nErgonomist\n(What the hell is an ergonomist?)\nWe sweat the details of cooler sleep.\nHow did we create 12+ hours of cooler sleep? By attacking overheating from every angle. From core to cover, every detail of Snow Max is designed to optimize heat dispersion and create a refreshing feel.\nWe believe you can always be cozier.\nWhy not get too comfortable? At Casper, we tirelessly test every foam and thread to ensure the best balance of comfort, support, and cooling for all sleep positions and styles. Whether you prefer a plush, medium, or firm feel, each mattress is built to support your unique needs.\nWe give gimmicks a rest.\nAt Casper, every material we use must help sleep and must be tested, which means when you buy a Casper bed you get everything you need to sleep better—and nothing you don’t. No fads, just thoughtful design, crafted by sleep experts.\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\nWe'll replace it with a new one. 10-year limited warranty*\nSend it back for free. 100-night risk-free trial*\nThe shipping is on us. Free, no-contact delivery*\nBuy now, pay over time. Quick, simple financing options\nLet us do the heavy lifting. Optional white glove delivery*\n*Select products ineligible for free shipping or returns where indicated. Additional shipping fees apply to AK and HI.\nFrom:\n$699\nSAVE 20%\nComp. Value:\n$874\nBest Seller\n11”\nFeel:\nMedium-Firm\nResponsive\nOur most popular mattress just got an upgrade.\nFeel:\nMedium-Soft\nResponsive\nSupport:\nPressure Relief:\nShop The Foams\nThe Hybrids\nFrom:\n$1,215\nSAVE 25%\nComp. Value:\n$1,620\nHighest Rated\n12”\nDream\nPremium support and comfort. Less interruptions.\nFeel:\nMedium\nResponsive\nSnow\nA memory foam bed that actually sleeps cool.\nFeel:\nMedium\nConforming\nSupport:\nPressure Relief:\nShop The Hybrids\nThe Maxes\nFrom:\n$2,040\nSAVE 25%\nComp. Value:\n$2,720\nMost Supportive\n14”\nDream Max\nMaximum support, minimum aches and pains.\nFeel:\nMedium-Soft\nResponsive\nSnow Max\nMaximum support, and cooling all night.\nFeel:\nMedium-Soft\nConforming\nSupport:\nPressure Relief:\nShop The Maxes\nYou slept. We listened.\nSince the beginning, we've designed our mattresses around real people, which means lots of feedback. Lots and lots of feedback.\nPlay video\nFrequently Asked Questions\nWhat is Consumer Reports?\nConsumer Reports is an independent nonprofit that tests and rates products to help consumers make informed decisions. Casper mattresses have consistently performed well in their reviews for comfort, durability, and temperature regulation.\nWhat makes Casper mattresses different?\nCasper mattresses are developed by a team of sleep-obsessed engineers and designers, plus a Certified Professional Ergonomist. We have two rules: everything we design must be tested and must help sleep.\nOver the past 10 years we have taken valuable feedback from sleepers like you to design the best products for a great night’s rest. Our Zoned Support™ system provides optimal spinal alignment without sacrificing comfort — allowing you to choose between the c"
+   },
+   {
+    "id": 3,
+    "url": "https://casper.com/products/casper-one-foam",
+    "title": "The One - Affordable Foam Mattress | Casper",
+    "words": 762,
+    "text": "Shop\nWhat's Inside\nCompare\nQUIZ RESULTS\nYour perfect match is here!\n92% of customers keep their mattress.*\nZoom\nZoom\nZoom\nZoom\nZoom\nZoom\nZoom\nSelect your foam model:\nThree layers of comforting foam with a responsive feel.\n+$200\nThree layers of responsive foam with a plusher feel.\nCasper\nBEST SELLER\nPremium Foam Mattress\nSale price $699\nSAVE 20%\nComp. Value:\nRegular price\n$874\n69900\n92% of customers keep their mattress.*\n92% of customers keep their mattress.*\nZoom\nZoom\nZoom\nZoom\nZoom\nZoom\nZoom\nCozy Cover\nBreathable Foams\nExpertly engineered to solve your sleep needs without breaking the bank, our signature foam mattress features three layers of cradling foam and a responsive yet supportive medium-firm feel sleepers love.\nSelect your foam model:\nThree layers of comforting foam with a responsive feel.\n+$200\nThree layers of responsive foam with a plusher feel.\nSize chart\nWhich mattress size is right for you?\nWhen picking your next mattress, it’s more than just personal preference—two key things to keep in mind are how much room you have and who’s sleeping in the bed.\nUpgrading to a King mattress is a game-changer if you’re sharing space with kids or pets. And if you’re tall, the extra length of a California King could be just right.\nA Full size mattress is ideal for young adults or those with a smaller bedroom, while a Queen is the top pick for couples or anyone who enjoys extra space to sprawl out.\nThe Twin is the smallest option, ideal for single sleepers. While the Twin XL is a dorm favorite it can also create a Split King if you purchase two.\nWhich pillow size is right for you?\nPillow sizes can vary, but standard pillows, also known as queen pillows, are typically suitable for all types of sleepers. If you prefer extra space or need to fill the width of a larger mattress, king-size pillows, which are about 30% larger, are a great choice.\nSelect your size:\nSale price $699\nComp. Value:\nRegular price\n$874\n69900\nSale price $779\nComp. Value:\nRegular price\n$974\n69900\nSale price $859\nComp. Value:\nRegular price\n$1,074\n69900\nSale price $899\nComp. Value:\nRegular price\n$1,149\n69900\nSale price $1,319\nComp. Value:\nRegular price\n$1,649\n69900\nCalifornia King\nSale price $1,319\nComp. Value:\nRegular price\n$1,649\n69900\nSplit King\nSale price $1,558\nComp. Value:\nRegular price\n$1,948\n69900\nComplete your bed:\nTwin - (Save over 30%)\nTwin - (Save over 30%)\nUpgrade & Save\n+$119\nComp. Value:\n$184\nDescription for Original Pillow.\nOur dreamy down-alternative pillow that is both soft and supportive.\n$75 Comp. Value\nIn-stock, ships in 1-2 business days | Free shipping\nDescription for Waterproof Mattress Protector.\nGuards against dirt, spills, and normal wear and tear.\n$109 Comp. Value\nIn-stock, ships in 1-2 business days | Free shipping\nFree gift with purchase:\nLIMITED TIME OFFER\nFREE GIFT\nComp. Value:\nSubtotal:\nSale price $699\nSAVE 20%\nComp. Value:\nRegular price\n$874\n69900\nAdd to cart\nAs low as\n$/week with .\nNo credit required. See my payment\nIn-stock, ships in 1-2 business days | Free shipping & returns\nWhat makes this mattress The One?\nOVERHEATING IS OVER : Every layer of foam is designed for all night breathability.\nBEST NIGHT’S REST : Three layers of supportive, pressure-relieving foam soothe your body.\nTHE FEEL SLEEPERS LOVE : Uniquely supportive with the perfect bit of bounce.\nDREAMY SLEEP, DREAMIER PRICE: Enjoy deep sleep at an affordable price.\nDECADE OF DURABILITY : Casper mattresses use the highest-quality foams to stay comfortable year after year.\nThe One foam mattress is especially comfortable for stomach sleepers.\nGot Questions? Talk to a Sleep Specialist.\nWe’re dedicated to helping you find the mattress of your dreams!\n1.888.498.0003\nChat with us\nTry in store\nEnter your ZIP code to find the nearest Casper store.\nZIP code\nFind store\nUse current location\nFinding the nearest store…\nStore detail (opens in new tab)\nSee all stores (opens in new tab)\nChange location\nWe’re not in your area yet! Visit a partners store below.\nSee all stores (opens in new tab)\nChange location\nFree, no-contact delivery\n100-night risk-free trial*\n10-year limited warranty*\nAdd to cart\nSale price $699\nSAVE 20%\nComp. Value:\nRegular price\n$874\n69900\nAdd to cart\nSelect your size:\nSize\nCalifornia King\nSplit King\nSale price $699\nComp. Value:\nRegular price\n$874\n69900\nAdd to cart\nSale price $699\nSAVE 20%\nComp. Value:\nRegular price\n$874\n69900\nSelect your size:\nSale price $699\nComp. Value:\nRegular price\n$874\n<path d=\"M7.33301 6.00016H8.66634V4.66683H7.33301M7.99967 13.3335C5.05967 13.3335 2.66634 10.9402 2.66634 8.00016C2.66634 5.06016 5.05967 2.66683 7.99967 2.66683C10.9397 2"
+   },
+   {
+    "id": 4,
+    "url": "https://casper.com/pages/contact",
+    "title": "Contact Us | Get help from our team of Casper sleep experts.",
+    "words": 562,
+    "text": "We're here for all your snooze questions.\nContact us 7 days a week for advice on everything from sleep concerns to the best breakfast foods.\nSupport and Sales:\n9am-9pm EST Monday - Friday\n9am-6pm EST Saturday/Sunday\nNeed help afterhours?\nOur virtual assistant is available from 9pm-9am Monday - Friday and 6pm-9am Saturday/Sunday.\nGive us a call\nOur team is standing by to help you sleep more easily.\n+1.888.498.0003\nChat with us now\nStart a chat and get the answers you need—without the fluff.\nChat now\nSend us an email\nDrop us a line and we’ll respond faster than you can hit snooze.\nSend us an email.\nSend us your questions and concerns.\nSend us your questions and concerns. Fill out the form with your personal information and send us a\nmessage\nName\nE-mail\nMessage\nSend message\nHow do I find a Casper store near me?\nWe've recently added Casper experiences in cities across the United States and Canada. To find the store closest to you, visit our store finder here .\nHow do I track my order?\nTo track your package, simply locate your shipping confirmation email and click on the tracking number. If you've set up an account on Casper.com, you can also login to access tracking information for your entire order. Please keep in mind that delivery may take longer during holidays or severe weather conditions.\nHow do I start a return or exchange?\nIf you decide that your Casper products aren’t right for you within your trial period, we're happy to help troubleshoot or initiate the return process. For smaller items like our bedding, pillows, and dog beds, you can visit our return center.\nFor larger items like mattresses or furniture, please contact us at +1 888-498-0003 . We'll work with you to arrange a pickup through a local charity or recycling partner and refund you in full. Refunds will be credited back to your account within two weeks.\nEnjoy our risk-free 100-night mattress trial.\nWe give you 100 nights to try it on us. Don’t love it? We’ll take it back and give you a full refund. Really!\nFeel the Casper difference at one of our retail locations.\nIt's always bedtime at a Casper store. Swing by to try and pick up our mattresses and other sleep products. Find a store .\nCasper®, Hyperlite™, Snoozewear™, Snug™, Dream Cooling Pillow™, AirScape®, Zoned Support™, Zoned Support™ Max, QuickCool™, HeatDelete®, Core+™ are trademarks of Casper Sleep Inc.\nOur team regularly searches the market and tests comparable mattress and sleep products to ensure that ours offer top-quality materials, the most value for your dollar, and the best sleep experience on the market.\nAs part of the Carpenter Co family, Casper mattresses are manufactured by the largest foam manufacturer in the world—no middle man, no markups, just the best prices for our sleepers.\nWith 12+ years in the mattress and bedding industry, the Casper team knows what makes a great night’s rest and what’s just fluff. Our mattresses and bedding are obsessively-engineered and precisely-layered to help you get your deepest sleep ever.\nThe Comp. Value shown for Casper products is never set it and forget it. Our team conducts thorough market research every quarter to ensure our comparable value is always accurate to the bedding market and the three most comparable products, so you never have to worry about missing out on savings."
+   },
+   {
+    "id": 5,
+    "url": "https://casper.com/pages/jobs",
+    "title": "Jobs and Careers | Casper",
+    "words": 207,
+    "text": "Casper Career Center\nCorporate Positions\nRetail Positions\nHelp bring great sleep to more people\nWe're looking for smart, driven individuals who are ready to dream up new ideas with our team.\nCasper®, Hyperlite™, Snoozewear™, Snug™, Dream Cooling Pillow™, AirScape®, Zoned Support™, Zoned Support™ Max, QuickCool™, HeatDelete®, Core+™ are trademarks of Casper Sleep Inc.\nOur team regularly searches the market and tests comparable mattress and sleep products to ensure that ours offer top-quality materials, the most value for your dollar, and the best sleep experience on the market.\nAs part of the Carpenter Co family, Casper mattresses are manufactured by the largest foam manufacturer in the world—no middle man, no markups, just the best prices for our sleepers.\nWith 12+ years in the mattress and bedding industry, the Casper team knows what makes a great night’s rest and what’s just fluff. Our mattresses and bedding are obsessively-engineered and precisely-layered to help you get your deepest sleep ever.\nThe Comp. Value shown for Casper products is never set it and forget it. Our team conducts thorough market research every quarter to ensure our comparable value is always accurate to the bedding market and the three most comparable products, so you never have to worry about missing out on savings."
+   },
+   {
+    "id": 6,
+    "url": "https://casper.com/pages/delivery",
+    "title": "Fast Mattress Delivery - Free Shipping | Casper",
+    "words": 1087,
+    "text": "Plan for your Delivery\nShipping & Delivery\nFastest Delivery\n- Delivery in 2-8 business days\n- Free shipping for mattresses*\n- Set delivery preferences using UPS MyChoice\nLearn More\nLeast Heavy Lifting\n- Delivery in 2-4 weeks\n- Optional free mattress removal\n- Schedule preferred delivery date\nLearn More\nNEED IT SOONER?\nSleep on your new mattress tonight.\nE-Zzz Curbside Pick Up\nSleep Specialist Consultation\nBook a 30-min Nap Appointment\nFastest delivery.\nUPS Standard Ground Shipping\nIn stock products are typically delivered within 2-8 business days after order.\nCasper mattress boxes are about the size of a mini-fridge and can weigh anywhere from 47-139 lbs depending on the mattress model and size. Teamwork makes the dream work — unboxing is easiest when you have a helping hand.\nAs soon as it’s available, we’ll send UPS tracking information via email for each item in your order. During checkout, you can opt-in to receive text message updates or add a signature requirement for your delivery. When you sign up for UPS My Choice®, you can keep a closer eye on your shipments, modify your shipping preferences, or schedule a future delivery date.\nProcessing Time\nOrder processing typically takes 1-3 business days.\nPlease keep in mind that delivery may take longer during/after holidays or severe weather conditions.\nDue to changes in product availability, sometimes there will be “ships by” messaging on our site.\nThe product is set to ship by the date provided, at the latest, which means it can ship any day before.\nWhile these orders have a slightly longer processing time, the travel time via UPS is still a standard 1-5 business days.\nShipping Fees\nShipping via UPS is free for mattresses, soft goods, and accessories within the contiguous United States.\nWe are unable to ship to APO and PO Boxes, or US Territories like Puerto Rico and the Virgin Islands.\nLet us do the heavy lifting for $249.\nIn Home Delivery and Setup Service + Optional Mattress Removal\nHow does In-Home Delivery and Setup Work?\nWhen you purchase products to be delivered via our in-home delivery and set up partners at RXO, it typically takes 2-4 weeks for items to be delivered to your home. If your order includes soft goods like sheets and pillows, those items will be delivered directly to your door via UPS, while the mattress and furniture will be sent to our delivery partners. RXO will work with you to schedule a delivery date and removal if you opted into product removal at the time of purchase.\n1.) After you have placed an order with In-Home Delivery and Setup, our partner RXO Logistics will send you an order confirmation (separate from your Casper order confirmation) with a scheduling link. Once your product(s) arrive at RXO's location, the scheduling link will update, and RXO's automated phone system will call and provide you with the next available date for delivery. You’ll also be able to talk to an RXO Scheduling agent.\n2.) The day before your delivery date, you'll receive a call that confirms a four-hour delivery window in which your delivery team will arrive. During that four-hour window, they will call again within 30 minutes of their arrival. ​​You must answer both calls and confirm verbally to accept the delivery.\n3.)The delivery team will bring your In-Home Delivery eligible Casper products to the appropriate room, set them up, and remove any packaging materials.\n4.) You can also add a removal service to remove and recycle your previously owned mattress and foundation/box spring. To be eligible for the removal of a mattress and box spring, those items must be purchased through Casper. An order with one mattress will be eligible for the removal of one used mattress. An order with one foundation will be eligible for the removal of one used box spring/foundation.\nAll mattresses removed using Casper’s In-Home Delivery and Setup service must be in sanitary condition, to be determined by the on-site delivery team, and all box springs must be able to be removed without being broken down.\nPlease note that our delivery partner does not remove bed frames. In addition, our partners are limited to arranging and setting up Casper products only.\nLoadUp: Mattress Removal Service\nCasper partners with LoadUp, a national logistics and recycling company, to remove your old mattress and furniture. This optional service is available in eligible areas (excluding California) for $150 and can be selected at checkout.\n) LoadUp will send you an email (separate from your Casper order confirmation) with a link to schedule your appointment.\n) Scheduling is typically available as soon as the next day, up to 28 days in advance – appointments are scheduled in four-hour time slots.\n) On the day of your appointment, you'll receive a text message or phone call when the LoadUp team is on the way. You must respond to this text or call to confirm. If you're unable to respond, your appointment may be rescheduled.\n) Items are removed on a one-for-one basis, matching each eligible Casper product purchased. For example, if you purchased a Casper mattress and bedframe, LoadUp can only remove one mattress and one bed frame.\nLoadUp provides removal services only and does not perform assembly or setup, so if you are interested in set-up services, check out In-Home Delivery & Setup option!\nLoadUp can remove a maximum of three eligible items per appointment. If you need more than three items removed, consider our In-Home Delivery & Setup service.\nLoadUp can remove mattresses, bed frames and adjustable bases, but cannot remove the Repose, or Haven bedframe or other non-eligible household items.\nFrequently asked questions\nCan you expedite shipping?\nAll Casper products ship via UPS Standard Shipping which typically takes 2-8 business days. Since we cannot expedite orders, your best bet would be to visit one of our stores. Click here to use our Store Locator to find the Casper Sleep Shop or partner store nearest you!\nDo you deliver on Saturday or Sunday?\nUPS will occasionally deliver ground packages on Saturdays. In order to get your order on Saturday or Sunday, we recommend having your packages delivered to a UPS store or friend's house ahead of the weekend, where you can pick up your packages at your own convenience.\nCan I specify a delivery date?\nSince UPS is a third party, we're unable to 100% guarantee that your order will be delivered on a specific date—occasionally a weather or operational delay could impact your delivery by a day or so. We are also unable "
+   },
+   {
+    "id": 7,
+    "url": "https://casper.com/pages/returns",
+    "title": "Casper Return Center",
+    "words": 571,
+    "text": "Casper Return Center\nRemember, it can take the body at least 30 days to adjust to a new mattress.\nWe give you 100 nights to try your mattress for free. Returns are free and easy anytime after the 30-Night Adjustment Period. See our expert tips for getting there faster.\nLearn more\nPillows and Bedding Returns\nYou can return your Casper item and get a full refund within 30 days of delivery or within 30 days of an in-store purchase, provided the merchandise is unused, and in its original packaging and condition.\nPrint Shipping Labels\nContact us or click the order number in your original order confirmation email, to view and print your shipping label.\nPrepare your package\nAttach the return label to the outside of the box. If you don't have the original packaging, any sturdy box will do.\nShip it at no cost\nDrop your return package off at any UPS location. Sit back and relax.\nFurniture Returns\nIt’s important to test out all your Casper products in your own sleep environment. We offer a 30-night trial on our furniture products so that you can do just that. When you purchase your furniture with a paired mattress, we're happy to extend the trial to 100 nights to match that of your mattress. As long as your furniture is in donate-able condition, you can return it without the original packaging or box, even if it has been assembled.\nGlow, Mattress Topper, and Dog Bed Returns\nOur Glows, Mattress Toppers, and Dog Bed all come with 30-night trials. If this product isn't right for you or your pup, email our Customer Experience team here for assistance.\nBundle Returns\nWhen you purchase a Casper Bundle, all of the items in the bundle will have the same trial period. If your bundle includes a mattress, the entire bundle will have a 100-night trial period.\nRefunds\nRefunds will be credited back to your account within two weeks.\nIf you paid for shipping to Hawaii or Alaska, you’ll get a refund for those shipping costs as well.\nIf you paid for our in-home delivery and setup service, we will not refund for the service performed.\nYou may return a maximum of two items of the same product type.\nFor more information on our return policy, see Terms .\nStill have questions?\nOur Sleep Specialists are dedicated to helping you find the mattress of your dreams. Give us a call or chat with us now.\nGive us a call\nOur team is standing by to help you sleep more easily.\n+1.888.498.0003\nChat with us now\nStart a chat and get the answers you need—without the fluff.\nChat now\nSend us an email\nDrop us a line and we’ll respond faster than you can hit snooze.\nSend us an email\nCasper®, Hyperlite™, Snoozewear™, Snug™, Dream Cooling Pillow™, AirScape®, Zoned Support™, Zoned Support™ Max, QuickCool™, HeatDelete®, Core+™ are trademarks of Casper Sleep Inc.\nOur team regularly searches the market and tests comparable mattress and sleep products to ensure that ours offer top-quality materials, the most value for your dollar, and the best sleep experience on the market.\nAs part of the Carpenter Co family, Casper mattresses are manufactured by the largest foam manufacturer in the world—no middle man, no markups, just the best prices for our sleepers.\nWith 12+ years in the mattress and bedding industry, the Casper team knows what makes a great night’s rest and what’s ju"
+   }
+  ],
+  "stats": {
+   "quotes": 16,
+   "found": 16,
+   "words": 5313
+  },
+  "prompt": "2026-10-16.1",
+  "run": [
+   {
+    "step": "scout",
+    "status": "start",
+    "at": "2026-10-16T18:23:04.290Z"
+   },
+   {
+    "step": "scout",
+    "status": "done",
+    "detail": "Opened the homepage, found 68 useful links, picked 6 pages to read.",
+    "ms": 1370,
+    "pages": [
+     "https://casper.com/pages/why-casper",
+     "https://casper.com/products/casper-one-foam",
+     "https://casper.com/pages/contact",
+     "https://casper.com/pages/jobs",
+     "https://casper.com/pages/delivery",
+     "https://casper.com/pages/returns"
+    ],
+    "at": "2026-10-16T18:23:05.660Z"
+   },
+   {
+    "step": "reader",
+    "status": "start",
+    "at": "2026-10-16T18:23:06.840Z"
+   },
+   {
+    "step": "reader",
+    "status": "done",
+    "detail": "Read 7 pages, 5,313 words after removing menus and footers.",
+    "ms": 1167,
+    "at": "2026-10-16T18:23:06.840Z"
+   },
+   {
+    "step": "analyst",
+    "status": "start",
+    "at": "2026-10-16T18:23:06.841Z"
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "detail": "Noted 10 signs of manual work and 6 tools in use.",
+    "ms": 16731,
+    "at": "2026-10-16T18:23:23.572Z"
+   },
+   {
+    "step": "planner",
+    "status": "start",
+    "at": "2026-10-16T18:23:23.585Z"
+   },
+   {
+    "step": "planner",
+    "status": "done",
+    "detail": "Drafted 4 opportunities, ranked by impact.",
+    "ms": 41006,
+    "at": "2026-10-16T18:24:04.591Z"
+   },
+   {
+    "step": "skeptic",
+    "status": "start",
+    "at": "2026-10-16T18:24:04.601Z"
+   },
+   {
+    "step": "skeptic",
+    "status": "done",
+    "detail": "Kept 3 of 4, cut 1, marked 2 as low confidence.",
+    "ms": 22202,
+    "at": "2026-10-16T18:24:26.803Z"
+   },
+   {
+    "step": "checker",
+    "status": "start",
+    "at": "2026-10-16T18:24:26.806Z"
+   },
+   {
+    "step": "checker",
+    "status": "done",
+    "detail": "Found 16 of 16 quotes on the pages they came from.",
+    "ms": 61,
+    "at": "2026-10-16T18:24:26.867Z"
+   }
+  ]
+ },
+ "meta": {
+  "engine": "claude-code",
+  "model": "claude-opus-5-5",
+  "generated_at": "2026-10-16T18:24:26.868Z",
+  "seconds": 83
+ }
+}
